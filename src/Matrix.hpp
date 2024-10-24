@@ -15,7 +15,6 @@ public:
     }
 
     ~Matrix(){
-        std::cerr << "deleting";
         for(int i = 0; i < rows; i++){
             delete [] matrix[i];
         }

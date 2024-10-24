@@ -1,7 +1,6 @@
 #include "Game.hpp"
 #include "SDL2/SDL.h"
 #include <iostream>
-#include "Vector2D.hpp"
 
 Game* game = nullptr;
 

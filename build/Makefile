@@ -118,80 +118,48 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Game.cpp
+# Target rules for targets named test
 
 # Build rule for target.
-Game.cpp: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Game.cpp
-.PHONY : Game.cpp
+test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test
+.PHONY : test
 
 # fast build rule for target.
-Game.cpp/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.cpp.dir/build.make CMakeFiles/Game.cpp.dir/build
-.PHONY : Game.cpp/fast
+test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
+.PHONY : test/fast
 
-#=============================================================================
-# Target rules for targets named GameState.cpp
+src/ECS/ECS.o: src/ECS/ECS.cpp.o
+.PHONY : src/ECS/ECS.o
 
-# Build rule for target.
-GameState.cpp: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 GameState.cpp
-.PHONY : GameState.cpp
+# target to build an object file
+src/ECS/ECS.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/ECS/ECS.cpp.o
+.PHONY : src/ECS/ECS.cpp.o
 
-# fast build rule for target.
-GameState.cpp/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameState.cpp.dir/build.make CMakeFiles/GameState.cpp.dir/build
-.PHONY : GameState.cpp/fast
+src/ECS/ECS.i: src/ECS/ECS.cpp.i
+.PHONY : src/ECS/ECS.i
 
-#=============================================================================
-# Target rules for targets named TextureManager.cpp
+# target to preprocess a source file
+src/ECS/ECS.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/ECS/ECS.cpp.i
+.PHONY : src/ECS/ECS.cpp.i
 
-# Build rule for target.
-TextureManager.cpp: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TextureManager.cpp
-.PHONY : TextureManager.cpp
+src/ECS/ECS.s: src/ECS/ECS.cpp.s
+.PHONY : src/ECS/ECS.s
 
-# fast build rule for target.
-TextureManager.cpp/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TextureManager.cpp.dir/build.make CMakeFiles/TextureManager.cpp.dir/build
-.PHONY : TextureManager.cpp/fast
-
-#=============================================================================
-# Target rules for targets named Vector2D.cpp
-
-# Build rule for target.
-Vector2D.cpp: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Vector2D.cpp
-.PHONY : Vector2D.cpp
-
-# fast build rule for target.
-Vector2D.cpp/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vector2D.cpp.dir/build.make CMakeFiles/Vector2D.cpp.dir/build
-.PHONY : Vector2D.cpp/fast
-
-#=============================================================================
-# Target rules for targets named main.cpp
-
-# Build rule for target.
-main.cpp: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main.cpp
-.PHONY : main.cpp
-
-# fast build rule for target.
-main.cpp/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/build
-.PHONY : main.cpp/fast
+# target to generate assembly for a file
+src/ECS/ECS.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/ECS/ECS.cpp.s
+.PHONY : src/ECS/ECS.cpp.s
 
 src/Game.o: src/Game.cpp.o
 .PHONY : src/Game.o
 
 # target to build an object file
 src/Game.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.cpp.dir/build.make CMakeFiles/Game.cpp.dir/src/Game.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameState.cpp.dir/build.make CMakeFiles/GameState.cpp.dir/src/Game.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TextureManager.cpp.dir/build.make CMakeFiles/TextureManager.cpp.dir/src/Game.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vector2D.cpp.dir/build.make CMakeFiles/Vector2D.cpp.dir/src/Game.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/src/Game.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Game.cpp.o
 .PHONY : src/Game.cpp.o
 
 src/Game.i: src/Game.cpp.i
@@ -199,11 +167,7 @@ src/Game.i: src/Game.cpp.i
 
 # target to preprocess a source file
 src/Game.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.cpp.dir/build.make CMakeFiles/Game.cpp.dir/src/Game.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameState.cpp.dir/build.make CMakeFiles/GameState.cpp.dir/src/Game.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TextureManager.cpp.dir/build.make CMakeFiles/TextureManager.cpp.dir/src/Game.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vector2D.cpp.dir/build.make CMakeFiles/Vector2D.cpp.dir/src/Game.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/src/Game.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Game.cpp.i
 .PHONY : src/Game.cpp.i
 
 src/Game.s: src/Game.cpp.s
@@ -211,11 +175,7 @@ src/Game.s: src/Game.cpp.s
 
 # target to generate assembly for a file
 src/Game.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.cpp.dir/build.make CMakeFiles/Game.cpp.dir/src/Game.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameState.cpp.dir/build.make CMakeFiles/GameState.cpp.dir/src/Game.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TextureManager.cpp.dir/build.make CMakeFiles/TextureManager.cpp.dir/src/Game.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vector2D.cpp.dir/build.make CMakeFiles/Vector2D.cpp.dir/src/Game.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/src/Game.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Game.cpp.s
 .PHONY : src/Game.cpp.s
 
 src/GameState.o: src/GameState.cpp.o
@@ -223,11 +183,7 @@ src/GameState.o: src/GameState.cpp.o
 
 # target to build an object file
 src/GameState.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.cpp.dir/build.make CMakeFiles/Game.cpp.dir/src/GameState.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameState.cpp.dir/build.make CMakeFiles/GameState.cpp.dir/src/GameState.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TextureManager.cpp.dir/build.make CMakeFiles/TextureManager.cpp.dir/src/GameState.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vector2D.cpp.dir/build.make CMakeFiles/Vector2D.cpp.dir/src/GameState.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/src/GameState.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/GameState.cpp.o
 .PHONY : src/GameState.cpp.o
 
 src/GameState.i: src/GameState.cpp.i
@@ -235,11 +191,7 @@ src/GameState.i: src/GameState.cpp.i
 
 # target to preprocess a source file
 src/GameState.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.cpp.dir/build.make CMakeFiles/Game.cpp.dir/src/GameState.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameState.cpp.dir/build.make CMakeFiles/GameState.cpp.dir/src/GameState.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TextureManager.cpp.dir/build.make CMakeFiles/TextureManager.cpp.dir/src/GameState.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vector2D.cpp.dir/build.make CMakeFiles/Vector2D.cpp.dir/src/GameState.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/src/GameState.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/GameState.cpp.i
 .PHONY : src/GameState.cpp.i
 
 src/GameState.s: src/GameState.cpp.s
@@ -247,23 +199,63 @@ src/GameState.s: src/GameState.cpp.s
 
 # target to generate assembly for a file
 src/GameState.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.cpp.dir/build.make CMakeFiles/Game.cpp.dir/src/GameState.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameState.cpp.dir/build.make CMakeFiles/GameState.cpp.dir/src/GameState.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TextureManager.cpp.dir/build.make CMakeFiles/TextureManager.cpp.dir/src/GameState.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vector2D.cpp.dir/build.make CMakeFiles/Vector2D.cpp.dir/src/GameState.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/src/GameState.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/GameState.cpp.s
 .PHONY : src/GameState.cpp.s
+
+src/Layers/BackgroundLayer.o: src/Layers/BackgroundLayer.cpp.o
+.PHONY : src/Layers/BackgroundLayer.o
+
+# target to build an object file
+src/Layers/BackgroundLayer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Layers/BackgroundLayer.cpp.o
+.PHONY : src/Layers/BackgroundLayer.cpp.o
+
+src/Layers/BackgroundLayer.i: src/Layers/BackgroundLayer.cpp.i
+.PHONY : src/Layers/BackgroundLayer.i
+
+# target to preprocess a source file
+src/Layers/BackgroundLayer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Layers/BackgroundLayer.cpp.i
+.PHONY : src/Layers/BackgroundLayer.cpp.i
+
+src/Layers/BackgroundLayer.s: src/Layers/BackgroundLayer.cpp.s
+.PHONY : src/Layers/BackgroundLayer.s
+
+# target to generate assembly for a file
+src/Layers/BackgroundLayer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Layers/BackgroundLayer.cpp.s
+.PHONY : src/Layers/BackgroundLayer.cpp.s
+
+src/Layers/PieceLayer.o: src/Layers/PieceLayer.cpp.o
+.PHONY : src/Layers/PieceLayer.o
+
+# target to build an object file
+src/Layers/PieceLayer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Layers/PieceLayer.cpp.o
+.PHONY : src/Layers/PieceLayer.cpp.o
+
+src/Layers/PieceLayer.i: src/Layers/PieceLayer.cpp.i
+.PHONY : src/Layers/PieceLayer.i
+
+# target to preprocess a source file
+src/Layers/PieceLayer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Layers/PieceLayer.cpp.i
+.PHONY : src/Layers/PieceLayer.cpp.i
+
+src/Layers/PieceLayer.s: src/Layers/PieceLayer.cpp.s
+.PHONY : src/Layers/PieceLayer.s
+
+# target to generate assembly for a file
+src/Layers/PieceLayer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Layers/PieceLayer.cpp.s
+.PHONY : src/Layers/PieceLayer.cpp.s
 
 src/TextureManager.o: src/TextureManager.cpp.o
 .PHONY : src/TextureManager.o
 
 # target to build an object file
 src/TextureManager.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.cpp.dir/build.make CMakeFiles/Game.cpp.dir/src/TextureManager.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameState.cpp.dir/build.make CMakeFiles/GameState.cpp.dir/src/TextureManager.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TextureManager.cpp.dir/build.make CMakeFiles/TextureManager.cpp.dir/src/TextureManager.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vector2D.cpp.dir/build.make CMakeFiles/Vector2D.cpp.dir/src/TextureManager.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/src/TextureManager.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/TextureManager.cpp.o
 .PHONY : src/TextureManager.cpp.o
 
 src/TextureManager.i: src/TextureManager.cpp.i
@@ -271,11 +263,7 @@ src/TextureManager.i: src/TextureManager.cpp.i
 
 # target to preprocess a source file
 src/TextureManager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.cpp.dir/build.make CMakeFiles/Game.cpp.dir/src/TextureManager.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameState.cpp.dir/build.make CMakeFiles/GameState.cpp.dir/src/TextureManager.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TextureManager.cpp.dir/build.make CMakeFiles/TextureManager.cpp.dir/src/TextureManager.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vector2D.cpp.dir/build.make CMakeFiles/Vector2D.cpp.dir/src/TextureManager.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/src/TextureManager.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/TextureManager.cpp.i
 .PHONY : src/TextureManager.cpp.i
 
 src/TextureManager.s: src/TextureManager.cpp.s
@@ -283,11 +271,7 @@ src/TextureManager.s: src/TextureManager.cpp.s
 
 # target to generate assembly for a file
 src/TextureManager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.cpp.dir/build.make CMakeFiles/Game.cpp.dir/src/TextureManager.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameState.cpp.dir/build.make CMakeFiles/GameState.cpp.dir/src/TextureManager.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TextureManager.cpp.dir/build.make CMakeFiles/TextureManager.cpp.dir/src/TextureManager.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vector2D.cpp.dir/build.make CMakeFiles/Vector2D.cpp.dir/src/TextureManager.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/src/TextureManager.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/TextureManager.cpp.s
 .PHONY : src/TextureManager.cpp.s
 
 src/Vector2D.o: src/Vector2D.cpp.o
@@ -295,11 +279,7 @@ src/Vector2D.o: src/Vector2D.cpp.o
 
 # target to build an object file
 src/Vector2D.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.cpp.dir/build.make CMakeFiles/Game.cpp.dir/src/Vector2D.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameState.cpp.dir/build.make CMakeFiles/GameState.cpp.dir/src/Vector2D.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TextureManager.cpp.dir/build.make CMakeFiles/TextureManager.cpp.dir/src/Vector2D.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vector2D.cpp.dir/build.make CMakeFiles/Vector2D.cpp.dir/src/Vector2D.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/src/Vector2D.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Vector2D.cpp.o
 .PHONY : src/Vector2D.cpp.o
 
 src/Vector2D.i: src/Vector2D.cpp.i
@@ -307,11 +287,7 @@ src/Vector2D.i: src/Vector2D.cpp.i
 
 # target to preprocess a source file
 src/Vector2D.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.cpp.dir/build.make CMakeFiles/Game.cpp.dir/src/Vector2D.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameState.cpp.dir/build.make CMakeFiles/GameState.cpp.dir/src/Vector2D.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TextureManager.cpp.dir/build.make CMakeFiles/TextureManager.cpp.dir/src/Vector2D.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vector2D.cpp.dir/build.make CMakeFiles/Vector2D.cpp.dir/src/Vector2D.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/src/Vector2D.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Vector2D.cpp.i
 .PHONY : src/Vector2D.cpp.i
 
 src/Vector2D.s: src/Vector2D.cpp.s
@@ -319,11 +295,7 @@ src/Vector2D.s: src/Vector2D.cpp.s
 
 # target to generate assembly for a file
 src/Vector2D.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.cpp.dir/build.make CMakeFiles/Game.cpp.dir/src/Vector2D.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameState.cpp.dir/build.make CMakeFiles/GameState.cpp.dir/src/Vector2D.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TextureManager.cpp.dir/build.make CMakeFiles/TextureManager.cpp.dir/src/Vector2D.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vector2D.cpp.dir/build.make CMakeFiles/Vector2D.cpp.dir/src/Vector2D.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/src/Vector2D.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Vector2D.cpp.s
 .PHONY : src/Vector2D.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -331,11 +303,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.cpp.dir/build.make CMakeFiles/Game.cpp.dir/src/main.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameState.cpp.dir/build.make CMakeFiles/GameState.cpp.dir/src/main.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TextureManager.cpp.dir/build.make CMakeFiles/TextureManager.cpp.dir/src/main.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vector2D.cpp.dir/build.make CMakeFiles/Vector2D.cpp.dir/src/main.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -343,11 +311,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.cpp.dir/build.make CMakeFiles/Game.cpp.dir/src/main.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameState.cpp.dir/build.make CMakeFiles/GameState.cpp.dir/src/main.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TextureManager.cpp.dir/build.make CMakeFiles/TextureManager.cpp.dir/src/main.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vector2D.cpp.dir/build.make CMakeFiles/Vector2D.cpp.dir/src/main.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -355,11 +319,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.cpp.dir/build.make CMakeFiles/Game.cpp.dir/src/main.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameState.cpp.dir/build.make CMakeFiles/GameState.cpp.dir/src/main.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TextureManager.cpp.dir/build.make CMakeFiles/TextureManager.cpp.dir/src/main.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vector2D.cpp.dir/build.make CMakeFiles/Vector2D.cpp.dir/src/main.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -370,17 +330,22 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Game.cpp"
-	@echo "... GameState.cpp"
-	@echo "... TextureManager.cpp"
-	@echo "... Vector2D.cpp"
-	@echo "... main.cpp"
+	@echo "... test"
+	@echo "... src/ECS/ECS.o"
+	@echo "... src/ECS/ECS.i"
+	@echo "... src/ECS/ECS.s"
 	@echo "... src/Game.o"
 	@echo "... src/Game.i"
 	@echo "... src/Game.s"
 	@echo "... src/GameState.o"
 	@echo "... src/GameState.i"
 	@echo "... src/GameState.s"
+	@echo "... src/Layers/BackgroundLayer.o"
+	@echo "... src/Layers/BackgroundLayer.i"
+	@echo "... src/Layers/BackgroundLayer.s"
+	@echo "... src/Layers/PieceLayer.o"
+	@echo "... src/Layers/PieceLayer.i"
+	@echo "... src/Layers/PieceLayer.s"
 	@echo "... src/TextureManager.o"
 	@echo "... src/TextureManager.i"
 	@echo "... src/TextureManager.s"

@@ -1,6 +1,5 @@
 #include "PieceLayer.hpp"
-#include "../MouseClickEvent.hpp"
-#include <iostream>
+#include "../Events/MouseClickEvent.hpp"
 
 PieceLayer::PieceLayer(){
 }

@@ -1,5 +1,4 @@
 #include "BackgroundLayer.hpp"
-#include <iostream>
 
 BackgroundLayer::BackgroundLayer(){
 }

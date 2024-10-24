@@ -1,9 +1,5 @@
 #include "Game.hpp"
 
-
-
-
-
 SDL_Renderer* Game::renderer = nullptr;
 SDL_Event Game::event;
     

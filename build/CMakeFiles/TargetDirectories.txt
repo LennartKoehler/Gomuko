@@ -1,7 +1,3 @@
-/home/lennart/vscodeProjects/SDL_test/build/CMakeFiles/Game.cpp.dir
-/home/lennart/vscodeProjects/SDL_test/build/CMakeFiles/GameState.cpp.dir
-/home/lennart/vscodeProjects/SDL_test/build/CMakeFiles/TextureManager.cpp.dir
-/home/lennart/vscodeProjects/SDL_test/build/CMakeFiles/Vector2D.cpp.dir
-/home/lennart/vscodeProjects/SDL_test/build/CMakeFiles/main.cpp.dir
+/home/lennart/vscodeProjects/SDL_test/build/CMakeFiles/test.dir
 /home/lennart/vscodeProjects/SDL_test/build/CMakeFiles/edit_cache.dir
 /home/lennart/vscodeProjects/SDL_test/build/CMakeFiles/rebuild_cache.dir
