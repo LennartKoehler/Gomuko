@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -isystem /usr/include/SDL2
 
-CXX_FLAGS = -std=gnu++23
+CXX_FLAGS = -g -std=gnu++23
 

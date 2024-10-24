@@ -38,17 +38,20 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 
     gameState = new GameState(20, 20, 1, 5);
 
-    backgroundLayer = BackgroundLayer(gameState, 64, "assets/tile.png");
-    pieceLayer = PieceLayer(gameState, 64, "assets/white.png", "assets/black.png");
+    backgroundLayer = BackgroundLayer(gameState, 64, "../assets/tile.png");
+    pieceLayer = PieceLayer(gameState, 64, "../assets/white.png", "../assets/black.png");
 }
 
 void Game::handleEvents(SDL_Event& event){
     switch (event.type)
     {
     case SDL_QUIT:
+        std::cout << "SDL_QUIT" << std::endl;
         isRunning = false;
         break;
     case SDL_MOUSEBUTTONDOWN:
+        std::cout << "SDL_MOUSE" << std::endl;
+
         onClick(event, pieceLayer);
     default:
         break;
@@ -67,9 +70,11 @@ void Game::render(){
     backgroundLayer.draw();
     pieceLayer.draw();
     SDL_RenderPresent(renderer);
+
 }
 
 void Game::clean(){
+    std::cout << "deleting" << std::endl;
     delete gameState;
     SDL_DestroyWindow(window);
     SDL_DestroyRenderer(renderer);

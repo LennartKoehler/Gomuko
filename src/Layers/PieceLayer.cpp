@@ -85,7 +85,7 @@ void PieceLayer::playerWon(PlayerComponent& playercomp){
     //pretty ugly
     Entity& won_entity = manager.addEntity();
     won_entity.addComponent<RectComponent>(200, 200, entity_size*2, entity_size*2);
-    won_entity.addComponent<SpriteComponent>("assets/won.png");
+    won_entity.addComponent<SpriteComponent>("../assets/won.png");
     Entity& won_tile = manager.addEntity();
     won_tile.addComponent<RectComponent>(200, 200-2*entity_size, entity_size*2, entity_size*2);
     won_tile.addComponent<SpriteComponent>(playercomp.playerPieceAsset);

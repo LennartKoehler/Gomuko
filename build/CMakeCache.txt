@@ -20,9 +20,8 @@ CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
 
-//Choose the type of build, options are: None Debug Release RelWithDebInfo
-// MinSizeRel ...
-CMAKE_BUILD_TYPE:STRING=
+//No help, variable specified on the command line.
+CMAKE_BUILD_TYPE:STRING=Debug
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
@@ -97,8 +96,8 @@ CMAKE_EXE_LINKER_FLAGS_RELEASE:STRING=
 //Flags used by the linker during RELWITHDEBINFO builds.
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
-//Enable/Disable output of compile commands during generation.
-CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=
+//No help, variable specified on the command line.
+CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE
 
 //Install path prefix, prepended onto install directories.
 CMAKE_INSTALL_PREFIX:PATH=/usr/local
@@ -218,32 +217,8 @@ PKG_CONFIG_ARGN:STRING=
 //pkg-config executable
 PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 
-//Value Computed by CMake
-Project_BINARY_DIR:STATIC=/home/lennart/vscodeProjects/SDL_test/build
-
-//Value Computed by CMake
-Project_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-Project_SOURCE_DIR:STATIC=/home/lennart/vscodeProjects/SDL_test
-
 //The directory containing a CMake configuration file for SDL2.
 SDL2_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/SDL2
-
-//The directory containing a CMake configuration file for SDL2_image.
-SDL2_image_DIR:PATH=SDL2_image_DIR-NOTFOUND
-
-//The directory containing a CMake configuration file for lSDL2_image.
-lSDL2_image_DIR:PATH=lSDL2_image_DIR-NOTFOUND
-
-//The directory containing a CMake configuration file for libsdl_image.
-libsdl_image_DIR:PATH=libsdl_image_DIR-NOTFOUND
-
-//Path to a library.
-pkgcfg_lib_SDL2IMAGE_SDL2:FILEPATH=/usr/lib/x86_64-linux-gnu/libSDL2.so
-
-//Path to a library.
-pkgcfg_lib_SDL2IMAGE_SDL2_image:FILEPATH=/usr/lib/x86_64-linux-gnu/libSDL2_image.so
 
 //Path to a library.
 pkgcfg_lib_SDL2_image_SDL2:FILEPATH=/usr/lib/x86_64-linux-gnu/libSDL2.so
@@ -331,8 +306,6 @@ CMAKE_EXE_LINKER_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_EXE_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_EXPORT_COMPILE_COMMANDS
-CMAKE_EXPORT_COMPILE_COMMANDS-ADVANCED:INTERNAL=1
 //Name of external makefile project generator.
 CMAKE_EXTRA_GENERATOR:INTERNAL=
 //Name of generator.
@@ -408,49 +381,12 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
-//Test COMPILER_SUPPORTS_CXX11
-COMPILER_SUPPORTS_CXX11:INTERNAL=1
 //Details about finding PkgConfig
 FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v0.29.2()]
 //ADVANCED property for variable: PKG_CONFIG_ARGN
 PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
 PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
-SDL2IMAGE_CFLAGS:INTERNAL=-D_REENTRANT;-I/usr/include/SDL2
-SDL2IMAGE_CFLAGS_I:INTERNAL=
-SDL2IMAGE_CFLAGS_OTHER:INTERNAL=-D_REENTRANT
-SDL2IMAGE_FOUND:INTERNAL=1
-SDL2IMAGE_INCLUDEDIR:INTERNAL=/usr/include
-SDL2IMAGE_INCLUDE_DIRS:INTERNAL=/usr/include/SDL2
-SDL2IMAGE_LDFLAGS:INTERNAL=-L/usr/lib/x86_64-linux-gnu;-lSDL2_image;-lSDL2
-SDL2IMAGE_LDFLAGS_OTHER:INTERNAL=
-SDL2IMAGE_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
-SDL2IMAGE_LIBRARIES:INTERNAL=SDL2_image;SDL2
-SDL2IMAGE_LIBRARY_DIRS:INTERNAL=/usr/lib/x86_64-linux-gnu
-SDL2IMAGE_LIBS:INTERNAL=
-SDL2IMAGE_LIBS_L:INTERNAL=
-SDL2IMAGE_LIBS_OTHER:INTERNAL=
-SDL2IMAGE_LIBS_PATHS:INTERNAL=
-SDL2IMAGE_MODULE_NAME:INTERNAL=SDL2_image
-SDL2IMAGE_PREFIX:INTERNAL=/usr
-SDL2IMAGE_SDL2_image_INCLUDEDIR:INTERNAL=
-SDL2IMAGE_SDL2_image_LIBDIR:INTERNAL=
-SDL2IMAGE_SDL2_image_PREFIX:INTERNAL=
-SDL2IMAGE_SDL2_image_VERSION:INTERNAL=
-SDL2IMAGE_STATIC_CFLAGS:INTERNAL=-D_REENTRANT;-I/usr/include/SDL2
-SDL2IMAGE_STATIC_CFLAGS_I:INTERNAL=
-SDL2IMAGE_STATIC_CFLAGS_OTHER:INTERNAL=-D_REENTRANT
-SDL2IMAGE_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/SDL2
-SDL2IMAGE_STATIC_LDFLAGS:INTERNAL=-L/usr/lib/x86_64-linux-gnu;-lSDL2_image;-lSDL2;-lm;-lasound;-lm;-ldl;-lpthread;-lpulse-simple;-pthread;-lpulse;-pthread;-lX11;-lXext;-lXcursor;-lXinerama;-lXi;-lXfixes;-lXrandr;-lXss;-lXxf86vm;-ldrm;-lgbm;-lwayland-egl;-lwayland-client;-lwayland-cursor;-lxkbcommon;-ldecor-0;-lpthread;-lrt
-SDL2IMAGE_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread
-SDL2IMAGE_STATIC_LIBDIR:INTERNAL=
-SDL2IMAGE_STATIC_LIBRARIES:INTERNAL=SDL2_image;SDL2;m;asound;m;dl;pthread;pulse-simple;pulse;X11;Xext;Xcursor;Xinerama;Xi;Xfixes;Xrandr;Xss;Xxf86vm;drm;gbm;wayland-egl;wayland-client;wayland-cursor;xkbcommon;decor-0;pthread;rt
-SDL2IMAGE_STATIC_LIBRARY_DIRS:INTERNAL=/usr/lib/x86_64-linux-gnu
-SDL2IMAGE_STATIC_LIBS:INTERNAL=
-SDL2IMAGE_STATIC_LIBS_L:INTERNAL=
-SDL2IMAGE_STATIC_LIBS_OTHER:INTERNAL=
-SDL2IMAGE_STATIC_LIBS_PATHS:INTERNAL=
-SDL2IMAGE_VERSION:INTERNAL=2.0.5
 SDL2_image_CFLAGS:INTERNAL=-D_REENTRANT;-I/usr/include/SDL2
 SDL2_image_CFLAGS_I:INTERNAL=
 SDL2_image_CFLAGS_OTHER:INTERNAL=-D_REENTRANT
@@ -486,12 +422,7 @@ SDL2_image_STATIC_LIBS_L:INTERNAL=
 SDL2_image_STATIC_LIBS_OTHER:INTERNAL=
 SDL2_image_STATIC_LIBS_PATHS:INTERNAL=
 SDL2_image_VERSION:INTERNAL=2.0.5
-__pkg_config_checked_SDL2IMAGE:INTERNAL=1
 __pkg_config_checked_SDL2_image:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_SDL2IMAGE_SDL2
-pkgcfg_lib_SDL2IMAGE_SDL2-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_SDL2IMAGE_SDL2_image
-pkgcfg_lib_SDL2IMAGE_SDL2_image-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_SDL2_image_SDL2
 pkgcfg_lib_SDL2_image_SDL2-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_SDL2_image_SDL2_image
