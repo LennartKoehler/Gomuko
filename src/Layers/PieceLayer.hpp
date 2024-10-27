@@ -1,10 +1,10 @@
 #pragma once
 
 #include "Layerinclude.hpp"
+#include "../Textures.hpp"
 
-namespace GE{
-    class MouseClickEvent;
-}
+
+class MouseClickEvent;
 
 class PieceLayer : public Layer{
 public:
@@ -14,7 +14,7 @@ public:
 
     Entity* getEntityAtPosition(int x, int y, size_t group);
     bool entityOverlap(Entity* entity, int x, int y);
-    void onEvent(GE::MouseClickEvent event);
+    void onEvent(MouseClickEvent event);
     void init_players();
     Entity* getPlayerFromID(int playerID);
     void playerWon(PlayerComponent& playercomp);

@@ -6,8 +6,10 @@
 #include <SDL2/SDL.h>
 #include <iostream>
 #include <SDL2/SDL_image.h>
+#include "Textures.hpp"
 #include "Events/MouseClickEvent.hpp"
 #include "Layers/Layerinclude.hpp"
+
 
 class Game {
 public:

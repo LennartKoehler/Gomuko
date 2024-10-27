@@ -3,7 +3,8 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "../networking/GameNetworkingSockets/include"
             ],
             "defines": [],
             "cStandard": "c23",

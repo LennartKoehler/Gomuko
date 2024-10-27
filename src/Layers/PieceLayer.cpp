@@ -59,7 +59,7 @@ Entity* PieceLayer::getPlayerFromID(int playerID){
 }
 
 
-void PieceLayer::onEvent(GE::MouseClickEvent event){
+void PieceLayer::onEvent(MouseClickEvent event){
     Entity* player_at_turn = getPlayerFromID(gameState->player_at_turn);
     Entity* tile = getEntityAtPosition(event.x, event.y, groupPieces);
 
@@ -85,7 +85,7 @@ void PieceLayer::playerWon(PlayerComponent& playercomp){
     //pretty ugly
     Entity& won_entity = manager.addEntity();
     won_entity.addComponent<RectComponent>(200, 200, entity_size*2, entity_size*2);
-    won_entity.addComponent<SpriteComponent>("../assets/won.png");
+    won_entity.addComponent<SpriteComponent>(textures::won);
     Entity& won_tile = manager.addEntity();
     won_tile.addComponent<RectComponent>(200, 200-2*entity_size, entity_size*2, entity_size*2);
     won_tile.addComponent<SpriteComponent>(playercomp.playerPieceAsset);

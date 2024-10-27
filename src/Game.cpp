@@ -18,7 +18,7 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
     }
     
     if(SDL_Init(SDL_INIT_EVERYTHING) == 0){
-        std::cout << "Subsystem initialized..." << std::endl;
+        std::cout << "Subsystem initialized" << std::endl;
 
         window = SDL_CreateWindow(title, xpos, ypos, width, height, flags);
         if (window){
@@ -38,19 +38,17 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 
     gameState = new GameState(20, 20, 1, 5);
 
-    backgroundLayer = BackgroundLayer(gameState, 64, "../assets/tile.png");
-    pieceLayer = PieceLayer(gameState, 64, "../assets/white.png", "../assets/black.png");
+    backgroundLayer = BackgroundLayer(gameState, 64, textures::tile);
+    pieceLayer = PieceLayer(gameState, 64, textures::white_piece, textures::black_piece);
 }
 
 void Game::handleEvents(SDL_Event& event){
     switch (event.type)
     {
     case SDL_QUIT:
-        std::cout << "SDL_QUIT" << std::endl;
         isRunning = false;
         break;
     case SDL_MOUSEBUTTONDOWN:
-        std::cout << "SDL_MOUSE" << std::endl;
 
         onClick(event, pieceLayer);
     default:
@@ -74,7 +72,6 @@ void Game::render(){
 }
 
 void Game::clean(){
-    std::cout << "deleting" << std::endl;
     delete gameState;
     SDL_DestroyWindow(window);
     SDL_DestroyRenderer(renderer);
@@ -82,8 +79,8 @@ void Game::clean(){
     std::cout << "Game cleaned" << std::endl;
 }
 
-void Game::onClick(SDL_Event& event, PieceLayer& layer){
-    GE::MouseClickEvent ge_event(event);
-    layer.onEvent(ge_event);
+void Game::onClick(SDL_Event& sdl_event, PieceLayer& layer){
+    MouseClickEvent event(sdl_event);
+    layer.onEvent(event);
 }
 

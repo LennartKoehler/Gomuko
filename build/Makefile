@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lennart/vscodeProjects/SDL_test
+CMAKE_SOURCE_DIR = /home/lennart/cpp_projects/game_engine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lennart/vscodeProjects/SDL_test/build
+CMAKE_BINARY_DIR = /home/lennart/cpp_projects/game_engine/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lennart/vscodeProjects/SDL_test/build/CMakeFiles /home/lennart/vscodeProjects/SDL_test/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lennart/cpp_projects/game_engine/build/CMakeFiles /home/lennart/cpp_projects/game_engine/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lennart/vscodeProjects/SDL_test/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lennart/cpp_projects/game_engine/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -113,29 +113,29 @@ preinstall/fast:
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -P /home/lennart/vscodeProjects/SDL_test/build/CMakeFiles/VerifyGlobs.cmake
+	$(CMAKE_COMMAND) -P /home/lennart/cpp_projects/game_engine/build/CMakeFiles/VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named test
+# Target rules for targets named test2
 
 # Build rule for target.
-test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test
-.PHONY : test
+test2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test2
+.PHONY : test2
 
 # fast build rule for target.
-test/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
-.PHONY : test/fast
+test2/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/build
+.PHONY : test2/fast
 
 src/ECS/ECS.o: src/ECS/ECS.cpp.o
 .PHONY : src/ECS/ECS.o
 
 # target to build an object file
 src/ECS/ECS.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/ECS/ECS.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/src/ECS/ECS.cpp.o
 .PHONY : src/ECS/ECS.cpp.o
 
 src/ECS/ECS.i: src/ECS/ECS.cpp.i
@@ -143,7 +143,7 @@ src/ECS/ECS.i: src/ECS/ECS.cpp.i
 
 # target to preprocess a source file
 src/ECS/ECS.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/ECS/ECS.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/src/ECS/ECS.cpp.i
 .PHONY : src/ECS/ECS.cpp.i
 
 src/ECS/ECS.s: src/ECS/ECS.cpp.s
@@ -151,15 +151,39 @@ src/ECS/ECS.s: src/ECS/ECS.cpp.s
 
 # target to generate assembly for a file
 src/ECS/ECS.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/ECS/ECS.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/src/ECS/ECS.cpp.s
 .PHONY : src/ECS/ECS.cpp.s
+
+src/Events/EventQueue.o: src/Events/EventQueue.cpp.o
+.PHONY : src/Events/EventQueue.o
+
+# target to build an object file
+src/Events/EventQueue.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/src/Events/EventQueue.cpp.o
+.PHONY : src/Events/EventQueue.cpp.o
+
+src/Events/EventQueue.i: src/Events/EventQueue.cpp.i
+.PHONY : src/Events/EventQueue.i
+
+# target to preprocess a source file
+src/Events/EventQueue.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/src/Events/EventQueue.cpp.i
+.PHONY : src/Events/EventQueue.cpp.i
+
+src/Events/EventQueue.s: src/Events/EventQueue.cpp.s
+.PHONY : src/Events/EventQueue.s
+
+# target to generate assembly for a file
+src/Events/EventQueue.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/src/Events/EventQueue.cpp.s
+.PHONY : src/Events/EventQueue.cpp.s
 
 src/Game.o: src/Game.cpp.o
 .PHONY : src/Game.o
 
 # target to build an object file
 src/Game.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Game.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/src/Game.cpp.o
 .PHONY : src/Game.cpp.o
 
 src/Game.i: src/Game.cpp.i
@@ -167,7 +191,7 @@ src/Game.i: src/Game.cpp.i
 
 # target to preprocess a source file
 src/Game.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Game.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/src/Game.cpp.i
 .PHONY : src/Game.cpp.i
 
 src/Game.s: src/Game.cpp.s
@@ -175,7 +199,7 @@ src/Game.s: src/Game.cpp.s
 
 # target to generate assembly for a file
 src/Game.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Game.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/src/Game.cpp.s
 .PHONY : src/Game.cpp.s
 
 src/GameState.o: src/GameState.cpp.o
@@ -183,7 +207,7 @@ src/GameState.o: src/GameState.cpp.o
 
 # target to build an object file
 src/GameState.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/GameState.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/src/GameState.cpp.o
 .PHONY : src/GameState.cpp.o
 
 src/GameState.i: src/GameState.cpp.i
@@ -191,7 +215,7 @@ src/GameState.i: src/GameState.cpp.i
 
 # target to preprocess a source file
 src/GameState.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/GameState.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/src/GameState.cpp.i
 .PHONY : src/GameState.cpp.i
 
 src/GameState.s: src/GameState.cpp.s
@@ -199,7 +223,7 @@ src/GameState.s: src/GameState.cpp.s
 
 # target to generate assembly for a file
 src/GameState.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/GameState.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/src/GameState.cpp.s
 .PHONY : src/GameState.cpp.s
 
 src/Layers/BackgroundLayer.o: src/Layers/BackgroundLayer.cpp.o
@@ -207,7 +231,7 @@ src/Layers/BackgroundLayer.o: src/Layers/BackgroundLayer.cpp.o
 
 # target to build an object file
 src/Layers/BackgroundLayer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Layers/BackgroundLayer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/src/Layers/BackgroundLayer.cpp.o
 .PHONY : src/Layers/BackgroundLayer.cpp.o
 
 src/Layers/BackgroundLayer.i: src/Layers/BackgroundLayer.cpp.i
@@ -215,7 +239,7 @@ src/Layers/BackgroundLayer.i: src/Layers/BackgroundLayer.cpp.i
 
 # target to preprocess a source file
 src/Layers/BackgroundLayer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Layers/BackgroundLayer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/src/Layers/BackgroundLayer.cpp.i
 .PHONY : src/Layers/BackgroundLayer.cpp.i
 
 src/Layers/BackgroundLayer.s: src/Layers/BackgroundLayer.cpp.s
@@ -223,7 +247,7 @@ src/Layers/BackgroundLayer.s: src/Layers/BackgroundLayer.cpp.s
 
 # target to generate assembly for a file
 src/Layers/BackgroundLayer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Layers/BackgroundLayer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/src/Layers/BackgroundLayer.cpp.s
 .PHONY : src/Layers/BackgroundLayer.cpp.s
 
 src/Layers/PieceLayer.o: src/Layers/PieceLayer.cpp.o
@@ -231,7 +255,7 @@ src/Layers/PieceLayer.o: src/Layers/PieceLayer.cpp.o
 
 # target to build an object file
 src/Layers/PieceLayer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Layers/PieceLayer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/src/Layers/PieceLayer.cpp.o
 .PHONY : src/Layers/PieceLayer.cpp.o
 
 src/Layers/PieceLayer.i: src/Layers/PieceLayer.cpp.i
@@ -239,7 +263,7 @@ src/Layers/PieceLayer.i: src/Layers/PieceLayer.cpp.i
 
 # target to preprocess a source file
 src/Layers/PieceLayer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Layers/PieceLayer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/src/Layers/PieceLayer.cpp.i
 .PHONY : src/Layers/PieceLayer.cpp.i
 
 src/Layers/PieceLayer.s: src/Layers/PieceLayer.cpp.s
@@ -247,7 +271,7 @@ src/Layers/PieceLayer.s: src/Layers/PieceLayer.cpp.s
 
 # target to generate assembly for a file
 src/Layers/PieceLayer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Layers/PieceLayer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/src/Layers/PieceLayer.cpp.s
 .PHONY : src/Layers/PieceLayer.cpp.s
 
 src/TextureManager.o: src/TextureManager.cpp.o
@@ -255,7 +279,7 @@ src/TextureManager.o: src/TextureManager.cpp.o
 
 # target to build an object file
 src/TextureManager.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/TextureManager.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/src/TextureManager.cpp.o
 .PHONY : src/TextureManager.cpp.o
 
 src/TextureManager.i: src/TextureManager.cpp.i
@@ -263,7 +287,7 @@ src/TextureManager.i: src/TextureManager.cpp.i
 
 # target to preprocess a source file
 src/TextureManager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/TextureManager.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/src/TextureManager.cpp.i
 .PHONY : src/TextureManager.cpp.i
 
 src/TextureManager.s: src/TextureManager.cpp.s
@@ -271,7 +295,7 @@ src/TextureManager.s: src/TextureManager.cpp.s
 
 # target to generate assembly for a file
 src/TextureManager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/TextureManager.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/src/TextureManager.cpp.s
 .PHONY : src/TextureManager.cpp.s
 
 src/Vector2D.o: src/Vector2D.cpp.o
@@ -279,7 +303,7 @@ src/Vector2D.o: src/Vector2D.cpp.o
 
 # target to build an object file
 src/Vector2D.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Vector2D.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/src/Vector2D.cpp.o
 .PHONY : src/Vector2D.cpp.o
 
 src/Vector2D.i: src/Vector2D.cpp.i
@@ -287,7 +311,7 @@ src/Vector2D.i: src/Vector2D.cpp.i
 
 # target to preprocess a source file
 src/Vector2D.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Vector2D.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/src/Vector2D.cpp.i
 .PHONY : src/Vector2D.cpp.i
 
 src/Vector2D.s: src/Vector2D.cpp.s
@@ -295,7 +319,7 @@ src/Vector2D.s: src/Vector2D.cpp.s
 
 # target to generate assembly for a file
 src/Vector2D.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Vector2D.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/src/Vector2D.cpp.s
 .PHONY : src/Vector2D.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -303,7 +327,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -311,7 +335,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -319,7 +343,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -330,10 +354,13 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... test"
+	@echo "... test2"
 	@echo "... src/ECS/ECS.o"
 	@echo "... src/ECS/ECS.i"
 	@echo "... src/ECS/ECS.s"
+	@echo "... src/Events/EventQueue.o"
+	@echo "... src/Events/EventQueue.i"
+	@echo "... src/Events/EventQueue.s"
 	@echo "... src/Game.o"
 	@echo "... src/Game.i"
 	@echo "... src/Game.s"
@@ -366,7 +393,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -P /home/lennart/vscodeProjects/SDL_test/build/CMakeFiles/VerifyGlobs.cmake
+	$(CMAKE_COMMAND) -P /home/lennart/cpp_projects/game_engine/build/CMakeFiles/VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

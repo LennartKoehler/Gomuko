@@ -1,10 +1,11 @@
 #include "Game.hpp"
 #include "SDL2/SDL.h"
 #include <iostream>
+//#include "Networking.cpp"
 
 Game* game = nullptr;
 
-int main(int argc, const char* argv[]) {
+int test(int argc, const char* argv[]) {
 
 
 
@@ -17,6 +18,8 @@ int main(int argc, const char* argv[]) {
     game = new Game();
     game->init("Gomuko", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 64*10, 64*10, false);
     SDL_Event event;
+
+
     while (game->running()){
         while (SDL_WaitEventTimeout(&event, 100)){
             //frameStart = SDL_GetTicks();

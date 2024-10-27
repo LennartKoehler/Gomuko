@@ -1,0 +1,15 @@
+# ninja log v5
+0	5	0	/home/lennart/cpp_projects/game_engine/net_build/CMakeFiles/cmake.verify_globs	d14109b76827aa1e
+1	985	1730065481130130546	CMakeFiles/test2.dir/src/TextureManager.cpp.o	959b813d625c0bbb
+1	181	1730066540300127718	test2	2273e31ca06c5a5f
+0	9	1730065480160130548	CMakeFiles/test2.dir/src/Events/EventQueue.cpp.o	7d854379b8e66022
+1	366	1730065480520130546	CMakeFiles/test2.dir/src/Vector2D.cpp.o	cd6026303f694a23
+0	653	1730065480800130544	CMakeFiles/test2.dir/src/ECS/ECS.cpp.o	ee63a5866b09de95
+0	905	1730065481050130546	CMakeFiles/test2.dir/src/GameState.cpp.o	b1d9b80ac56bf884
+0	1018	1730065481170130547	CMakeFiles/test2.dir/src/Layers/PieceLayer.cpp.o	ea2fc11e8054a6e8
+1	957	1730065481110130546	CMakeFiles/test2.dir/src/main.cpp.o	6643ffa3a1451c82
+1	1169	1730065481320130543	CMakeFiles/test2.dir/src/Networking.cpp.o	e3f349e1f6ff0da7
+0	996	1730065481150130546	CMakeFiles/test2.dir/src/Game.cpp.o	b13441ce0e30ff
+0	1015	1730065481160130547	CMakeFiles/test2.dir/src/Layers/BackgroundLayer.cpp.o	91c86876a09c1f34
+0	5	0	/home/lennart/cpp_projects/game_engine/net_build/CMakeFiles/cmake.verify_globs	d14109b76827aa1e
+1	116	1730066936290101572	test2	999a7b224edb874d
