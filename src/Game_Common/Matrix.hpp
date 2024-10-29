@@ -1,6 +1,4 @@
-#include <iostream>
-
-
+//unused
 template <typename T>
 class Matrix{
 public:
@@ -35,6 +33,8 @@ public:
     int get_num_cols() const {
         return cols;
     }
+
+
 private:
     int rows;
     int cols;

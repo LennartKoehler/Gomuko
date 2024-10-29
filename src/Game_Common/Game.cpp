@@ -36,8 +36,7 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
         isRunning = true;
     }
 
-    gameState = new GameState(20, 20, 1, 5);
-
+    gameState = new GameState(20, 20, 1, 5); // IMPORTANT currently only works with fixed size: 20 x 20  this is because it needs to be the same file when recieved by server
     backgroundLayer = new BackgroundLayer(gameState, 64, textures::tile);
     pieceLayer = new PieceLayer(gameState, 64, textures::white_piece, textures::black_piece);
 }

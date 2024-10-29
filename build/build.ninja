@@ -112,8 +112,8 @@ build CMakeFiles/test.dir/src/Game_Common/Vector2D.cpp.o: CXX_COMPILER__test_Deb
   OBJECT_DIR = CMakeFiles/test.dir
   OBJECT_FILE_DIR = CMakeFiles/test.dir/src/Game_Common
 
-build CMakeFiles/test.dir/src/Game_Common/maintest.cpp.o: CXX_COMPILER__test_Debug /home/lennart/cpp_projects/game_engine/src/Game_Common/maintest.cpp || cmake_object_order_depends_target_test
-  DEP_FILE = CMakeFiles/test.dir/src/Game_Common/maintest.cpp.o.d
+build CMakeFiles/test.dir/src/Game_Common/main.cpp.o: CXX_COMPILER__test_Debug /home/lennart/cpp_projects/game_engine/src/Game_Common/main.cpp || cmake_object_order_depends_target_test
+  DEP_FILE = CMakeFiles/test.dir/src/Game_Common/main.cpp.o.d
   FLAGS = -g -std=gnu++23
   INCLUDES = -I/home/lennart/cpp_projects/networking/GameNetworkingSockets/include -isystem /usr/include/SDL2
   OBJECT_DIR = CMakeFiles/test.dir
@@ -127,7 +127,7 @@ build CMakeFiles/test.dir/src/Game_Common/maintest.cpp.o: CXX_COMPILER__test_Deb
 #############################################
 # Link the executable test
 
-build test: CXX_EXECUTABLE_LINKER__test_Debug CMakeFiles/test.dir/src/Game_Client/main.cpp.o CMakeFiles/test.dir/src/Game_Common/ECS/ECS.cpp.o CMakeFiles/test.dir/src/Game_Common/Events/EventQueue.cpp.o CMakeFiles/test.dir/src/Game_Common/Game.cpp.o CMakeFiles/test.dir/src/Game_Common/GameState.cpp.o CMakeFiles/test.dir/src/Game_Common/Layers/BackgroundLayer.cpp.o CMakeFiles/test.dir/src/Game_Common/Layers/PieceLayer.cpp.o CMakeFiles/test.dir/src/Game_Common/TextureManager.cpp.o CMakeFiles/test.dir/src/Game_Common/Vector2D.cpp.o CMakeFiles/test.dir/src/Game_Common/maintest.cpp.o | /home/lennart/cpp_projects/networking/GameNetworkingSockets/test_build/bin/libGameNetworkingSockets.so /usr/lib/x86_64-linux-gnu/libSDL2main.a /usr/lib/x86_64-linux-gnu/libSDL2.so
+build test: CXX_EXECUTABLE_LINKER__test_Debug CMakeFiles/test.dir/src/Game_Client/main.cpp.o CMakeFiles/test.dir/src/Game_Common/ECS/ECS.cpp.o CMakeFiles/test.dir/src/Game_Common/Events/EventQueue.cpp.o CMakeFiles/test.dir/src/Game_Common/Game.cpp.o CMakeFiles/test.dir/src/Game_Common/GameState.cpp.o CMakeFiles/test.dir/src/Game_Common/Layers/BackgroundLayer.cpp.o CMakeFiles/test.dir/src/Game_Common/Layers/PieceLayer.cpp.o CMakeFiles/test.dir/src/Game_Common/TextureManager.cpp.o CMakeFiles/test.dir/src/Game_Common/Vector2D.cpp.o CMakeFiles/test.dir/src/Game_Common/main.cpp.o | /home/lennart/cpp_projects/networking/GameNetworkingSockets/test_build/bin/libGameNetworkingSockets.so /usr/lib/x86_64-linux-gnu/libSDL2main.a /usr/lib/x86_64-linux-gnu/libSDL2.so
   FLAGS = -g
   LINK_LIBRARIES = -Wl,-rpath,/home/lennart/cpp_projects/networking/GameNetworkingSockets/test_build/bin  -lSDL2_image  /home/lennart/cpp_projects/networking/GameNetworkingSockets/test_build/bin/libGameNetworkingSockets.so  /usr/lib/x86_64-linux-gnu/libSDL2main.a  /usr/lib/x86_64-linux-gnu/libSDL2.so
   OBJECT_DIR = CMakeFiles/test.dir

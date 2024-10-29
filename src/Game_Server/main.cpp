@@ -1,6 +1,21 @@
-// int input_handling( int argc, const char *argv[] ){
-//     int nPort = atoi( argv[0] );
-//     if ( nPort <= 0 || nPort > 65535 )
-//         FatalError( "Invalid port %d", nPort );
-//     return nPort;
-// }
+#include "../Game_Common/GameState.hpp"
+#include <iostream>
+#include "NetworkingServer.hpp"
+
+
+
+int main(int argc, const char* argv[]) {
+    GameState gameState(20, 20, 1, 5);
+    int nPort = input_handling(argc, argv);
+    ChatServer* server = run_server(nPort);
+
+    while (!g_bQuit){
+        server->iteration();
+
+    }
+
+
+    server->shutdown();
+    
+    return 0;
+}

@@ -3,9 +3,9 @@
 cmake_policy(SET CMP0009 NEW)
 
 # SRC at CMakeLists.txt:22 (file)
-file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/lennart/cpp_projects/game_engine/src/Game_Client/*.cpp")
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Client/*.cpp")
 set(OLD_GLOB
-  "/home/lennart/cpp_projects/game_engine/src/Game_Client/main.cpp"
+  "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Client/main.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -13,9 +13,9 @@ if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
 endif()
 
 # SRC at CMakeLists.txt:22 (file)
-file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/lennart/cpp_projects/game_engine/src/Game_Client/*.hpp")
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Client/*.hpp")
 set(OLD_GLOB
-  "/home/lennart/cpp_projects/game_engine/src/Game_Client/NetworkingClient.hpp"
+  "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Client/NetworkingClient.hpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -23,13 +23,13 @@ if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
 endif()
 
 # SRC at CMakeLists.txt:22 (file)
-file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/lennart/cpp_projects/game_engine/src/Game_Common/*.cpp")
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Common/*.cpp")
 set(OLD_GLOB
-  "/home/lennart/cpp_projects/game_engine/src/Game_Common/Game.cpp"
-  "/home/lennart/cpp_projects/game_engine/src/Game_Common/GameState.cpp"
-  "/home/lennart/cpp_projects/game_engine/src/Game_Common/TextureManager.cpp"
-  "/home/lennart/cpp_projects/game_engine/src/Game_Common/Vector2D.cpp"
-  "/home/lennart/cpp_projects/game_engine/src/Game_Common/maintest.cpp"
+  "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Common/Game.cpp"
+  "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Common/GameState.cpp"
+  "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Common/TextureManager.cpp"
+  "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Common/Vector2D.cpp"
+  "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Common/main.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -37,16 +37,18 @@ if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
 endif()
 
 # SRC at CMakeLists.txt:22 (file)
-file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/lennart/cpp_projects/game_engine/src/Game_Common/*.hpp")
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Common/*.hpp")
 set(OLD_GLOB
-  "/home/lennart/cpp_projects/game_engine/src/Game_Common/Game.hpp"
-  "/home/lennart/cpp_projects/game_engine/src/Game_Common/GameState.hpp"
-  "/home/lennart/cpp_projects/game_engine/src/Game_Common/Matrix.hpp"
-  "/home/lennart/cpp_projects/game_engine/src/Game_Common/Networking.hpp"
-  "/home/lennart/cpp_projects/game_engine/src/Game_Common/SendAction.hpp"
-  "/home/lennart/cpp_projects/game_engine/src/Game_Common/TextureManager.hpp"
-  "/home/lennart/cpp_projects/game_engine/src/Game_Common/Textures.hpp"
-  "/home/lennart/cpp_projects/game_engine/src/Game_Common/Vector2D.hpp"
+  "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Common/Game.hpp"
+  "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Common/GameState.hpp"
+  "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Common/GameStatePackaging.hpp"
+  "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Common/Matrix.hpp"
+  "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Common/Networking.hpp"
+  "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Common/SendAction.hpp"
+  "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Common/TextureManager.hpp"
+  "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Common/Textures.hpp"
+  "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Common/Vector2D.hpp"
+  "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Common/VectorMatrix.hpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -54,9 +56,9 @@ if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
 endif()
 
 # SRC at CMakeLists.txt:22 (file)
-file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/lennart/cpp_projects/game_engine/src/Game_Common/ECS/*.cpp")
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Common/ECS/*.cpp")
 set(OLD_GLOB
-  "/home/lennart/cpp_projects/game_engine/src/Game_Common/ECS/ECS.cpp"
+  "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Common/ECS/ECS.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -64,15 +66,15 @@ if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
 endif()
 
 # SRC at CMakeLists.txt:22 (file)
-file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/lennart/cpp_projects/game_engine/src/Game_Common/ECS/*.hpp")
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Common/ECS/*.hpp")
 set(OLD_GLOB
-  "/home/lennart/cpp_projects/game_engine/src/Game_Common/ECS/Components.hpp"
-  "/home/lennart/cpp_projects/game_engine/src/Game_Common/ECS/ECS.hpp"
-  "/home/lennart/cpp_projects/game_engine/src/Game_Common/ECS/MatrixPositionComponent.hpp"
-  "/home/lennart/cpp_projects/game_engine/src/Game_Common/ECS/OwnershipComponent.hpp"
-  "/home/lennart/cpp_projects/game_engine/src/Game_Common/ECS/PlayerComponent.hpp"
-  "/home/lennart/cpp_projects/game_engine/src/Game_Common/ECS/RectComponent.hpp"
-  "/home/lennart/cpp_projects/game_engine/src/Game_Common/ECS/SpriteComponent.hpp"
+  "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Common/ECS/Components.hpp"
+  "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Common/ECS/ECS.hpp"
+  "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Common/ECS/MatrixPositionComponent.hpp"
+  "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Common/ECS/OwnershipComponent.hpp"
+  "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Common/ECS/PlayerComponent.hpp"
+  "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Common/ECS/RectComponent.hpp"
+  "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Common/ECS/SpriteComponent.hpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -80,9 +82,9 @@ if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
 endif()
 
 # SRC at CMakeLists.txt:22 (file)
-file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/lennart/cpp_projects/game_engine/src/Game_Common/Events/*.cpp")
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Common/Events/*.cpp")
 set(OLD_GLOB
-  "/home/lennart/cpp_projects/game_engine/src/Game_Common/Events/EventQueue.cpp"
+  "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Common/Events/EventQueue.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -90,11 +92,11 @@ if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
 endif()
 
 # SRC at CMakeLists.txt:22 (file)
-file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/lennart/cpp_projects/game_engine/src/Game_Common/Events/*.hpp")
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Common/Events/*.hpp")
 set(OLD_GLOB
-  "/home/lennart/cpp_projects/game_engine/src/Game_Common/Events/Event.hpp"
-  "/home/lennart/cpp_projects/game_engine/src/Game_Common/Events/EventQueue.hpp"
-  "/home/lennart/cpp_projects/game_engine/src/Game_Common/Events/MouseClickEvent.hpp"
+  "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Common/Events/Event.hpp"
+  "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Common/Events/EventQueue.hpp"
+  "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Common/Events/MouseClickEvent.hpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -102,10 +104,10 @@ if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
 endif()
 
 # SRC at CMakeLists.txt:22 (file)
-file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/*.cpp")
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Common/Layers/*.cpp")
 set(OLD_GLOB
-  "/home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/BackgroundLayer.cpp"
-  "/home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/PieceLayer.cpp"
+  "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Common/Layers/BackgroundLayer.cpp"
+  "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Common/Layers/PieceLayer.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -113,12 +115,12 @@ if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
 endif()
 
 # SRC at CMakeLists.txt:22 (file)
-file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/*.hpp")
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Common/Layers/*.hpp")
 set(OLD_GLOB
-  "/home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/BackgroundLayer.hpp"
-  "/home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/Layer.hpp"
-  "/home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/Layerinclude.hpp"
-  "/home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/PieceLayer.hpp"
+  "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Common/Layers/BackgroundLayer.hpp"
+  "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Common/Layers/Layer.hpp"
+  "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Common/Layers/Layerinclude.hpp"
+  "/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../src/Game_Common/Layers/PieceLayer.hpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

@@ -25,7 +25,8 @@ int main(int argc, const char* argv[]) {
             game->render();
 
         }
-
+        
+        client->sendGameState(game->gameState);
         client->iteration();
 
     }

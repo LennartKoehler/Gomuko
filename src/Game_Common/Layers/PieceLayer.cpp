@@ -7,8 +7,11 @@ PieceLayer::PieceLayer(){
 PieceLayer::PieceLayer(GameState* gameState, int entity_size, const char* asset_white, const char* asset_black)
     : gameState(gameState),
      entityMatrix(gameState->stateMatrix.get_num_rows(), gameState->stateMatrix.get_num_cols(), std::shared_ptr<Entity>()),
-     entity_size(entity_size), asset_white(asset_white), asset_black(asset_black){
-    init_players();
+     entity_size(entity_size){
+    asset_map[1] = asset_white;
+    asset_map[2] = asset_black;
+
+    //init_players();
 
     for (int row = 0; row < gameState->stateMatrix.get_num_rows(); row++){
         for (int col = 0; col < gameState->stateMatrix.get_num_cols(); col++){
@@ -23,15 +26,15 @@ PieceLayer::PieceLayer(GameState* gameState, int entity_size, const char* asset_
 }
 
 
-void PieceLayer::init_players(){
-    p_player_white = &manager.addEntity();
-    p_player_white->addComponent<PlayerComponent>(1, "white", asset_white);
-    p_player_white->addGroup(groupPlayers);
+// void PieceLayer::init_players(){
+//     p_player_white = &manager.addEntity();
+//     p_player_white->addComponent<PlayerComponent>(1, "white", asset_white);
+//     p_player_white->addGroup(groupPlayers);
 
-    p_player_black = &manager.addEntity();
-    p_player_black->addComponent<PlayerComponent>(2, "black", asset_black);
-    p_player_black->addGroup(groupPlayers);
-}
+//     p_player_black = &manager.addEntity();
+//     p_player_black->addComponent<PlayerComponent>(2, "black", asset_black);
+//     p_player_black->addGroup(groupPlayers);
+// }
 
 
 Entity* PieceLayer::getEntityAtPosition(int x, int y, Group group){
@@ -54,25 +57,24 @@ bool PieceLayer::entityOverlap(Entity* entity, int x, int y){
     else return false;
 }
 
-Entity* PieceLayer::getPlayerFromID(int playerID){
-    for (Entity* player : manager.getGroup(groupPlayers)){
-        PlayerComponent playercomp = player->getComponent<PlayerComponent>();
-        if (playercomp.playerID == playerID){
-            return player;
-        }
-    }
-    return nullptr;
-}
+// Entity* PieceLayer::getPlayerFromID(int playerID){
+//     for (Entity* player : manager.getGroup(groupPlayers)){
+//         PlayerComponent playercomp = player->getComponent<PlayerComponent>();
+//         if (playercomp.playerID == playerID){
+//             return player;
+//         }
+//     }
+//     return nullptr;
+// }
 
 
 void PieceLayer::onEvent(MouseClickEvent event){
-    Entity* player_at_turn = getPlayerFromID(gameState->player_at_turn);
     Entity* tile = getEntityAtPosition(event.x, event.y, groupPieces);
 
     if (tile != nullptr){
 
         MatrixPositionComponent& position = tile->getComponent<MatrixPositionComponent>();
-        gameState->placePiece(position.i, position.j);
+        gameState->placePiece(position.i, position.j, gameState->player_at_turn);
         syncGameState();
     }
 }
@@ -84,12 +86,8 @@ void PieceLayer::syncGameState(){
             std::shared_ptr<Entity> entity = entityMatrix.getValue(row, col);
     
             SpriteComponent& spritecomp = entity->getComponent<SpriteComponent>();
-            std::vector<Entity*> players = manager.getGroup(groupPlayers);
             
-            if (piece_int != 0){
-                PlayerComponent playercomp = players[piece_int-1]->getComponent<PlayerComponent>(); //TODO pretty ugly
-                spritecomp.setTexture(playercomp.playerPieceAsset);
-            }
+            spritecomp.setTexture(asset_map[piece_int]);
         }
     }
 }

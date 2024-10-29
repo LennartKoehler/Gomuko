@@ -29,7 +29,7 @@ set(OLD_GLOB
   "/home/lennart/cpp_projects/game_engine/src/Game_Common/GameState.cpp"
   "/home/lennart/cpp_projects/game_engine/src/Game_Common/TextureManager.cpp"
   "/home/lennart/cpp_projects/game_engine/src/Game_Common/Vector2D.cpp"
-  "/home/lennart/cpp_projects/game_engine/src/Game_Common/maintest.cpp"
+  "/home/lennart/cpp_projects/game_engine/src/Game_Common/main.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

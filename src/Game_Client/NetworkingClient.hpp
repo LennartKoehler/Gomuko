@@ -41,9 +41,9 @@ public:
 		std::this_thread::sleep_for( std::chrono::milliseconds( 10 ) );
 	}
 
-	void place_piece(PlacePiecePackage* place_piece){
-		std::cout << "sent " << place_piece->to_string() << std::endl; // IMPORTANT
-		m_pInterface->SendMessageToConnection( m_hConnection, place_piece, (uint32)sizeof(PlacePiecePackage), k_nSteamNetworkingSend_Reliable, nullptr );
+	void sendGameState(GameState* gamestate){
+		// std::cerr << "sent " << gamestate->to_string() << std::endl; // IMPORTANT
+		m_pInterface->SendMessageToConnection( m_hConnection, gamestate, (uint32)sizeof(GameState), k_nSteamNetworkingSend_Reliable, nullptr );
 	}
 
 	void shutdown(){

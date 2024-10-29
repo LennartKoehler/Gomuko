@@ -2,20 +2,16 @@
 
 #include "Layerinclude.hpp"
 #include "../Textures.hpp"
-
+#include <map>
 
 class MouseClickEvent;
 
+// turns gamestate into a image
 class PieceLayer : public Layer{
 public:
     PieceLayer();
     PieceLayer(GameState* gameState, int entity_size, const char* asset_white, const char* asset_black);
-    //~PieceLayer();
 
-    // void update() override {
-    //     syncGameState();
-    //     manager.update();
-    // }
 
     Entity* getEntityAtPosition(int x, int y, size_t group);
     bool entityOverlap(Entity* entity, int x, int y);
@@ -27,13 +23,14 @@ public:
 
 
 
-
 private:
     Matrix<std::shared_ptr<Entity>> entityMatrix; // basically a lookup of entity pointers for gamestate
-    Entity* p_player_white;
-    Entity* p_player_black;
-    const char* asset_white;
-    const char* asset_black;
+    std::map<int, const char*> asset_map{{0, ""}, {1, ""}, {2, ""}};
+
+    // Entity* p_player_white;
+    // Entity* p_player_black;
+    // const char* asset_white;
+    // const char* asset_black;
     int entity_size;
     GameState* gameState;
     enum groupLabels : std::size_t{

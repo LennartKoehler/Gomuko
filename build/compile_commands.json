@@ -46,7 +46,7 @@
 },
 {
   "directory": "/home/lennart/cpp_projects/game_engine/build",
-  "command": "/usr/bin/g++ -I/home/lennart/cpp_projects/networking/GameNetworkingSockets/include -isystem /usr/include/SDL2 -g -std=gnu++23 -o CMakeFiles/test.dir/src/Game_Common/maintest.cpp.o -c /home/lennart/cpp_projects/game_engine/src/Game_Common/maintest.cpp",
-  "file": "/home/lennart/cpp_projects/game_engine/src/Game_Common/maintest.cpp"
+  "command": "/usr/bin/g++ -I/home/lennart/cpp_projects/networking/GameNetworkingSockets/include -isystem /usr/include/SDL2 -g -std=gnu++23 -o CMakeFiles/test.dir/src/Game_Common/main.cpp.o -c /home/lennart/cpp_projects/game_engine/src/Game_Common/main.cpp",
+  "file": "/home/lennart/cpp_projects/game_engine/src/Game_Common/main.cpp"
 }
 ]

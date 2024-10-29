@@ -1,4 +1,3 @@
-#include "ECS/Components.hpp"
 #include "GameState.hpp"
 
 
@@ -6,7 +5,7 @@ GameState::GameState(int size_x, int size_y, int start_player, int win_condition
     : stateMatrix(Matrix<int>(size_x, size_y, 0)), player_at_turn(start_player), turn_number(0), win_condition_number(win_condition_number){
 }
 
-void GameState::placePiece(int i, int j){
+void GameState::placePiece(int i, int j, int playerID){
     if (getValue(i, j) == 0){
         stateMatrix.setValue(i, j, player_at_turn);
         if (checkIfWon(player_at_turn)){
@@ -14,7 +13,7 @@ void GameState::placePiece(int i, int j){
         }
         else{ player_at_turn = (player_at_turn % 2) + 1;}
     }
-    }
+}
 
 bool GameState::checkIfWon(int playerID) {
     int n_rows = stateMatrix.get_num_rows();
@@ -74,3 +73,8 @@ bool GameState::checkIfWon(int playerID) {
     return false;
 }
 
+std::string GameState::to_string(){
+        std::stringstream ss;
+        ss << "player_at_turn: " << player_at_turn << ", turn_number: " << turn_number;
+    return ss.str();
+}

@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: test
+# Project: client
 # Configurations: 
 # =============================================================================
 
@@ -36,99 +36,99 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = /home/lennart/cpp_projects/game_engine/build_client/
 # =============================================================================
-# Object build statements for EXECUTABLE target test
+# Object build statements for EXECUTABLE target client
 
 
 #############################################
-# Order-only phony target for test
+# Order-only phony target for client
 
-build cmake_object_order_depends_target_test: phony || CMakeFiles/test.dir
+build cmake_object_order_depends_target_client: phony || CMakeFiles/client.dir
 
-build CMakeFiles/test.dir/src/Game_Client/main.cpp.o: CXX_COMPILER__test_ /home/lennart/cpp_projects/game_engine/src/Game_Client/main.cpp || cmake_object_order_depends_target_test
-  DEP_FILE = CMakeFiles/test.dir/src/Game_Client/main.cpp.o.d
+build CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Client/main.cpp.o: CXX_COMPILER__client_ /home/lennart/cpp_projects/game_engine/src/Game_Client/main.cpp || cmake_object_order_depends_target_client
+  DEP_FILE = CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Client/main.cpp.o.d
   FLAGS = -std=gnu++23
   INCLUDES = -I/home/lennart/cpp_projects/networking/GameNetworkingSockets/include -isystem /usr/include/SDL2
-  OBJECT_DIR = CMakeFiles/test.dir
-  OBJECT_FILE_DIR = CMakeFiles/test.dir/src/Game_Client
+  OBJECT_DIR = CMakeFiles/client.dir
+  OBJECT_FILE_DIR = CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Client
 
-build CMakeFiles/test.dir/src/Game_Common/ECS/ECS.cpp.o: CXX_COMPILER__test_ /home/lennart/cpp_projects/game_engine/src/Game_Common/ECS/ECS.cpp || cmake_object_order_depends_target_test
-  DEP_FILE = CMakeFiles/test.dir/src/Game_Common/ECS/ECS.cpp.o.d
+build CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/ECS/ECS.cpp.o: CXX_COMPILER__client_ /home/lennart/cpp_projects/game_engine/src/Game_Common/ECS/ECS.cpp || cmake_object_order_depends_target_client
+  DEP_FILE = CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/ECS/ECS.cpp.o.d
   FLAGS = -std=gnu++23
   INCLUDES = -I/home/lennart/cpp_projects/networking/GameNetworkingSockets/include -isystem /usr/include/SDL2
-  OBJECT_DIR = CMakeFiles/test.dir
-  OBJECT_FILE_DIR = CMakeFiles/test.dir/src/Game_Common/ECS
+  OBJECT_DIR = CMakeFiles/client.dir
+  OBJECT_FILE_DIR = CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/ECS
 
-build CMakeFiles/test.dir/src/Game_Common/Events/EventQueue.cpp.o: CXX_COMPILER__test_ /home/lennart/cpp_projects/game_engine/src/Game_Common/Events/EventQueue.cpp || cmake_object_order_depends_target_test
-  DEP_FILE = CMakeFiles/test.dir/src/Game_Common/Events/EventQueue.cpp.o.d
+build CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Events/EventQueue.cpp.o: CXX_COMPILER__client_ /home/lennart/cpp_projects/game_engine/src/Game_Common/Events/EventQueue.cpp || cmake_object_order_depends_target_client
+  DEP_FILE = CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Events/EventQueue.cpp.o.d
   FLAGS = -std=gnu++23
   INCLUDES = -I/home/lennart/cpp_projects/networking/GameNetworkingSockets/include -isystem /usr/include/SDL2
-  OBJECT_DIR = CMakeFiles/test.dir
-  OBJECT_FILE_DIR = CMakeFiles/test.dir/src/Game_Common/Events
+  OBJECT_DIR = CMakeFiles/client.dir
+  OBJECT_FILE_DIR = CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Events
 
-build CMakeFiles/test.dir/src/Game_Common/Game.cpp.o: CXX_COMPILER__test_ /home/lennart/cpp_projects/game_engine/src/Game_Common/Game.cpp || cmake_object_order_depends_target_test
-  DEP_FILE = CMakeFiles/test.dir/src/Game_Common/Game.cpp.o.d
+build CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Game.cpp.o: CXX_COMPILER__client_ /home/lennart/cpp_projects/game_engine/src/Game_Common/Game.cpp || cmake_object_order_depends_target_client
+  DEP_FILE = CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Game.cpp.o.d
   FLAGS = -std=gnu++23
   INCLUDES = -I/home/lennart/cpp_projects/networking/GameNetworkingSockets/include -isystem /usr/include/SDL2
-  OBJECT_DIR = CMakeFiles/test.dir
-  OBJECT_FILE_DIR = CMakeFiles/test.dir/src/Game_Common
+  OBJECT_DIR = CMakeFiles/client.dir
+  OBJECT_FILE_DIR = CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common
 
-build CMakeFiles/test.dir/src/Game_Common/GameState.cpp.o: CXX_COMPILER__test_ /home/lennart/cpp_projects/game_engine/src/Game_Common/GameState.cpp || cmake_object_order_depends_target_test
-  DEP_FILE = CMakeFiles/test.dir/src/Game_Common/GameState.cpp.o.d
+build CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/GameState.cpp.o: CXX_COMPILER__client_ /home/lennart/cpp_projects/game_engine/src/Game_Common/GameState.cpp || cmake_object_order_depends_target_client
+  DEP_FILE = CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/GameState.cpp.o.d
   FLAGS = -std=gnu++23
   INCLUDES = -I/home/lennart/cpp_projects/networking/GameNetworkingSockets/include -isystem /usr/include/SDL2
-  OBJECT_DIR = CMakeFiles/test.dir
-  OBJECT_FILE_DIR = CMakeFiles/test.dir/src/Game_Common
+  OBJECT_DIR = CMakeFiles/client.dir
+  OBJECT_FILE_DIR = CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common
 
-build CMakeFiles/test.dir/src/Game_Common/Layers/BackgroundLayer.cpp.o: CXX_COMPILER__test_ /home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/BackgroundLayer.cpp || cmake_object_order_depends_target_test
-  DEP_FILE = CMakeFiles/test.dir/src/Game_Common/Layers/BackgroundLayer.cpp.o.d
+build CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/BackgroundLayer.cpp.o: CXX_COMPILER__client_ /home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/BackgroundLayer.cpp || cmake_object_order_depends_target_client
+  DEP_FILE = CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/BackgroundLayer.cpp.o.d
   FLAGS = -std=gnu++23
   INCLUDES = -I/home/lennart/cpp_projects/networking/GameNetworkingSockets/include -isystem /usr/include/SDL2
-  OBJECT_DIR = CMakeFiles/test.dir
-  OBJECT_FILE_DIR = CMakeFiles/test.dir/src/Game_Common/Layers
+  OBJECT_DIR = CMakeFiles/client.dir
+  OBJECT_FILE_DIR = CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Layers
 
-build CMakeFiles/test.dir/src/Game_Common/Layers/PieceLayer.cpp.o: CXX_COMPILER__test_ /home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/PieceLayer.cpp || cmake_object_order_depends_target_test
-  DEP_FILE = CMakeFiles/test.dir/src/Game_Common/Layers/PieceLayer.cpp.o.d
+build CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/PieceLayer.cpp.o: CXX_COMPILER__client_ /home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/PieceLayer.cpp || cmake_object_order_depends_target_client
+  DEP_FILE = CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/PieceLayer.cpp.o.d
   FLAGS = -std=gnu++23
   INCLUDES = -I/home/lennart/cpp_projects/networking/GameNetworkingSockets/include -isystem /usr/include/SDL2
-  OBJECT_DIR = CMakeFiles/test.dir
-  OBJECT_FILE_DIR = CMakeFiles/test.dir/src/Game_Common/Layers
+  OBJECT_DIR = CMakeFiles/client.dir
+  OBJECT_FILE_DIR = CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Layers
 
-build CMakeFiles/test.dir/src/Game_Common/TextureManager.cpp.o: CXX_COMPILER__test_ /home/lennart/cpp_projects/game_engine/src/Game_Common/TextureManager.cpp || cmake_object_order_depends_target_test
-  DEP_FILE = CMakeFiles/test.dir/src/Game_Common/TextureManager.cpp.o.d
+build CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/TextureManager.cpp.o: CXX_COMPILER__client_ /home/lennart/cpp_projects/game_engine/src/Game_Common/TextureManager.cpp || cmake_object_order_depends_target_client
+  DEP_FILE = CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/TextureManager.cpp.o.d
   FLAGS = -std=gnu++23
   INCLUDES = -I/home/lennart/cpp_projects/networking/GameNetworkingSockets/include -isystem /usr/include/SDL2
-  OBJECT_DIR = CMakeFiles/test.dir
-  OBJECT_FILE_DIR = CMakeFiles/test.dir/src/Game_Common
+  OBJECT_DIR = CMakeFiles/client.dir
+  OBJECT_FILE_DIR = CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common
 
-build CMakeFiles/test.dir/src/Game_Common/Vector2D.cpp.o: CXX_COMPILER__test_ /home/lennart/cpp_projects/game_engine/src/Game_Common/Vector2D.cpp || cmake_object_order_depends_target_test
-  DEP_FILE = CMakeFiles/test.dir/src/Game_Common/Vector2D.cpp.o.d
+build CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Vector2D.cpp.o: CXX_COMPILER__client_ /home/lennart/cpp_projects/game_engine/src/Game_Common/Vector2D.cpp || cmake_object_order_depends_target_client
+  DEP_FILE = CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Vector2D.cpp.o.d
   FLAGS = -std=gnu++23
   INCLUDES = -I/home/lennart/cpp_projects/networking/GameNetworkingSockets/include -isystem /usr/include/SDL2
-  OBJECT_DIR = CMakeFiles/test.dir
-  OBJECT_FILE_DIR = CMakeFiles/test.dir/src/Game_Common
+  OBJECT_DIR = CMakeFiles/client.dir
+  OBJECT_FILE_DIR = CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common
 
-build CMakeFiles/test.dir/src/Game_Common/maintest.cpp.o: CXX_COMPILER__test_ /home/lennart/cpp_projects/game_engine/src/Game_Common/maintest.cpp || cmake_object_order_depends_target_test
-  DEP_FILE = CMakeFiles/test.dir/src/Game_Common/maintest.cpp.o.d
+build CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/main.cpp.o: CXX_COMPILER__client_ /home/lennart/cpp_projects/game_engine/src/Game_Common/main.cpp || cmake_object_order_depends_target_client
+  DEP_FILE = CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/main.cpp.o.d
   FLAGS = -std=gnu++23
   INCLUDES = -I/home/lennart/cpp_projects/networking/GameNetworkingSockets/include -isystem /usr/include/SDL2
-  OBJECT_DIR = CMakeFiles/test.dir
-  OBJECT_FILE_DIR = CMakeFiles/test.dir/src/Game_Common
+  OBJECT_DIR = CMakeFiles/client.dir
+  OBJECT_FILE_DIR = CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target test
+# Link build statements for EXECUTABLE target client
 
 
 #############################################
-# Link the executable test
+# Link the executable client
 
-build test: CXX_EXECUTABLE_LINKER__test_ CMakeFiles/test.dir/src/Game_Client/main.cpp.o CMakeFiles/test.dir/src/Game_Common/ECS/ECS.cpp.o CMakeFiles/test.dir/src/Game_Common/Events/EventQueue.cpp.o CMakeFiles/test.dir/src/Game_Common/Game.cpp.o CMakeFiles/test.dir/src/Game_Common/GameState.cpp.o CMakeFiles/test.dir/src/Game_Common/Layers/BackgroundLayer.cpp.o CMakeFiles/test.dir/src/Game_Common/Layers/PieceLayer.cpp.o CMakeFiles/test.dir/src/Game_Common/TextureManager.cpp.o CMakeFiles/test.dir/src/Game_Common/Vector2D.cpp.o CMakeFiles/test.dir/src/Game_Common/maintest.cpp.o | /home/lennart/cpp_projects/networking/GameNetworkingSockets/test_build/bin/libGameNetworkingSockets.so /usr/lib/x86_64-linux-gnu/libSDL2main.a /usr/lib/x86_64-linux-gnu/libSDL2.so
+build client: CXX_EXECUTABLE_LINKER__client_ CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Client/main.cpp.o CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/ECS/ECS.cpp.o CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Events/EventQueue.cpp.o CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Game.cpp.o CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/GameState.cpp.o CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/BackgroundLayer.cpp.o CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/PieceLayer.cpp.o CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/TextureManager.cpp.o CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Vector2D.cpp.o CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/main.cpp.o | /home/lennart/cpp_projects/networking/GameNetworkingSockets/test_build/bin/libGameNetworkingSockets.so /usr/lib/x86_64-linux-gnu/libSDL2main.a /usr/lib/x86_64-linux-gnu/libSDL2.so
   LINK_LIBRARIES = -Wl,-rpath,/home/lennart/cpp_projects/networking/GameNetworkingSockets/test_build/bin  -lSDL2_image  /home/lennart/cpp_projects/networking/GameNetworkingSockets/test_build/bin/libGameNetworkingSockets.so  /usr/lib/x86_64-linux-gnu/libSDL2main.a  /usr/lib/x86_64-linux-gnu/libSDL2.so
-  OBJECT_DIR = CMakeFiles/test.dir
+  OBJECT_DIR = CMakeFiles/client.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = test
-  TARGET_PDB = test.dbg
+  TARGET_FILE = client
+  TARGET_PDB = client.dbg
 
 
 #############################################
@@ -146,7 +146,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/lennart/cpp_projects/game_engine/build_client && /usr/bin/cmake --regenerate-during-build -S/home/lennart/cpp_projects/game_engine -B/home/lennart/cpp_projects/game_engine/build_client
+  COMMAND = cd /home/lennart/cpp_projects/game_engine/build_client && /usr/bin/cmake --regenerate-during-build -S/home/lennart/cpp_projects/game_engine/CMakeFiles/client -B/home/lennart/cpp_projects/game_engine/build_client
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -164,7 +164,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /home/lennart/cpp_projects/game_engine/build_client
 
-build all: phony test
+build all: phony client
 
 # =============================================================================
 # Built-in targets
@@ -187,14 +187,14 @@ build /home/lennart/cpp_projects/game_engine/build_client/CMakeFiles/cmake.verif
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE /home/lennart/cpp_projects/game_engine/build_client/CMakeFiles/cmake.verify_globs | ../CMakeLists.txt /home/lennart/cpp_projects/game_engine/build_client/CMakeFiles/VerifyGlobs.cmake /usr/lib/x86_64-linux-gnu/cmake/SDL2/sdl2-config-version.cmake /usr/lib/x86_64-linux-gnu/cmake/SDL2/sdl2-config.cmake /usr/share/cmake-3.22/Modules/CMakeCInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.22/Modules/FindPackageMessage.cmake /usr/share/cmake-3.22/Modules/FindPkgConfig.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Linux.cmake /usr/share/cmake-3.22/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE /home/lennart/cpp_projects/game_engine/build_client/CMakeFiles/cmake.verify_globs | /home/lennart/cpp_projects/game_engine/CMakeFiles/client/CMakeLists.txt /home/lennart/cpp_projects/game_engine/build_client/CMakeFiles/VerifyGlobs.cmake /usr/lib/x86_64-linux-gnu/cmake/SDL2/sdl2-config-version.cmake /usr/lib/x86_64-linux-gnu/cmake/SDL2/sdl2-config.cmake /usr/share/cmake-3.22/Modules/CMakeCInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.22/Modules/FindPackageMessage.cmake /usr/share/cmake-3.22/Modules/FindPkgConfig.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Linux.cmake /usr/share/cmake-3.22/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt /home/lennart/cpp_projects/game_engine/build_client/CMakeFiles/VerifyGlobs.cmake /usr/lib/x86_64-linux-gnu/cmake/SDL2/sdl2-config-version.cmake /usr/lib/x86_64-linux-gnu/cmake/SDL2/sdl2-config.cmake /usr/share/cmake-3.22/Modules/CMakeCInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.22/Modules/FindPackageMessage.cmake /usr/share/cmake-3.22/Modules/FindPkgConfig.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Linux.cmake /usr/share/cmake-3.22/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake: phony
+build /home/lennart/cpp_projects/game_engine/CMakeFiles/client/CMakeLists.txt /home/lennart/cpp_projects/game_engine/build_client/CMakeFiles/VerifyGlobs.cmake /usr/lib/x86_64-linux-gnu/cmake/SDL2/sdl2-config-version.cmake /usr/lib/x86_64-linux-gnu/cmake/SDL2/sdl2-config.cmake /usr/share/cmake-3.22/Modules/CMakeCInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.22/Modules/FindPackageMessage.cmake /usr/share/cmake-3.22/Modules/FindPkgConfig.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Linux.cmake /usr/share/cmake-3.22/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake: phony
 
 
 #############################################

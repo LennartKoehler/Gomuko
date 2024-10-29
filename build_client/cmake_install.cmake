@@ -1,4 +1,4 @@
-# Install script for directory: /home/lennart/cpp_projects/game_engine
+# Install script for directory: /home/lennart/cpp_projects/game_engine/CMakeFiles/client
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -22,14 +22,13 @@ public:
     void render();
     void clean();
     void onClick(SDL_Event& event, PieceLayer* layer);
-    
     static SDL_Renderer* renderer;
     static SDL_Event event;
+    GameState* gameState;
 
 private:
     bool isRunning = false;
     SDL_Window* window;
-    GameState* gameState;
     BackgroundLayer* backgroundLayer;
     PieceLayer* pieceLayer;
 };
