@@ -11,7 +11,6 @@ PieceLayer::PieceLayer(GameState* gameState, int entity_size, const char* asset_
     asset_map[1] = asset_white;
     asset_map[2] = asset_black;
 
-    //init_players();
 
     for (int row = 0; row < gameState->stateMatrix.get_num_rows(); row++){
         for (int col = 0; col < gameState->stateMatrix.get_num_cols(); col++){
@@ -25,16 +24,6 @@ PieceLayer::PieceLayer(GameState* gameState, int entity_size, const char* asset_
     }
 }
 
-
-// void PieceLayer::init_players(){
-//     p_player_white = &manager.addEntity();
-//     p_player_white->addComponent<PlayerComponent>(1, "white", asset_white);
-//     p_player_white->addGroup(groupPlayers);
-
-//     p_player_black = &manager.addEntity();
-//     p_player_black->addComponent<PlayerComponent>(2, "black", asset_black);
-//     p_player_black->addGroup(groupPlayers);
-// }
 
 
 Entity* PieceLayer::getEntityAtPosition(int x, int y, Group group){
@@ -57,15 +46,6 @@ bool PieceLayer::entityOverlap(Entity* entity, int x, int y){
     else return false;
 }
 
-// Entity* PieceLayer::getPlayerFromID(int playerID){
-//     for (Entity* player : manager.getGroup(groupPlayers)){
-//         PlayerComponent playercomp = player->getComponent<PlayerComponent>();
-//         if (playercomp.playerID == playerID){
-//             return player;
-//         }
-//     }
-//     return nullptr;
-// }
 
 
 void PieceLayer::onEvent(MouseClickEvent event){
@@ -94,12 +74,12 @@ void PieceLayer::syncGameState(){
 
 
 
-void PieceLayer::playerWon(PlayerComponent& playercomp){
-    //pretty ugly
-    Entity& won_entity = manager.addEntity();
-    won_entity.addComponent<RectComponent>(200, 200, entity_size*2, entity_size*2);
-    won_entity.addComponent<SpriteComponent>(textures::won);
-    Entity& won_tile = manager.addEntity();
-    won_tile.addComponent<RectComponent>(200, 200-2*entity_size, entity_size*2, entity_size*2);
-    won_tile.addComponent<SpriteComponent>(playercomp.playerPieceAsset);
-}
+// void PieceLayer::playerWon(PlayerComponent& playercomp){
+//     //pretty ugly
+//     Entity& won_entity = manager.addEntity();
+//     won_entity.addComponent<RectComponent>(200, 200, entity_size*2, entity_size*2);
+//     won_entity.addComponent<SpriteComponent>(textures::won);
+//     Entity& won_tile = manager.addEntity();
+//     won_tile.addComponent<RectComponent>(200, 200-2*entity_size, entity_size*2, entity_size*2);
+//     won_tile.addComponent<SpriteComponent>(playercomp.playerPieceAsset);
+// }

@@ -3,7 +3,7 @@
 #include <vector>
 #include <string>
 #include <sstream>
-// Simple representation of the game state e.g. for saving
+// Simple representation of the game state e.g. for saving, this is what is sent/recieved from server
 
 struct GameState{
 public:
@@ -11,7 +11,7 @@ public:
     Matrix<int> stateMatrix;
     int turn_number;
     int player_at_turn;
-    int win_condition_number; // number of pieces in a row to win
+    int win_condition_number; // number of pieces in a row/col/diag to win
 
     GameState() = default;
     GameState(int size_x, int size_y, int start_player, int win_condition_number);

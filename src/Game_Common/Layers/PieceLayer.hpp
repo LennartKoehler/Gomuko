@@ -16,21 +16,15 @@ public:
     Entity* getEntityAtPosition(int x, int y, size_t group);
     bool entityOverlap(Entity* entity, int x, int y);
     void onEvent(MouseClickEvent event);
-    void init_players();
-    Entity* getPlayerFromID(int playerID);
-    void playerWon(PlayerComponent& playercomp);
     void syncGameState();
+    // void playerWon(PlayerComponent& playercomp);
 
 
 
 private:
     Matrix<std::shared_ptr<Entity>> entityMatrix; // basically a lookup of entity pointers for gamestate
-    std::map<int, const char*> asset_map{{0, ""}, {1, ""}, {2, ""}};
+    std::map<int, const char*> asset_map{{0, ""}, {1, ""}, {2, ""}}; // map for gamestate integers an the assets
 
-    // Entity* p_player_white;
-    // Entity* p_player_black;
-    // const char* asset_white;
-    // const char* asset_black;
     int entity_size;
     GameState* gameState;
     enum groupLabels : std::size_t{
