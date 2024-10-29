@@ -8,7 +8,8 @@
                 "-std=gnu++23",
                 "-I",
                 "${workspaceFolder}",
-
+                "/home/lennart/cpp_projects/networking/GameNetworkingSockets/include",
+                "/home/lennart/cpp_projects/networking/GameNetworkingSockets/test_build/bin/libGameNetworkingSockets.so",
                 "-g",
                 "${fileDirname}/*.cpp",
                 "${fileDirname}/ECS/*.cpp",

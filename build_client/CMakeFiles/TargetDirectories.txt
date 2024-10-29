@@ -1,0 +1,3 @@
+/home/lennart/cpp_projects/game_engine/build_client/CMakeFiles/test.dir
+/home/lennart/cpp_projects/game_engine/build_client/CMakeFiles/edit_cache.dir
+/home/lennart/cpp_projects/game_engine/build_client/CMakeFiles/rebuild_cache.dir
