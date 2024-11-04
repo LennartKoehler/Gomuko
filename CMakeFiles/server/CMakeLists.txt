@@ -37,12 +37,12 @@ file(GLOB SRC CONFIGURE_DEPENDS
 
 add_executable(${PROJECT_NAME}
     ${SRC})
-target_include_directories(${PROJECT_NAME} PUBLIC /home/lennart/cpp_projects/networking/GameNetworkingSockets/include)
+target_include_directories(${PROJECT_NAME} PUBLIC "../../GameNetworkingSockets/include")
 
 
 
 add_library( NETWORKING SHARED IMPORTED GLOBAL)
-set_target_properties( NETWORKING PROPERTIES IMPORTED_LOCATION "/home/lennart/cpp_projects/networking/GameNetworkingSockets/test_build/bin/libGameNetworkingSockets.so" )
+set_target_properties( NETWORKING PROPERTIES IMPORTED_LOCATION "../GameNetworkingSockets/bin/libGameNetworkingSockets.so" )
 target_link_libraries(${PROJECT_NAME} PUBLIC NETWORKING)
 
 target_link_libraries(${PROJECT_NAME} PUBLIC SDL2_image)
