@@ -5,13 +5,15 @@
 
 /////////////////////////////////////////////////////////////////////////////
 //
-// ChatClient
+// ChatClient, client and server are almost the same, except server can have conn to multiple clients
 //
 /////////////////////////////////////////////////////////////////////////////
 
 class ChatClient
 {
 public:
+	bool newGameState = false;
+
 	void init( const SteamNetworkingIPAddr &serverAddr )
 	{
 
@@ -27,12 +29,7 @@ public:
 		m_hConnection = m_pInterface->ConnectByIPAddress( serverAddr, 1, &opt );
 		if ( m_hConnection == k_HSteamNetConnection_Invalid )
 			FatalError( "Failed to create connection" );
-		// PlacePiecePackage test = PlacePiecePackage(4,5,6);
-		// place_piece(&test);
-		// while ( !g_bQuit )
-		// {
 
-		// }
 	}
 	void iteration(){
 		PollIncomingMessages();
@@ -51,7 +48,13 @@ public:
 		NukeProcess(0);
 	}
 
+	GameState* getGameState(){
+		newGameState = false;
+		return currentGameState;
+	}
+
 private:
+	GameState* currentGameState;
 
 	HSteamNetConnection m_hConnection;
 	ISteamNetworkingSockets *m_pInterface;
@@ -67,12 +70,11 @@ private:
 			if ( numMsgs < 0 )
 				FatalError( "Error checking for messages" );
 
-			// Just echo anything we get from the server
-			fwrite( pIncomingMsg->m_pData, 1, pIncomingMsg->m_cbSize, stdout );
-			fputc( '\n', stdout );
 
-			// We don't need this anymore.
-			pIncomingMsg->Release();
+			currentGameState = (GameState*)pIncomingMsg->m_pData; // decode gamestate
+			newGameState = true;
+			std::cerr << "recieved new gamestate" << std::endl;
+			// pIncomingMsg->Release(); # TODO cant do that currently
 		}
 	}
 
@@ -97,9 +99,7 @@ private:
 				m_pInterface->CloseConnection( m_hConnection, 0, "Goodbye", true );
 				break;
 			}
-			PlacePiecePackage* p_placepiecepackage;
-			m_pInterface->SendMessageToConnection( m_hConnection, p_placepiecepackage, (uint32)sizeof(PlacePiecePackage), k_nSteamNetworkingSend_Reliable, nullptr ); //IMPORTANT SEND MESSAGE
-			
+		
 
 			// Anything else, just send it to the server and let them parse it
 			//m_pInterface->SendMessageToConnection( m_hConnection, cmd.c_str(), (uint32)cmd.length(), k_nSteamNetworkingSend_Reliable, nullptr );

@@ -28,7 +28,10 @@ file(GLOB SRC CONFIGURE_DEPENDS
     "../../src/Game_Common/Layers/*.hpp" 
     "../../src/Game_Common/ECS/*.hpp" 
 
-    "../../src/Game_Common/*.cpp" 
+    "../../src/Game_Common/TextureManager.cpp" 
+    "../../src/Game_Common/Game.cpp" 
+    "../../src/Game_Common/GameState.cpp" 
+
     "../../src/Game_Common/Events/*.cpp" 
     "../../src/Game_Common/Layers/*.cpp" 
     "../../src/Game_Common/ECS/*.cpp"

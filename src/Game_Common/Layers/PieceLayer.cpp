@@ -1,10 +1,9 @@
 #include "PieceLayer.hpp"
 #include "../Events/MouseClickEvent.hpp"
 
-PieceLayer::PieceLayer(){
-}
 
-PieceLayer::PieceLayer(GameState* gameState, int entity_size, const char* asset_white, const char* asset_black)
+
+PieceLayer::PieceLayer(GameState*& gameState, int entity_size, const char* asset_white, const char* asset_black)
     : gameState(gameState),
      entityMatrix(gameState->stateMatrix.get_num_rows(), gameState->stateMatrix.get_num_cols(), std::shared_ptr<Entity>()),
      entity_size(entity_size){
@@ -50,12 +49,10 @@ bool PieceLayer::entityOverlap(Entity* entity, int x, int y){
 
 void PieceLayer::onEvent(MouseClickEvent event){
     Entity* tile = getEntityAtPosition(event.x, event.y, groupPieces);
-
     if (tile != nullptr){
 
         MatrixPositionComponent& position = tile->getComponent<MatrixPositionComponent>();
-        gameState->placePiece(position.i, position.j, gameState->player_at_turn);
-        syncGameState();
+        gameState->placePieceRequest(position.i, position.j);
     }
 }
 

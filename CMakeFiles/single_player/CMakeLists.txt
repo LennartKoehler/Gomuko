@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.17)
-project(client)
+project(server)
 set(CMAKE_CXX_STANDARD 23)
 
 # Create an option to switch between a system sdl library and a vendored sdl library
@@ -20,18 +20,12 @@ PKG_SEARCH_MODULE(SDL2_image REQUIRED SDL2_image>=2.0.0)
 
 
 file(GLOB SRC CONFIGURE_DEPENDS 
-    "../../src/Game_Client/*.cpp" 
-    "../../src/Game_Client/*.hpp" 
-
     "../../src/Game_Common/*.hpp" 
     "../../src/Game_Common/Events/*.hpp" 
     "../../src/Game_Common/Layers/*.hpp" 
     "../../src/Game_Common/ECS/*.hpp" 
 
-    "../../src/Game_Common/TextureManager.cpp" 
-    "../../src/Game_Common/Game.cpp" 
-    "../../src/Game_Common/GameState.cpp" 
-    
+    "../../src/Game_Common/*.cpp" 
     "../../src/Game_Common/Events/*.cpp" 
     "../../src/Game_Common/Layers/*.cpp" 
     "../../src/Game_Common/ECS/*.cpp"

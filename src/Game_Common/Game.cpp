@@ -83,3 +83,9 @@ void Game::onClick(SDL_Event& sdl_event, PieceLayer* layer){
     layer->onEvent(event);
 }
 
+void Game::setGameState(GameState* gameState){
+    this->gameState = gameState;
+    // pieceLayer->gameState = gameState;
+}
+
+GameState* Game::getGameState() { return gameState;}

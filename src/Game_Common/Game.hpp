@@ -24,9 +24,10 @@ public:
     void onClick(SDL_Event& event, PieceLayer* layer);
     static SDL_Renderer* renderer;
     static SDL_Event event;
-    GameState* gameState;
-
+    void setGameState(GameState* gameState);
+    GameState* getGameState();
 private:
+    GameState* gameState;
     bool isRunning = false;
     SDL_Window* window;
     BackgroundLayer* backgroundLayer;

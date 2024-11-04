@@ -32,7 +32,7 @@
 #endif
 
 
-#include "SendAction.hpp"
+#include "GameState.hpp"
 /////////////////////////////////////////////////////////////////////////////
 //
 // Common stuff
@@ -240,5 +240,14 @@ R"usage(Usage:
 	fflush(stdout);
 	exit(rc);
 }
+
+class Package{
+public:
+	GameState gameState;
+	int playerID;
+	
+
+private:
+};
 
 

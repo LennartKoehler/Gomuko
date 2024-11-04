@@ -9,6 +9,9 @@
 class ChatServer
 {
 public:
+	GameState currentGameState = GameState(20, 20, 1, 5);
+
+
 	void init( uint16 nPort )
 	{
 		// Select instance to use.  For now we'll always use the default.
@@ -59,8 +62,6 @@ public:
 		m_hPollGroup = k_HSteamNetPollGroup_Invalid;
 		ShutdownSteamDatagramConnectionSockets();
 		NukeProcess(0);
-
-
 	}
 	void iteration(){
 		PollIncomingMessages();
@@ -68,14 +69,38 @@ public:
 		PollLocalUserInput();
 		std::this_thread::sleep_for( std::chrono::milliseconds( 10 ) );
 	}
-private:
 
+
+	void sendGameStateToClient(HSteamNetConnection conn, GameState* gamestate){ // IMPORTANT
+		std::cerr << "sending gamestate" << std::endl;
+		m_pInterface->SendMessageToConnection( conn, gamestate, (uint32)sizeof(GameState), k_nSteamNetworkingSend_Reliable, nullptr );
+	}
+
+	void sendGameStateToAllClients(GameState* gamestate, int player_at_last_turn, HSteamNetConnection except = k_HSteamNetConnection_Invalid ){
+		sendGameStateToClient(getConnectionByID(player_at_last_turn), gamestate); //just send back to same client
+		gamestate->unchangable = false;
+		sendGameStateToClient(getConnectionByID((player_at_last_turn % 2) + 1), gamestate); // send it to the other client
+	}
+
+	HSteamNetConnection getConnectionByID(int playerID){
+		for ( auto &c: m_mapClients )
+		{
+			if ( c.second.playerID == playerID )
+				return c.first;
+		}
+		Printf("playerID %d not found", playerID);
+		return HSteamNetConnection();
+	}
+	
+private:
+	int playerID_iterator = 1;
 	HSteamListenSocket m_hListenSock;
 	HSteamNetPollGroup m_hPollGroup;
 	ISteamNetworkingSockets *m_pInterface;
 
 	struct Client_t
 	{
+		int playerID;
 		std::string m_sNick;
 	};
 
@@ -83,24 +108,29 @@ private:
 
 	void SendStringToClient( HSteamNetConnection conn, const char *str )
 	{
-		m_pInterface->SendMessageToConnection( conn, str, (uint32)strlen(str), k_nSteamNetworkingSend_Reliable, nullptr );
+		//m_pInterface->SendMessageToConnection( conn, str, (uint32)strlen(str), k_nSteamNetworkingSend_Reliable, nullptr );
 	}
 
 
 
 	void SendStringToAllClients( const char *str, HSteamNetConnection except = k_HSteamNetConnection_Invalid )
 	{
-		for ( auto &c: m_mapClients )
-		{
-			if ( c.first != except )
-				SendStringToClient( c.first, str );
-		}
+		// for ( auto &c: m_mapClients )
+		// {
+		// 	if ( c.first != except )
+		// 		SendStringToClient( c.first, str );
+		// }
 	}
+
+	void beginGame(){
+		sendGameStateToAllClients(&currentGameState, 1);
+	}
+
+
 
 	void PollIncomingMessages()
 	{
 		char temp[ 1024 ];
-
 		while ( !g_bQuit )
 		{
 			ISteamNetworkingMessage *pIncomingMsg = nullptr;
@@ -113,10 +143,12 @@ private:
 			auto itClient = m_mapClients.find( pIncomingMsg->m_conn );
 			assert( itClient != m_mapClients.end() );
 
-			GameState gamestate = *(GameState*)pIncomingMsg->m_pData;
-			//std::cerr << "recieved " << gamestate.to_string() << std::endl;
+			GameState gamestate = *(GameState*)pIncomingMsg->m_pData; // decode gamestate
+			int playerID = m_mapClients[pIncomingMsg->m_conn].playerID; // add the owner id according to the connection (NO CHEATING!) //TODO this doesnt work
 
+			sendGameStateToAllClients(&gamestate, playerID);
 
+			pIncomingMsg->Release();
 
 
 			// std::string sCmd;
@@ -124,7 +156,6 @@ private:
 			// const char *cmd = sCmd.c_str();
 
 			// We don't need this anymore.
-			pIncomingMsg->Release();
 
 			// Check for known commands.  None of this example code is secure or robust.
 			// Don't write a real server like this, please.
@@ -152,6 +183,8 @@ private:
 			// sprintf( temp, "%s: %s", itClient->second.m_sNick.c_str(), cmd );
 			// SendStringToAllClients( temp, itClient->first );
 		}
+
+
 	}
 
 	void PollLocalUserInput()
@@ -179,6 +212,11 @@ private:
 
 		// Set the connection name, too, which is useful for debugging
 		m_pInterface->SetConnectionName( hConn, nick );
+	}
+
+	void SetClientPlayerID( HSteamNetConnection hConn)
+	{
+		m_mapClients[hConn].playerID = playerID_iterator++;
 	}
 
 	void OnSteamNetConnectionStatusChanged( SteamNetConnectionStatusChangedCallback_t *pInfo )
@@ -310,6 +348,10 @@ private:
 				// Add them to the client list, using std::map wacky syntax
 				m_mapClients[ pInfo->m_hConn ];
 				SetClientNick( pInfo->m_hConn, nick );
+				SetClientPlayerID( pInfo->m_hConn);
+				if (m_mapClients.size() >= 2){
+					beginGame();
+				}
 				break;
 			}
 
