@@ -47,49 +47,49 @@ build cmake_object_order_depends_target_client: phony || CMakeFiles/client.dir
 build CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Client/main.cpp.o: CXX_COMPILER__client_ /home/lennart/cpp_projects/game_engine/src/Game_Client/main.cpp || cmake_object_order_depends_target_client
   DEP_FILE = CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Client/main.cpp.o.d
   FLAGS = -std=gnu++23
-  INCLUDES = -I/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../GameNetworkingSockets/include -I/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../include
+  INCLUDES = -I/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../GameNetworkingSockets/include -isystem /usr/include/SDL2
   OBJECT_DIR = CMakeFiles/client.dir
   OBJECT_FILE_DIR = CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Client
 
 build CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/ECS/ECS.cpp.o: CXX_COMPILER__client_ /home/lennart/cpp_projects/game_engine/src/Game_Common/ECS/ECS.cpp || cmake_object_order_depends_target_client
   DEP_FILE = CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/ECS/ECS.cpp.o.d
   FLAGS = -std=gnu++23
-  INCLUDES = -I/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../GameNetworkingSockets/include -I/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../include
+  INCLUDES = -I/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../GameNetworkingSockets/include -isystem /usr/include/SDL2
   OBJECT_DIR = CMakeFiles/client.dir
   OBJECT_FILE_DIR = CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/ECS
 
 build CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Game.cpp.o: CXX_COMPILER__client_ /home/lennart/cpp_projects/game_engine/src/Game_Common/Game.cpp || cmake_object_order_depends_target_client
   DEP_FILE = CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Game.cpp.o.d
   FLAGS = -std=gnu++23
-  INCLUDES = -I/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../GameNetworkingSockets/include -I/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../include
+  INCLUDES = -I/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../GameNetworkingSockets/include -isystem /usr/include/SDL2
   OBJECT_DIR = CMakeFiles/client.dir
   OBJECT_FILE_DIR = CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common
 
 build CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/GameState.cpp.o: CXX_COMPILER__client_ /home/lennart/cpp_projects/game_engine/src/Game_Common/GameState.cpp || cmake_object_order_depends_target_client
   DEP_FILE = CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/GameState.cpp.o.d
   FLAGS = -std=gnu++23
-  INCLUDES = -I/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../GameNetworkingSockets/include -I/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../include
+  INCLUDES = -I/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../GameNetworkingSockets/include -isystem /usr/include/SDL2
   OBJECT_DIR = CMakeFiles/client.dir
   OBJECT_FILE_DIR = CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common
 
 build CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/BackgroundLayer.cpp.o: CXX_COMPILER__client_ /home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/BackgroundLayer.cpp || cmake_object_order_depends_target_client
   DEP_FILE = CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/BackgroundLayer.cpp.o.d
   FLAGS = -std=gnu++23
-  INCLUDES = -I/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../GameNetworkingSockets/include -I/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../include
+  INCLUDES = -I/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../GameNetworkingSockets/include -isystem /usr/include/SDL2
   OBJECT_DIR = CMakeFiles/client.dir
   OBJECT_FILE_DIR = CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Layers
 
 build CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/PieceLayer.cpp.o: CXX_COMPILER__client_ /home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/PieceLayer.cpp || cmake_object_order_depends_target_client
   DEP_FILE = CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/PieceLayer.cpp.o.d
   FLAGS = -std=gnu++23
-  INCLUDES = -I/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../GameNetworkingSockets/include -I/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../include
+  INCLUDES = -I/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../GameNetworkingSockets/include -isystem /usr/include/SDL2
   OBJECT_DIR = CMakeFiles/client.dir
   OBJECT_FILE_DIR = CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Layers
 
 build CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/TextureManager.cpp.o: CXX_COMPILER__client_ /home/lennart/cpp_projects/game_engine/src/Game_Common/TextureManager.cpp || cmake_object_order_depends_target_client
   DEP_FILE = CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/TextureManager.cpp.o.d
   FLAGS = -std=gnu++23
-  INCLUDES = -I/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../GameNetworkingSockets/include -I/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../include
+  INCLUDES = -I/home/lennart/cpp_projects/game_engine/CMakeFiles/client/../../GameNetworkingSockets/include -isystem /usr/include/SDL2
   OBJECT_DIR = CMakeFiles/client.dir
   OBJECT_FILE_DIR = CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common
 
@@ -101,8 +101,8 @@ build CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Commo
 #############################################
 # Link the executable client
 
-build client: CXX_EXECUTABLE_LINKER__client_ CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Client/main.cpp.o CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/ECS/ECS.cpp.o CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Game.cpp.o CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/GameState.cpp.o CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/BackgroundLayer.cpp.o CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/PieceLayer.cpp.o CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/TextureManager.cpp.o | ../GameNetworkingSockets/bin/libGameNetworkingSockets.so /usr/lib/x86_64-linux-gnu/libSDL2main.a ../lib/libSDL2.a
-  LINK_LIBRARIES = -Wl,-rpath,../GameNetworkingSockets/bin:../lib  ../GameNetworkingSockets/bin/libGameNetworkingSockets.so  -lSDL2_image  /usr/lib/x86_64-linux-gnu/libSDL2main.a  ../lib/libSDL2.a
+build client: CXX_EXECUTABLE_LINKER__client_ CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Client/main.cpp.o CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/ECS/ECS.cpp.o CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Game.cpp.o CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/GameState.cpp.o CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/BackgroundLayer.cpp.o CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/PieceLayer.cpp.o CMakeFiles/client.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/TextureManager.cpp.o | ../GameNetworkingSockets/bin/libGameNetworkingSockets.so /usr/lib/x86_64-linux-gnu/libSDL2main.a /usr/lib/x86_64-linux-gnu/libSDL2.so
+  LINK_LIBRARIES = -Wl,-rpath,../GameNetworkingSockets/bin  ../GameNetworkingSockets/bin/libGameNetworkingSockets.so  -lSDL2_image  /usr/lib/x86_64-linux-gnu/libSDL2main.a  /usr/lib/x86_64-linux-gnu/libSDL2.so
   OBJECT_DIR = CMakeFiles/client.dir
   POST_BUILD = :
   PRE_LINK = :

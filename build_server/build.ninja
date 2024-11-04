@@ -52,49 +52,49 @@ build cmake_object_order_depends_target_server: phony || CMakeFiles/server.dir
 build CMakeFiles/server.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/ECS/ECS.cpp.o: CXX_COMPILER__server_Debug /home/lennart/cpp_projects/game_engine/src/Game_Common/ECS/ECS.cpp || cmake_object_order_depends_target_server
   DEP_FILE = CMakeFiles/server.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/ECS/ECS.cpp.o.d
   FLAGS = -g -std=gnu++23
-  INCLUDES = -I/home/lennart/cpp_projects/networking/GameNetworkingSockets/include -isystem /usr/include/SDL2
+  INCLUDES = -I/home/lennart/cpp_projects/game_engine/CMakeFiles/server/../../GameNetworkingSockets/include -isystem /usr/include/SDL2
   OBJECT_DIR = CMakeFiles/server.dir
   OBJECT_FILE_DIR = CMakeFiles/server.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/ECS
 
 build CMakeFiles/server.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Game.cpp.o: CXX_COMPILER__server_Debug /home/lennart/cpp_projects/game_engine/src/Game_Common/Game.cpp || cmake_object_order_depends_target_server
   DEP_FILE = CMakeFiles/server.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Game.cpp.o.d
   FLAGS = -g -std=gnu++23
-  INCLUDES = -I/home/lennart/cpp_projects/networking/GameNetworkingSockets/include -isystem /usr/include/SDL2
+  INCLUDES = -I/home/lennart/cpp_projects/game_engine/CMakeFiles/server/../../GameNetworkingSockets/include -isystem /usr/include/SDL2
   OBJECT_DIR = CMakeFiles/server.dir
   OBJECT_FILE_DIR = CMakeFiles/server.dir/home/lennart/cpp_projects/game_engine/src/Game_Common
 
 build CMakeFiles/server.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/GameState.cpp.o: CXX_COMPILER__server_Debug /home/lennart/cpp_projects/game_engine/src/Game_Common/GameState.cpp || cmake_object_order_depends_target_server
   DEP_FILE = CMakeFiles/server.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/GameState.cpp.o.d
   FLAGS = -g -std=gnu++23
-  INCLUDES = -I/home/lennart/cpp_projects/networking/GameNetworkingSockets/include -isystem /usr/include/SDL2
+  INCLUDES = -I/home/lennart/cpp_projects/game_engine/CMakeFiles/server/../../GameNetworkingSockets/include -isystem /usr/include/SDL2
   OBJECT_DIR = CMakeFiles/server.dir
   OBJECT_FILE_DIR = CMakeFiles/server.dir/home/lennart/cpp_projects/game_engine/src/Game_Common
 
 build CMakeFiles/server.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/BackgroundLayer.cpp.o: CXX_COMPILER__server_Debug /home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/BackgroundLayer.cpp || cmake_object_order_depends_target_server
   DEP_FILE = CMakeFiles/server.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/BackgroundLayer.cpp.o.d
   FLAGS = -g -std=gnu++23
-  INCLUDES = -I/home/lennart/cpp_projects/networking/GameNetworkingSockets/include -isystem /usr/include/SDL2
+  INCLUDES = -I/home/lennart/cpp_projects/game_engine/CMakeFiles/server/../../GameNetworkingSockets/include -isystem /usr/include/SDL2
   OBJECT_DIR = CMakeFiles/server.dir
   OBJECT_FILE_DIR = CMakeFiles/server.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Layers
 
 build CMakeFiles/server.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/PieceLayer.cpp.o: CXX_COMPILER__server_Debug /home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/PieceLayer.cpp || cmake_object_order_depends_target_server
   DEP_FILE = CMakeFiles/server.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/PieceLayer.cpp.o.d
   FLAGS = -g -std=gnu++23
-  INCLUDES = -I/home/lennart/cpp_projects/networking/GameNetworkingSockets/include -isystem /usr/include/SDL2
+  INCLUDES = -I/home/lennart/cpp_projects/game_engine/CMakeFiles/server/../../GameNetworkingSockets/include -isystem /usr/include/SDL2
   OBJECT_DIR = CMakeFiles/server.dir
   OBJECT_FILE_DIR = CMakeFiles/server.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Layers
 
 build CMakeFiles/server.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/TextureManager.cpp.o: CXX_COMPILER__server_Debug /home/lennart/cpp_projects/game_engine/src/Game_Common/TextureManager.cpp || cmake_object_order_depends_target_server
   DEP_FILE = CMakeFiles/server.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/TextureManager.cpp.o.d
   FLAGS = -g -std=gnu++23
-  INCLUDES = -I/home/lennart/cpp_projects/networking/GameNetworkingSockets/include -isystem /usr/include/SDL2
+  INCLUDES = -I/home/lennart/cpp_projects/game_engine/CMakeFiles/server/../../GameNetworkingSockets/include -isystem /usr/include/SDL2
   OBJECT_DIR = CMakeFiles/server.dir
   OBJECT_FILE_DIR = CMakeFiles/server.dir/home/lennart/cpp_projects/game_engine/src/Game_Common
 
 build CMakeFiles/server.dir/home/lennart/cpp_projects/game_engine/src/Game_Server/main.cpp.o: CXX_COMPILER__server_Debug /home/lennart/cpp_projects/game_engine/src/Game_Server/main.cpp || cmake_object_order_depends_target_server
   DEP_FILE = CMakeFiles/server.dir/home/lennart/cpp_projects/game_engine/src/Game_Server/main.cpp.o.d
   FLAGS = -g -std=gnu++23
-  INCLUDES = -I/home/lennart/cpp_projects/networking/GameNetworkingSockets/include -isystem /usr/include/SDL2
+  INCLUDES = -I/home/lennart/cpp_projects/game_engine/CMakeFiles/server/../../GameNetworkingSockets/include -isystem /usr/include/SDL2
   OBJECT_DIR = CMakeFiles/server.dir
   OBJECT_FILE_DIR = CMakeFiles/server.dir/home/lennart/cpp_projects/game_engine/src/Game_Server
 
@@ -106,9 +106,9 @@ build CMakeFiles/server.dir/home/lennart/cpp_projects/game_engine/src/Game_Serve
 #############################################
 # Link the executable server
 
-build server: CXX_EXECUTABLE_LINKER__server_Debug CMakeFiles/server.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/ECS/ECS.cpp.o CMakeFiles/server.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Game.cpp.o CMakeFiles/server.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/GameState.cpp.o CMakeFiles/server.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/BackgroundLayer.cpp.o CMakeFiles/server.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/PieceLayer.cpp.o CMakeFiles/server.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/TextureManager.cpp.o CMakeFiles/server.dir/home/lennart/cpp_projects/game_engine/src/Game_Server/main.cpp.o | /home/lennart/cpp_projects/networking/GameNetworkingSockets/test_build/bin/libGameNetworkingSockets.so /usr/lib/x86_64-linux-gnu/libSDL2main.a /usr/lib/x86_64-linux-gnu/libSDL2.so
+build server: CXX_EXECUTABLE_LINKER__server_Debug CMakeFiles/server.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/ECS/ECS.cpp.o CMakeFiles/server.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Game.cpp.o CMakeFiles/server.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/GameState.cpp.o CMakeFiles/server.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/BackgroundLayer.cpp.o CMakeFiles/server.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/PieceLayer.cpp.o CMakeFiles/server.dir/home/lennart/cpp_projects/game_engine/src/Game_Common/TextureManager.cpp.o CMakeFiles/server.dir/home/lennart/cpp_projects/game_engine/src/Game_Server/main.cpp.o | ../GameNetworkingSockets/bin/libGameNetworkingSockets.so /usr/lib/x86_64-linux-gnu/libSDL2main.a /usr/lib/x86_64-linux-gnu/libSDL2.so
   FLAGS = -g
-  LINK_LIBRARIES = -Wl,-rpath,/home/lennart/cpp_projects/networking/GameNetworkingSockets/test_build/bin  /home/lennart/cpp_projects/networking/GameNetworkingSockets/test_build/bin/libGameNetworkingSockets.so  -lSDL2_image  /usr/lib/x86_64-linux-gnu/libSDL2main.a  /usr/lib/x86_64-linux-gnu/libSDL2.so
+  LINK_LIBRARIES = -Wl,-rpath,../GameNetworkingSockets/bin  ../GameNetworkingSockets/bin/libGameNetworkingSockets.so  -lSDL2_image  /usr/lib/x86_64-linux-gnu/libSDL2main.a  /usr/lib/x86_64-linux-gnu/libSDL2.so
   OBJECT_DIR = CMakeFiles/server.dir
   POST_BUILD = :
   PRE_LINK = :
