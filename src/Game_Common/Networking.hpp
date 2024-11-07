@@ -1,6 +1,7 @@
 //====== Copyright Valve Corporation, All rights reserved. ====================
 //
 // Example client/server chat application using SteamNetworkingSockets
+#pragma once
 
 #include <assert.h>
 #include <stdio.h>

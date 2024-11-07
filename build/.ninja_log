@@ -1,5 +1,5 @@
 # ninja log v5
-0	6	0	/home/lennart/cpp_projects/game_engine/build/CMakeFiles/cmake.verify_globs	cb41e72e6ae39a90
+1	7	1730235233207811956	/home/lennart/cpp_projects/game_engine/build/CMakeFiles/cmake.verify_globs	cb41e72e6ae39a90
 0	9	1730125384623067427	CMakeFiles/test.dir/src/Events/EventQueue.cpp.o	8f50ecc97672ba37
 1	346	1730125384963067373	CMakeFiles/test.dir/src/Vector2D.cpp.o	87368acf6855f631
 0	655	1730125385263067323	CMakeFiles/test.dir/src/ECS/ECS.cpp.o	14e180ad17e9a48a
@@ -10,4 +10,3 @@
 1	1058	1730125385673067253	CMakeFiles/test.dir/src/Layers/PieceLayer.cpp.o	1e1091d11931da96
 1	1471	1730125386083067185	CMakeFiles/test.dir/src/main.cpp.o	19c2ded333e5d512
 1472	1631	1730125386243067165	test	3c73d08cb2695785
-1	7	1730235233207811956	/home/lennart/cpp_projects/game_engine/build/CMakeFiles/cmake.verify_globs	cb41e72e6ae39a90

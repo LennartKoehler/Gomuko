@@ -1,52 +1,37 @@
 [
 {
   "directory": "/home/lennart/cpp_projects/game_engine/build",
-  "command": "/usr/bin/g++ -I/home/lennart/cpp_projects/networking/GameNetworkingSockets/include -isystem /usr/include/SDL2 -g -std=gnu++23 -o CMakeFiles/test.dir/src/Game_Client/main.cpp.o -c /home/lennart/cpp_projects/game_engine/src/Game_Client/main.cpp",
-  "file": "/home/lennart/cpp_projects/game_engine/src/Game_Client/main.cpp"
+  "command": "/usr/bin/g++ -I/home/lennart/cpp_projects/game_engine/src/Game_Common -isystem /home/lennart/cpp_projects/game_engine/GameNetworkingSockets/include -isystem /usr/include/SDL2 -g -std=gnu++23 -o CMakeFiles/single_player.dir/src/Game_Common/main.cpp.o -c /home/lennart/cpp_projects/game_engine/src/Game_Common/main.cpp",
+  "file": "/home/lennart/cpp_projects/game_engine/src/Game_Common/main.cpp"
 },
 {
   "directory": "/home/lennart/cpp_projects/game_engine/build",
-  "command": "/usr/bin/g++ -I/home/lennart/cpp_projects/networking/GameNetworkingSockets/include -isystem /usr/include/SDL2 -g -std=gnu++23 -o CMakeFiles/test.dir/src/Game_Common/ECS/ECS.cpp.o -c /home/lennart/cpp_projects/game_engine/src/Game_Common/ECS/ECS.cpp",
-  "file": "/home/lennart/cpp_projects/game_engine/src/Game_Common/ECS/ECS.cpp"
-},
-{
-  "directory": "/home/lennart/cpp_projects/game_engine/build",
-  "command": "/usr/bin/g++ -I/home/lennart/cpp_projects/networking/GameNetworkingSockets/include -isystem /usr/include/SDL2 -g -std=gnu++23 -o CMakeFiles/test.dir/src/Game_Common/Events/EventQueue.cpp.o -c /home/lennart/cpp_projects/game_engine/src/Game_Common/Events/EventQueue.cpp",
-  "file": "/home/lennart/cpp_projects/game_engine/src/Game_Common/Events/EventQueue.cpp"
-},
-{
-  "directory": "/home/lennart/cpp_projects/game_engine/build",
-  "command": "/usr/bin/g++ -I/home/lennart/cpp_projects/networking/GameNetworkingSockets/include -isystem /usr/include/SDL2 -g -std=gnu++23 -o CMakeFiles/test.dir/src/Game_Common/Game.cpp.o -c /home/lennart/cpp_projects/game_engine/src/Game_Common/Game.cpp",
-  "file": "/home/lennart/cpp_projects/game_engine/src/Game_Common/Game.cpp"
-},
-{
-  "directory": "/home/lennart/cpp_projects/game_engine/build",
-  "command": "/usr/bin/g++ -I/home/lennart/cpp_projects/networking/GameNetworkingSockets/include -isystem /usr/include/SDL2 -g -std=gnu++23 -o CMakeFiles/test.dir/src/Game_Common/GameState.cpp.o -c /home/lennart/cpp_projects/game_engine/src/Game_Common/GameState.cpp",
-  "file": "/home/lennart/cpp_projects/game_engine/src/Game_Common/GameState.cpp"
-},
-{
-  "directory": "/home/lennart/cpp_projects/game_engine/build",
-  "command": "/usr/bin/g++ -I/home/lennart/cpp_projects/networking/GameNetworkingSockets/include -isystem /usr/include/SDL2 -g -std=gnu++23 -o CMakeFiles/test.dir/src/Game_Common/Layers/BackgroundLayer.cpp.o -c /home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/BackgroundLayer.cpp",
-  "file": "/home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/BackgroundLayer.cpp"
-},
-{
-  "directory": "/home/lennart/cpp_projects/game_engine/build",
-  "command": "/usr/bin/g++ -I/home/lennart/cpp_projects/networking/GameNetworkingSockets/include -isystem /usr/include/SDL2 -g -std=gnu++23 -o CMakeFiles/test.dir/src/Game_Common/Layers/PieceLayer.cpp.o -c /home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/PieceLayer.cpp",
+  "command": "/usr/bin/g++ -I/home/lennart/cpp_projects/game_engine/src/Game_Common -isystem /home/lennart/cpp_projects/game_engine/GameNetworkingSockets/include -g -std=gnu++23 -o src/Game_Common/CMakeFiles/game_common_lib.dir/Layers/PieceLayer.cpp.o -c /home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/PieceLayer.cpp",
   "file": "/home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/PieceLayer.cpp"
 },
 {
   "directory": "/home/lennart/cpp_projects/game_engine/build",
-  "command": "/usr/bin/g++ -I/home/lennart/cpp_projects/networking/GameNetworkingSockets/include -isystem /usr/include/SDL2 -g -std=gnu++23 -o CMakeFiles/test.dir/src/Game_Common/TextureManager.cpp.o -c /home/lennart/cpp_projects/game_engine/src/Game_Common/TextureManager.cpp",
+  "command": "/usr/bin/g++ -I/home/lennart/cpp_projects/game_engine/src/Game_Common -isystem /home/lennart/cpp_projects/game_engine/GameNetworkingSockets/include -g -std=gnu++23 -o src/Game_Common/CMakeFiles/game_common_lib.dir/Layers/BackgroundLayer.cpp.o -c /home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/BackgroundLayer.cpp",
+  "file": "/home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/BackgroundLayer.cpp"
+},
+{
+  "directory": "/home/lennart/cpp_projects/game_engine/build",
+  "command": "/usr/bin/g++ -I/home/lennart/cpp_projects/game_engine/src/Game_Common -isystem /home/lennart/cpp_projects/game_engine/GameNetworkingSockets/include -g -std=gnu++23 -o src/Game_Common/CMakeFiles/game_common_lib.dir/ECS/ECS.cpp.o -c /home/lennart/cpp_projects/game_engine/src/Game_Common/ECS/ECS.cpp",
+  "file": "/home/lennart/cpp_projects/game_engine/src/Game_Common/ECS/ECS.cpp"
+},
+{
+  "directory": "/home/lennart/cpp_projects/game_engine/build",
+  "command": "/usr/bin/g++ -I/home/lennart/cpp_projects/game_engine/src/Game_Common -isystem /home/lennart/cpp_projects/game_engine/GameNetworkingSockets/include -g -std=gnu++23 -o src/Game_Common/CMakeFiles/game_common_lib.dir/TextureManager.cpp.o -c /home/lennart/cpp_projects/game_engine/src/Game_Common/TextureManager.cpp",
   "file": "/home/lennart/cpp_projects/game_engine/src/Game_Common/TextureManager.cpp"
 },
 {
   "directory": "/home/lennart/cpp_projects/game_engine/build",
-  "command": "/usr/bin/g++ -I/home/lennart/cpp_projects/networking/GameNetworkingSockets/include -isystem /usr/include/SDL2 -g -std=gnu++23 -o CMakeFiles/test.dir/src/Game_Common/Vector2D.cpp.o -c /home/lennart/cpp_projects/game_engine/src/Game_Common/Vector2D.cpp",
-  "file": "/home/lennart/cpp_projects/game_engine/src/Game_Common/Vector2D.cpp"
+  "command": "/usr/bin/g++ -I/home/lennart/cpp_projects/game_engine/src/Game_Common -isystem /home/lennart/cpp_projects/game_engine/GameNetworkingSockets/include -g -std=gnu++23 -o src/Game_Common/CMakeFiles/game_common_lib.dir/Game.cpp.o -c /home/lennart/cpp_projects/game_engine/src/Game_Common/Game.cpp",
+  "file": "/home/lennart/cpp_projects/game_engine/src/Game_Common/Game.cpp"
 },
 {
   "directory": "/home/lennart/cpp_projects/game_engine/build",
-  "command": "/usr/bin/g++ -I/home/lennart/cpp_projects/networking/GameNetworkingSockets/include -isystem /usr/include/SDL2 -g -std=gnu++23 -o CMakeFiles/test.dir/src/Game_Common/main.cpp.o -c /home/lennart/cpp_projects/game_engine/src/Game_Common/main.cpp",
-  "file": "/home/lennart/cpp_projects/game_engine/src/Game_Common/main.cpp"
+  "command": "/usr/bin/g++ -I/home/lennart/cpp_projects/game_engine/src/Game_Common -isystem /home/lennart/cpp_projects/game_engine/GameNetworkingSockets/include -g -std=gnu++23 -o src/Game_Common/CMakeFiles/game_common_lib.dir/GameState.cpp.o -c /home/lennart/cpp_projects/game_engine/src/Game_Common/GameState.cpp",
+  "file": "/home/lennart/cpp_projects/game_engine/src/Game_Common/GameState.cpp"
 }
 ]
