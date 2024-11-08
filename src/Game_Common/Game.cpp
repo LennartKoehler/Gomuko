@@ -89,3 +89,8 @@ void Game::setGameState(GameState* gameState){
 }
 
 GameState* Game::getGameState() { return gameState;}
+
+bool Game::isHandledEvent(SDL_Event& event){
+    bool found = (std::find(handledEvents.begin(), handledEvents.end(), event.type) != handledEvents.end());
+    return found;
+}

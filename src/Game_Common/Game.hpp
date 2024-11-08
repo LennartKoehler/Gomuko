@@ -6,6 +6,7 @@
 #include <SDL2/SDL.h>
 #include <iostream>
 #include <SDL2/SDL_image.h>
+#include <set>
 #include "Textures.hpp"
 #include "Events/MouseClickEvent.hpp"
 #include "Layers/Layerinclude.hpp"
@@ -26,7 +27,9 @@ public:
     static SDL_Event event;
     void setGameState(GameState* gameState);
     GameState* getGameState();
+    bool isHandledEvent(SDL_Event& event);
 private:
+    std::set<Uint32> handledEvents{SDL_QUIT, SDL_MOUSEBUTTONDOWN};
     GameState* gameState;
     bool isRunning = false;
     SDL_Window* window;

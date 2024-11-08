@@ -5,6 +5,8 @@
 
 Game* game = nullptr;
 
+
+
 int main(int argc, const char* argv[]) {
 
     SteamNetworkingIPAddr addrServer = input_handling(argc, argv);
@@ -20,10 +22,11 @@ int main(int argc, const char* argv[]) {
 
     while (game->running() && !g_bQuit){
         while (SDL_WaitEventTimeout(&event, 100)){
-            game->handleEvents(event); // wait for events
-            game->update();
-            game->render();
-
+            if (game->isHandledEvent(event)){ //we dont want every event to be processed
+                game->handleEvents(event); // wait for events
+                game->update();
+                game->render();
+            }
         }
         if (game->getGameState()->turn_number != recieved_turn_number && !sent){
             std::cerr << "sending gamestate" << std::endl;

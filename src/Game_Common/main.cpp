@@ -22,11 +22,13 @@ int main(int argc, const char* argv[]) {
 
     while (game->running()){
         while (SDL_WaitEventTimeout(&event, 100)){
-            //frameStart = SDL_GetTicks();
-            game->handleEvents(event);
-            game->update();
-            game->render();
-                
+            if (game->isHandledEvent(event)){ //we dont want every event to be processed
+
+                //frameStart = SDL_GetTicks();
+                game->handleEvents(event);
+                game->update();
+                game->render();
+            }                
                 
             // frameTime = SDL_GetTicks() - frameStart;
 
