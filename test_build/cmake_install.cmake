@@ -1,4 +1,4 @@
-# Install script for directory: /home/lennart/cpp_projects/game_engine
+# Install script for directory: /home/lennart-koehler/gomuko
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,17 +44,17 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/lennart/cpp_projects/game_engine/test_build/GameNetworkingSockets/cmake_install.cmake")
+  include("/home/lennart-koehler/gomuko/test_build/GameNetworkingSockets/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/lennart/cpp_projects/game_engine/test_build/src/Game_Common/cmake_install.cmake")
+  include("/home/lennart-koehler/gomuko/test_build/src/Game_Common/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/lennart/cpp_projects/game_engine/test_build/src/Game_Server/cmake_install.cmake")
+  include("/home/lennart-koehler/gomuko/test_build/src/Game_Client/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -65,5 +65,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/lennart/cpp_projects/game_engine/test_build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/lennart-koehler/gomuko/test_build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
