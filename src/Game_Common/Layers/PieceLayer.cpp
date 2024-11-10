@@ -1,5 +1,5 @@
 #include "PieceLayer.hpp"
-#include "../Events/MouseClickEvent.hpp"
+#include "../Events/MouseButtonPressedEvent.hpp"
 
 
 
@@ -24,36 +24,21 @@ PieceLayer::PieceLayer(GameState*& gameState, int entity_size, const char* asset
 }
 
 
-
-Entity* PieceLayer::getEntityAtPosition(int x, int y, Group group){
-    for (Entity* entity : manager.getGroup(group)){
-        bool found = entityOverlap(entity, x, y);
-        if (found){
-            return entity;
-        }
-    }
-    return nullptr;
+void PieceLayer::onEvent(Event& event){
+    EventDispatcher dispatcher(event);
+    dispatcher.dispatch<MouseButtonPressedEvent>(HZ_BIND_EVENT_FN(PieceLayer::onMouseButtonPressed));
 }
 
 
+bool PieceLayer::onMouseButtonPressed(MouseButtonPressedEvent& event){
 
-bool PieceLayer::entityOverlap(Entity* entity, int x, int y){
-    RectComponent& tc = entity->getComponent<RectComponent>();
-    if (x > tc.x && x < tc.x + tc.w
-        && y > tc.y && y < tc.y + tc.h )
-        return true;
-    else return false;
-}
-
-
-
-void PieceLayer::onEvent(MouseClickEvent event){
     Entity* tile = getEntityAtPosition(event.x, event.y, groupPieces);
     if (tile != nullptr){
 
         MatrixPositionComponent& position = tile->getComponent<MatrixPositionComponent>();
         gameState->placePieceRequest(position.i, position.j);
     }
+    return true;
 }
 
 void PieceLayer::syncGameState(){

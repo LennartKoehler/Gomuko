@@ -1,0 +1,4 @@
+/home/lennart/cpp_projects/game_engine/package/bin/single_player
+/home/lennart/cpp_projects/game_engine/package/lib/libGameNetworkingSockets.so
+/home/lennart/cpp_projects/game_engine/package/lib/libprotobuf.so.23.0.4
+/home/lennart/cpp_projects/game_engine/package/lib/libgame_common_lib.a

@@ -1,21 +1,18 @@
 #pragma once
 
-#include "Layerinclude.hpp"
+#include "Layer.hpp"
 #include "../Textures.hpp"
 #include <map>
 
-class MouseClickEvent;
+class MouseButtonPressed;
 
 // turns gamestate into a image
 class PieceLayer : public Layer{
 public:
     PieceLayer();
     PieceLayer(GameState*& gameState, int entity_size, const char* asset_white, const char* asset_black);
-
-
-    Entity* getEntityAtPosition(int x, int y, size_t group);
-    bool entityOverlap(Entity* entity, int x, int y);
-    void onEvent(MouseClickEvent event);
+    void onEvent(Event& event);
+    bool onMouseButtonPressed( MouseButtonPressedEvent& event);
     void syncGameState();
     // void playerWon(PlayerComponent& playercomp);
     GameState*& gameState;

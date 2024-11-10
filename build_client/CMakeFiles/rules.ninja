@@ -39,20 +39,39 @@ rule CUSTOM_COMMAND
 
 
 #############################################
-# Rule for re-running cmake.
+# Rule for compiling CXX files.
 
-rule RERUN_CMAKE
-  command = /usr/bin/cmake --regenerate-during-build -S/home/lennart/cpp_projects/game_engine/CMakeFiles/client -B/home/lennart/cpp_projects/game_engine/build_client
-  description = Re-running CMake...
-  generator = 1
+rule CXX_COMPILER__game_common_lib_
+  depfile = $DEP_FILE
+  deps = gcc
+  command = /usr/bin/c++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building CXX object $out
 
 
 #############################################
-# Rule for re-checking globbed directories.
+# Rule for linking CXX static library.
 
-rule VERIFY_GLOBS
-  command = /usr/bin/cmake -P /home/lennart/cpp_projects/game_engine/build_client/CMakeFiles/VerifyGlobs.cmake
-  description = Re-checking globbed directories...
+rule CXX_STATIC_LIBRARY_LINKER__game_common_lib_
+  command = $PRE_LINK && /usr/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking CXX static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for linking CXX static library.
+
+rule CXX_STATIC_LIBRARY_LINKER__game_client_lib_
+  command = $PRE_LINK && /usr/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking CXX static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for re-running cmake.
+
+rule RERUN_CMAKE
+  command = /usr/bin/cmake --regenerate-during-build -S/home/lennart/cpp_projects/game_engine -B/home/lennart/cpp_projects/game_engine/build_client
+  description = Re-running CMake...
   generator = 1
 
 

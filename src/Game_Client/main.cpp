@@ -20,6 +20,10 @@ int main(int argc, const char* argv[]) {
     bool sent = false;
     game->getGameState()->unchangable = true; // unchangable is what tells us whos at turn
 
+
+    game->handleEvents(event); // wait for events
+    game->update();
+    game->render();
     while (game->running() && !g_bQuit){
         while (SDL_WaitEventTimeout(&event, 100)){
             if (game->isHandledEvent(event)){ //we dont want every event to be processed

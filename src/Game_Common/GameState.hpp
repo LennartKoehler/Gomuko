@@ -17,7 +17,6 @@ struct GameState{
 
     GameState() = default;
     GameState(int size_x, int size_y, int start_player, int win_condition_number);
-    ~GameState(){ std::cerr << "deleting gamestate" << std::endl; }
     //GameState(GameState& other){ std::cerr << "copying gamestate" << std::endl; }
 
     int getValue(int i, int j){ return stateMatrix.getValue(i, j); }

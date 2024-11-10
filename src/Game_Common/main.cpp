@@ -18,7 +18,9 @@ int main(int argc, const char* argv[]) {
     game = new Game();
     game->init("Gomuko", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 64*10, 64*10, false);
     SDL_Event event;
-
+    
+    game->update();
+    game->render();
 
     while (game->running()){
         while (SDL_WaitEventTimeout(&event, 100)){

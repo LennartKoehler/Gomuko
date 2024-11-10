@@ -8,8 +8,8 @@
 #include <SDL2/SDL_image.h>
 #include <set>
 #include "Textures.hpp"
-#include "Events/MouseClickEvent.hpp"
-#include "Layers/Layerinclude.hpp"
+#include "Events/EventConversionFactory.hpp"
+#include "Layers/LayerStack.hpp"
 
 
 class Game {
@@ -22,19 +22,19 @@ public:
     bool running() {return isRunning;};
     void render();
     void clean();
-    void onClick(SDL_Event& event, PieceLayer* layer);
     static SDL_Renderer* renderer;
     static SDL_Event event;
     void setGameState(GameState* gameState);
     GameState* getGameState();
     bool isHandledEvent(SDL_Event& event);
 private:
+    EventConversionFactory eventConversionFactory;
     std::set<Uint32> handledEvents{SDL_QUIT, SDL_MOUSEBUTTONDOWN};
     GameState* gameState;
     bool isRunning = false;
     SDL_Window* window;
-    BackgroundLayer* backgroundLayer;
-    PieceLayer* pieceLayer;
+    LayerStack layerStack;
+
 };
 
 #endif /* Game_hpp */

@@ -1,7 +1,7 @@
 add_library(
     game_common_lib
     "Events/Event.hpp" 
-    "Events/MouseClickEvent.hpp"
+    "Events/MouseButtonPressedEvent.hpp"
 
     "TextureManager.hpp" 
     "Game.hpp" 
@@ -10,7 +10,7 @@ add_library(
     "Networking.hpp"
 
     "Layers/Layer.hpp" 
-    "Layers/Layerinclude.hpp" 
+    "Layers/LayerStack.hpp" 
     "Layers/PieceLayer.hpp" 
     "Layers/BackgroundLayer.hpp" 
 
@@ -20,6 +20,7 @@ add_library(
     "ECS/RectComponent.hpp" 
     "ECS/SpriteComponent.hpp" 
 
+    "Layers/LayerStack.cpp" 
     "Layers/PieceLayer.cpp" 
     "Layers/BackgroundLayer.cpp" 
 

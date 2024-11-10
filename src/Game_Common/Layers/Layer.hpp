@@ -1,7 +1,8 @@
 #pragma once
-#include "Layerinclude.hpp"
 
-
+#include "../ECS/Components.hpp"
+#include "../GameState.hpp"
+#include "../Events/MouseButtonPressedEvent.hpp"
 class Layer{
 public:
     virtual void draw(){
@@ -15,6 +16,12 @@ public:
     virtual void refresh(){
         manager.refresh();
     }
+
+    virtual void onEvent(Event& event) {}
+
+    
+    Entity* getEntityAtPosition(int x, int y, size_t group);
+    bool entityOverlap(Entity* entity, int x, int y);
 protected:
     Manager manager;
 };

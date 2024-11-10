@@ -1,4 +1,4 @@
-# Install script for directory: /home/lennart-koehler/gomuko/src/Game_Common
+# Install script for directory: /home/lennart/cpp_projects/game_engine/src/Game_Common
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

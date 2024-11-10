@@ -58,6 +58,8 @@ endif()
 
 
 
+# target_link_libraries(${PROJECT_NAME} PRIVATE protobuf)
+
 
 target_link_libraries(${PROJECT_NAME} PRIVATE game_common_lib)
 
@@ -70,3 +72,12 @@ target_link_libraries(${PROJECT_NAME} PRIVATE SDL2::SDL2main)
 target_link_libraries(${PROJECT_NAME} PRIVATE SDL2::SDL2)
 
 
+include(GNUInstallDirs)
+install(TARGETS ${PROJECT_NAME})
+install(FILES 
+"/home/lennart/cpp_projects/game_engine/GameNetworkingSockets/bin/libGameNetworkingSockets.so"
+"/home/lennart/cpp_projects/game_engine/GameNetworkingSockets/bin/libprotobuf.so.23.0.4" TYPE LIB)
+install (TARGETS
+game_common_lib
+RUNTIME DESTINATION bin
+LIBRARY DESTINATION lib)

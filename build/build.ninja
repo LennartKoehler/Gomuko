@@ -66,7 +66,7 @@ build CMakeFiles/single_player.dir/src/Game_Common/main.cpp.o: CXX_COMPILER__sin
 
 build single_player: CXX_EXECUTABLE_LINKER__single_player_Debug CMakeFiles/single_player.dir/src/Game_Common/main.cpp.o | src/Game_Common/libgame_common_lib.a ../GameNetworkingSockets/bin/libGameNetworkingSockets.so /usr/lib/x86_64-linux-gnu/libSDL2main.a /usr/lib/x86_64-linux-gnu/libSDL2.so || src/Game_Common/libgame_common_lib.a
   FLAGS = -g
-  LINK_LIBRARIES = -Wl,-rpath,/home/lennart/cpp_projects/game_engine/GameNetworkingSockets/bin  src/Game_Common/libgame_common_lib.a  ../GameNetworkingSockets/bin/libGameNetworkingSockets.so  -lSDL2_image  /usr/lib/x86_64-linux-gnu/libSDL2main.a  /usr/lib/x86_64-linux-gnu/libSDL2.so
+  LINK_LIBRARIES = -Wl,-rpath,/home/lennart/cpp_projects/game_engine/GameNetworkingSockets/bin:  src/Game_Common/libgame_common_lib.a  ../GameNetworkingSockets/bin/libGameNetworkingSockets.so  -lSDL2_image  /usr/lib/x86_64-linux-gnu/libSDL2main.a  /usr/lib/x86_64-linux-gnu/libSDL2.so
   OBJECT_DIR = CMakeFiles/single_player.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -96,6 +96,48 @@ build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
 
 build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
+
+#############################################
+# Utility command for list_install_components
+
+build list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build CMakeFiles/install.util: CUSTOM_COMMAND all
+  COMMAND = cd /home/lennart/cpp_projects/game_engine/build && /usr/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build install: phony CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build CMakeFiles/install/local.util: CUSTOM_COMMAND all
+  COMMAND = cd /home/lennart/cpp_projects/game_engine/build && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build install/local: phony CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build CMakeFiles/install/strip.util: CUSTOM_COMMAND all
+  COMMAND = cd /home/lennart/cpp_projects/game_engine/build && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build install/strip: phony CMakeFiles/install/strip.util
+
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
 # /home/lennart/cpp_projects/game_engine/CMakeLists.txt
@@ -124,6 +166,48 @@ build GameNetworkingSockets/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
 
 build GameNetworkingSockets/rebuild_cache: phony GameNetworkingSockets/CMakeFiles/rebuild_cache.util
 
+
+#############################################
+# Utility command for list_install_components
+
+build GameNetworkingSockets/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build GameNetworkingSockets/CMakeFiles/install.util: CUSTOM_COMMAND GameNetworkingSockets/all
+  COMMAND = cd /home/lennart/cpp_projects/game_engine/build/GameNetworkingSockets && /usr/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build GameNetworkingSockets/install: phony GameNetworkingSockets/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build GameNetworkingSockets/CMakeFiles/install/local.util: CUSTOM_COMMAND GameNetworkingSockets/all
+  COMMAND = cd /home/lennart/cpp_projects/game_engine/build/GameNetworkingSockets && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build GameNetworkingSockets/install/local: phony GameNetworkingSockets/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build GameNetworkingSockets/CMakeFiles/install/strip.util: CUSTOM_COMMAND GameNetworkingSockets/all
+  COMMAND = cd /home/lennart/cpp_projects/game_engine/build/GameNetworkingSockets && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build GameNetworkingSockets/install/strip: phony GameNetworkingSockets/CMakeFiles/install/strip.util
+
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
 # /home/lennart/cpp_projects/game_engine/CMakeLists.txt
@@ -137,6 +221,13 @@ build GameNetworkingSockets/rebuild_cache: phony GameNetworkingSockets/CMakeFile
 # Order-only phony target for game_common_lib
 
 build cmake_object_order_depends_target_game_common_lib: phony || src/Game_Common/CMakeFiles/game_common_lib.dir
+
+build src/Game_Common/CMakeFiles/game_common_lib.dir/Layers/LayerStack.cpp.o: CXX_COMPILER__game_common_lib_Debug /home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/LayerStack.cpp || cmake_object_order_depends_target_game_common_lib
+  DEP_FILE = src/Game_Common/CMakeFiles/game_common_lib.dir/Layers/LayerStack.cpp.o.d
+  FLAGS = -g -std=gnu++23
+  INCLUDES = -I/home/lennart/cpp_projects/game_engine/src/Game_Common -isystem /home/lennart/cpp_projects/game_engine/GameNetworkingSockets/include
+  OBJECT_DIR = src/Game_Common/CMakeFiles/game_common_lib.dir
+  OBJECT_FILE_DIR = src/Game_Common/CMakeFiles/game_common_lib.dir/Layers
 
 build src/Game_Common/CMakeFiles/game_common_lib.dir/Layers/PieceLayer.cpp.o: CXX_COMPILER__game_common_lib_Debug /home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/PieceLayer.cpp || cmake_object_order_depends_target_game_common_lib
   DEP_FILE = src/Game_Common/CMakeFiles/game_common_lib.dir/Layers/PieceLayer.cpp.o.d
@@ -188,7 +279,7 @@ build src/Game_Common/CMakeFiles/game_common_lib.dir/GameState.cpp.o: CXX_COMPIL
 #############################################
 # Link the static library src/Game_Common/libgame_common_lib.a
 
-build src/Game_Common/libgame_common_lib.a: CXX_STATIC_LIBRARY_LINKER__game_common_lib_Debug src/Game_Common/CMakeFiles/game_common_lib.dir/Layers/PieceLayer.cpp.o src/Game_Common/CMakeFiles/game_common_lib.dir/Layers/BackgroundLayer.cpp.o src/Game_Common/CMakeFiles/game_common_lib.dir/ECS/ECS.cpp.o src/Game_Common/CMakeFiles/game_common_lib.dir/TextureManager.cpp.o src/Game_Common/CMakeFiles/game_common_lib.dir/Game.cpp.o src/Game_Common/CMakeFiles/game_common_lib.dir/GameState.cpp.o || ../GameNetworkingSockets/bin/libGameNetworkingSockets.so
+build src/Game_Common/libgame_common_lib.a: CXX_STATIC_LIBRARY_LINKER__game_common_lib_Debug src/Game_Common/CMakeFiles/game_common_lib.dir/Layers/LayerStack.cpp.o src/Game_Common/CMakeFiles/game_common_lib.dir/Layers/PieceLayer.cpp.o src/Game_Common/CMakeFiles/game_common_lib.dir/Layers/BackgroundLayer.cpp.o src/Game_Common/CMakeFiles/game_common_lib.dir/ECS/ECS.cpp.o src/Game_Common/CMakeFiles/game_common_lib.dir/TextureManager.cpp.o src/Game_Common/CMakeFiles/game_common_lib.dir/Game.cpp.o src/Game_Common/CMakeFiles/game_common_lib.dir/GameState.cpp.o || ../GameNetworkingSockets/bin/libGameNetworkingSockets.so
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = src/Game_Common/CMakeFiles/game_common_lib.dir
   POST_BUILD = :
@@ -218,6 +309,48 @@ build src/Game_Common/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
   restat = 1
 
 build src/Game_Common/rebuild_cache: phony src/Game_Common/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build src/Game_Common/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build src/Game_Common/CMakeFiles/install.util: CUSTOM_COMMAND src/Game_Common/all
+  COMMAND = cd /home/lennart/cpp_projects/game_engine/build/src/Game_Common && /usr/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build src/Game_Common/install: phony src/Game_Common/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build src/Game_Common/CMakeFiles/install/local.util: CUSTOM_COMMAND src/Game_Common/all
+  COMMAND = cd /home/lennart/cpp_projects/game_engine/build/src/Game_Common && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build src/Game_Common/install/local: phony src/Game_Common/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build src/Game_Common/CMakeFiles/install/strip.util: CUSTOM_COMMAND src/Game_Common/all
+  COMMAND = cd /home/lennart/cpp_projects/game_engine/build/src/Game_Common && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build src/Game_Common/install/strip: phony src/Game_Common/CMakeFiles/install/strip.util
 
 # =============================================================================
 # Target aliases.
@@ -257,14 +390,14 @@ build src/Game_Common/all: phony src/Game_Common/libgame_common_lib.a
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../GameNetworkingSockets/CMakeLists.txt ../src/Game_Common/CMakeLists.txt /usr/lib/x86_64-linux-gnu/cmake/SDL2/sdl2-config-version.cmake /usr/lib/x86_64-linux-gnu/cmake/SDL2/sdl2-config.cmake /usr/share/cmake-3.22/Modules/CMakeCInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.22/Modules/FindPackageMessage.cmake /usr/share/cmake-3.22/Modules/FindPkgConfig.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Linux.cmake /usr/share/cmake-3.22/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../GameNetworkingSockets/CMakeLists.txt ../src/Game_Common/CMakeLists.txt /usr/lib/x86_64-linux-gnu/cmake/SDL2/sdl2-config-version.cmake /usr/lib/x86_64-linux-gnu/cmake/SDL2/sdl2-config.cmake /usr/share/cmake-3.22/Modules/CMakeCInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.22/Modules/FindPackageMessage.cmake /usr/share/cmake-3.22/Modules/FindPkgConfig.cmake /usr/share/cmake-3.22/Modules/GNUInstallDirs.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Linux.cmake /usr/share/cmake-3.22/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt ../GameNetworkingSockets/CMakeLists.txt ../src/Game_Common/CMakeLists.txt /usr/lib/x86_64-linux-gnu/cmake/SDL2/sdl2-config-version.cmake /usr/lib/x86_64-linux-gnu/cmake/SDL2/sdl2-config.cmake /usr/share/cmake-3.22/Modules/CMakeCInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.22/Modules/FindPackageMessage.cmake /usr/share/cmake-3.22/Modules/FindPkgConfig.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Linux.cmake /usr/share/cmake-3.22/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake: phony
+build ../CMakeLists.txt ../GameNetworkingSockets/CMakeLists.txt ../src/Game_Common/CMakeLists.txt /usr/lib/x86_64-linux-gnu/cmake/SDL2/sdl2-config-version.cmake /usr/lib/x86_64-linux-gnu/cmake/SDL2/sdl2-config.cmake /usr/share/cmake-3.22/Modules/CMakeCInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.22/Modules/FindPackageMessage.cmake /usr/share/cmake-3.22/Modules/FindPkgConfig.cmake /usr/share/cmake-3.22/Modules/GNUInstallDirs.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Linux.cmake /usr/share/cmake-3.22/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake: phony
 
 
 #############################################

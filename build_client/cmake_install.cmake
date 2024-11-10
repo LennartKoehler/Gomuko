@@ -1,4 +1,4 @@
-# Install script for directory: /home/lennart/cpp_projects/game_engine/CMakeFiles/client
+# Install script for directory: /home/lennart/cpp_projects/game_engine
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,6 +40,21 @@ endif()
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/usr/bin/objdump")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/lennart/cpp_projects/game_engine/build_client/GameNetworkingSockets/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/lennart/cpp_projects/game_engine/build_client/src/Game_Common/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/lennart/cpp_projects/game_engine/build_client/src/Game_Client/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

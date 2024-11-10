@@ -14,6 +14,9 @@
 # EXTERNAL cache entries
 ########################
 
+//build client
+CLIENT:BOOL=ON
+
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
 
@@ -218,6 +221,9 @@ PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 //The directory containing a CMake configuration file for SDL2.
 SDL2_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/SDL2
 
+//build server
+SERVER:BOOL=OFF
+
 //Value Computed by CMake
 client_BINARY_DIR:STATIC=/home/lennart/cpp_projects/game_engine/build_client
 
@@ -225,7 +231,7 @@ client_BINARY_DIR:STATIC=/home/lennart/cpp_projects/game_engine/build_client
 client_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-client_SOURCE_DIR:STATIC=/home/lennart/cpp_projects/game_engine/CMakeFiles/client
+client_SOURCE_DIR:STATIC=/home/lennart/cpp_projects/game_engine
 
 //Path to a library.
 pkgcfg_lib_SDL2_image_SDL2:FILEPATH=/usr/lib/x86_64-linux-gnu/libSDL2.so
@@ -316,7 +322,7 @@ CMAKE_GENERATOR_PLATFORM:INTERNAL=
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=/home/lennart/cpp_projects/game_engine/CMakeFiles/client
+CMAKE_HOME_DIRECTORY:INTERNAL=/home/lennart/cpp_projects/game_engine
 //Install .so files without execute permission.
 CMAKE_INSTALL_SO_NO_EXE:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER
@@ -336,7 +342,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

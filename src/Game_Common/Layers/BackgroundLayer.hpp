@@ -1,5 +1,8 @@
 #pragma once
-#include "Layerinclude.hpp"
+#include "Layer.hpp"
+
+// Ensure Layer.hpp contains the definition of the Layer class
+// If Layer.hpp is in a different directory, provide the correct path
 
 
 class BackgroundLayer : public Layer{
