@@ -9,7 +9,9 @@
 #include <set>
 #include "Textures.hpp"
 #include "Events/EventConversionFactory.hpp"
-#include "Layers/LayerStack.hpp"
+#include "Scenes/SceneManager.hpp"
+
+//#include "Layers/LayerStack.hpp"
 
 
 class Game {
@@ -33,8 +35,7 @@ private:
     GameState* gameState;
     bool isRunning = false;
     SDL_Window* window;
-    LayerStack layerStack;
-
+    SceneManager* sceneManager = new SceneManager();
 };
 
 #endif /* Game_hpp */

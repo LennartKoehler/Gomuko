@@ -1,4 +1,5 @@
 #include "LayerStack.hpp"
+#include <iostream>
 
 LayerStack::~LayerStack(){
     for (Layer* layer : layers){
@@ -17,7 +18,7 @@ void LayerStack::handleEvent(Event& event){
 }
 
 void LayerStack::addLayer(Layer* layer){
-    layers.emplace_back(layer);
+    layers.push_back(layer);
 }
 
 void LayerStack::updateLayers(){

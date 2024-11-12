@@ -6,3 +6,4 @@
 #include "MatrixPositionComponent.hpp"
 #include "PlayerComponent.hpp"
 #include "OwnershipComponent.hpp"
+#include "FunctionComponent.hpp"

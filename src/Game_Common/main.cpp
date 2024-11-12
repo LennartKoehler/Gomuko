@@ -16,7 +16,7 @@ int main(int argc, const char* argv[]) {
     // int frameTime;
 
     game = new Game();
-    game->init("Gomuko", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 64*10, 64*10, false);
+    game->init("Gomuko", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 64*20, 64*20, false);
     SDL_Event event;
     
     game->update();
@@ -30,7 +30,7 @@ int main(int argc, const char* argv[]) {
                 game->handleEvents(event);
                 game->update();
                 game->render();
-            }                
+            }
                 
             // frameTime = SDL_GetTicks() - frameStart;
 

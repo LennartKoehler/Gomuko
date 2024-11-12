@@ -1,3 +1,4 @@
+#pragma once
 #include "Components.hpp"
 
 struct MatrixPositionComponent : public Component{

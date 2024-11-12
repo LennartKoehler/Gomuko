@@ -3,7 +3,9 @@
 #include "../ECS/Components.hpp"
 #include "../GameState.hpp"
 #include "../Events/MouseButtonPressedEvent.hpp"
-class Layer{
+
+//TODO layer system is bad, used incorrectly
+class Layer{ 
 public:
     virtual void draw(){
         manager.draw();

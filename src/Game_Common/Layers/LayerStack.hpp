@@ -2,6 +2,7 @@
 
 #include "PieceLayer.hpp"
 #include "BackgroundLayer.hpp"
+#include "MainMenuLayer.hpp"
 
 
 class LayerStack{

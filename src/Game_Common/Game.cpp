@@ -35,15 +35,10 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 
         isRunning = true;
     }
-
-    gameState = new GameState(20, 20, 1, 5); // IMPORTANT currently only works with fixed size: 20 x 20  this is because it needs to be the same file when recieved by server
-    BackgroundLayer* backgroundLayer = new BackgroundLayer(gameState, 64, textures::tile);
-    PieceLayer* pieceLayer = new PieceLayer(gameState, 64, textures::white_piece, textures::black_piece);
-    layerStack.addLayer(backgroundLayer);
-    layerStack.addLayer(pieceLayer);
-
+    sceneManager->setActiveScene(sceneManager->gomuko);
 }
 
+//TODO handleEvents can be adjusted to fit the event dispatcher system
 void Game::handleEvents(SDL_Event& event){
     std::unique_ptr<Event> convertedEvent = eventConversionFactory.convertEvent( event );
     switch (event.type)
@@ -53,27 +48,27 @@ void Game::handleEvents(SDL_Event& event){
         break;
     case SDL_MOUSEBUTTONDOWN:
 
-        layerStack.handleEvent(*convertedEvent);
+        sceneManager->activeScene->handleEvent(*convertedEvent);
     default:
         break;
     }
 }
 
 void Game::update(){
-    layerStack.refreshLayers();
-    layerStack.updateLayers();
-
+    sceneManager->activeScene->refresh();
+    sceneManager->activeScene->update();
 }
 
 void Game::render(){
     SDL_RenderClear(renderer);
-    layerStack.drawLayers();
+    sceneManager->activeScene->draw();
     SDL_RenderPresent(renderer);
 
 }
 
 void Game::clean(){
     delete gameState;
+    delete sceneManager;
     SDL_DestroyWindow(window);
     SDL_DestroyRenderer(renderer);
     SDL_Quit();

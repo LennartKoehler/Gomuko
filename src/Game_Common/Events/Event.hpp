@@ -32,10 +32,10 @@ public:
     bool dispatch(const F& function){
         if (m_Event.getEventType() == T::getStaticType()){
             m_Event.handled |= function(static_cast<T&>(m_Event));
-				return true;
-			}
-			return false;
+            return true;
         }
+        return false;
+    }
 
 private:
     Event& m_Event;

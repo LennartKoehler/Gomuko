@@ -14,6 +14,8 @@
                 "${fileDirname}/*.cpp",
                 "${fileDirname}/ECS/*.cpp",
                 "${fileDirname}/Layers/*.cpp",
+                "${fileDirname}/Scenes/*.cpp",
+
 
 
                 "-fdiagnostics-color=always",
