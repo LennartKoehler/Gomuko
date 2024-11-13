@@ -22,7 +22,7 @@ public:
     virtual void onEvent(Event& event) {}
 
     
-    Entity* getEntityAtPosition(int x, int y, size_t group);
+    Entity* getEntityAtPosition(int x, int y, Group group);
     bool entityOverlap(Entity* entity, int x, int y);
 protected:
     Manager manager;

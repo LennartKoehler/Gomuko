@@ -52,16 +52,19 @@ void PieceLayer::syncGameState(){
             spritecomp.setTexture(asset_map[piece_int]);
         }
     }
+    if ( gameState->winner!= 0 ){
+        playerWon(gameState->winner);
+    }
 }
 
 
 
-// void PieceLayer::playerWon(PlayerComponent& playercomp){
-//     //pretty ugly
-//     Entity& won_entity = manager.addEntity();
-//     won_entity.addComponent<RectComponent>(200, 200, entity_size*2, entity_size*2);
-//     won_entity.addComponent<SpriteComponent>(textures::won);
-//     Entity& won_tile = manager.addEntity();
-//     won_tile.addComponent<RectComponent>(200, 200-2*entity_size, entity_size*2, entity_size*2);
-//     won_tile.addComponent<SpriteComponent>(playercomp.playerPieceAsset);
-// }
+void PieceLayer::playerWon(int playerID){
+    //pretty ugly
+    Entity& won_entity = manager.addEntity();
+    won_entity.addComponent<RectComponent>(200, 200, entity_size*2, entity_size*2);
+    won_entity.addComponent<SpriteComponent>(textures::won);
+    Entity& won_tile = manager.addEntity();
+    won_tile.addComponent<RectComponent>(200, 200-2*entity_size, entity_size*2, entity_size*2);
+    won_tile.addComponent<SpriteComponent>(asset_map[playerID]);
+}

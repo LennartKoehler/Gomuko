@@ -14,7 +14,7 @@ public:
     void onEvent(Event& event);
     bool onMouseButtonPressed( MouseButtonPressedEvent& event);
     void syncGameState();
-    // void playerWon(PlayerComponent& playercomp);
+    void playerWon(int playerID);
     GameState*& gameState;
 
     void update() override{

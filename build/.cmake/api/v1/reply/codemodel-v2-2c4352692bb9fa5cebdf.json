@@ -1,0 +1,102 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-87bdf183b0fd6028cfc8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.17"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "GameNetworkingSockets",
+					"jsonFile" : "directory-GameNetworkingSockets-Debug-9ce65cd2435b52df1f3e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.17"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "GameNetworkingSockets"
+				},
+				{
+					"build" : "src/Game_Common",
+					"jsonFile" : "directory-src.Game_Common-Debug-6a9061719383af71fb75.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.17"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/Game_Common",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "single_player",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 2,
+					"id" : "game_common_lib::@54452913d81b15fc4354",
+					"jsonFile" : "target-game_common_lib-Debug-22d9f4ead14fa9703e15.json",
+					"name" : "game_common_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "single_player::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-single_player-Debug-2b368a6566157f7fade9.json",
+					"name" : "single_player",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/lennart/cpp_projects/game_engine/build",
+		"source" : "/home/lennart/cpp_projects/game_engine"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

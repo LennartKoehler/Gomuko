@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Install script for directory: /home/lennart/cpp_projects/game_engine/src/Game_Client
+=======
+# Install script for directory: /home/lennart-koehler/gomuko/src/Game_Client
+>>>>>>> 36caae48460a564ac2d16d5fa922dfdc89685e92
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

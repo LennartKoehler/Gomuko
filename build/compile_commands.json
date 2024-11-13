@@ -6,6 +6,11 @@
 },
 {
   "directory": "/home/lennart/cpp_projects/game_engine/build",
+  "command": "/usr/bin/g++ -I/home/lennart/cpp_projects/game_engine/src/Game_Common -isystem /home/lennart/cpp_projects/game_engine/GameNetworkingSockets/include -g -std=gnu++23 -o src/Game_Common/CMakeFiles/game_common_lib.dir/Layers/Layer.cpp.o -c /home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/Layer.cpp",
+  "file": "/home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/Layer.cpp"
+},
+{
+  "directory": "/home/lennart/cpp_projects/game_engine/build",
   "command": "/usr/bin/g++ -I/home/lennart/cpp_projects/game_engine/src/Game_Common -isystem /home/lennart/cpp_projects/game_engine/GameNetworkingSockets/include -g -std=gnu++23 -o src/Game_Common/CMakeFiles/game_common_lib.dir/Layers/LayerStack.cpp.o -c /home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/LayerStack.cpp",
   "file": "/home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/LayerStack.cpp"
 },
@@ -18,6 +23,21 @@
   "directory": "/home/lennart/cpp_projects/game_engine/build",
   "command": "/usr/bin/g++ -I/home/lennart/cpp_projects/game_engine/src/Game_Common -isystem /home/lennart/cpp_projects/game_engine/GameNetworkingSockets/include -g -std=gnu++23 -o src/Game_Common/CMakeFiles/game_common_lib.dir/Layers/BackgroundLayer.cpp.o -c /home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/BackgroundLayer.cpp",
   "file": "/home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/BackgroundLayer.cpp"
+},
+{
+  "directory": "/home/lennart/cpp_projects/game_engine/build",
+  "command": "/usr/bin/g++ -I/home/lennart/cpp_projects/game_engine/src/Game_Common -isystem /home/lennart/cpp_projects/game_engine/GameNetworkingSockets/include -g -std=gnu++23 -o src/Game_Common/CMakeFiles/game_common_lib.dir/Layers/MainMenuLayer.cpp.o -c /home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/MainMenuLayer.cpp",
+  "file": "/home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/MainMenuLayer.cpp"
+},
+{
+  "directory": "/home/lennart/cpp_projects/game_engine/build",
+  "command": "/usr/bin/g++ -I/home/lennart/cpp_projects/game_engine/src/Game_Common -isystem /home/lennart/cpp_projects/game_engine/GameNetworkingSockets/include -g -std=gnu++23 -o src/Game_Common/CMakeFiles/game_common_lib.dir/Scenes/Gomuko.cpp.o -c /home/lennart/cpp_projects/game_engine/src/Game_Common/Scenes/Gomuko.cpp",
+  "file": "/home/lennart/cpp_projects/game_engine/src/Game_Common/Scenes/Gomuko.cpp"
+},
+{
+  "directory": "/home/lennart/cpp_projects/game_engine/build",
+  "command": "/usr/bin/g++ -I/home/lennart/cpp_projects/game_engine/src/Game_Common -isystem /home/lennart/cpp_projects/game_engine/GameNetworkingSockets/include -g -std=gnu++23 -o src/Game_Common/CMakeFiles/game_common_lib.dir/Scenes/MainMenu.cpp.o -c /home/lennart/cpp_projects/game_engine/src/Game_Common/Scenes/MainMenu.cpp",
+  "file": "/home/lennart/cpp_projects/game_engine/src/Game_Common/Scenes/MainMenu.cpp"
 },
 {
   "directory": "/home/lennart/cpp_projects/game_engine/build",

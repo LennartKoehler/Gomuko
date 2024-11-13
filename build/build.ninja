@@ -66,7 +66,7 @@ build CMakeFiles/single_player.dir/src/Game_Common/main.cpp.o: CXX_COMPILER__sin
 
 build single_player: CXX_EXECUTABLE_LINKER__single_player_Debug CMakeFiles/single_player.dir/src/Game_Common/main.cpp.o | src/Game_Common/libgame_common_lib.a ../GameNetworkingSockets/bin/libGameNetworkingSockets.so /usr/lib/x86_64-linux-gnu/libSDL2main.a /usr/lib/x86_64-linux-gnu/libSDL2.so || src/Game_Common/libgame_common_lib.a
   FLAGS = -g
-  LINK_LIBRARIES = -Wl,-rpath,/home/lennart/cpp_projects/game_engine/GameNetworkingSockets/bin:  src/Game_Common/libgame_common_lib.a  ../GameNetworkingSockets/bin/libGameNetworkingSockets.so  -lSDL2_image  /usr/lib/x86_64-linux-gnu/libSDL2main.a  /usr/lib/x86_64-linux-gnu/libSDL2.so
+  LINK_LIBRARIES = -Wl,-rpath,../GameNetworkingSockets/bin:  src/Game_Common/libgame_common_lib.a  ../GameNetworkingSockets/bin/libGameNetworkingSockets.so  -lSDL2_image  /usr/lib/x86_64-linux-gnu/libSDL2main.a  /usr/lib/x86_64-linux-gnu/libSDL2.so
   OBJECT_DIR = CMakeFiles/single_player.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -222,6 +222,13 @@ build GameNetworkingSockets/install/strip: phony GameNetworkingSockets/CMakeFile
 
 build cmake_object_order_depends_target_game_common_lib: phony || src/Game_Common/CMakeFiles/game_common_lib.dir
 
+build src/Game_Common/CMakeFiles/game_common_lib.dir/Layers/Layer.cpp.o: CXX_COMPILER__game_common_lib_Debug /home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/Layer.cpp || cmake_object_order_depends_target_game_common_lib
+  DEP_FILE = src/Game_Common/CMakeFiles/game_common_lib.dir/Layers/Layer.cpp.o.d
+  FLAGS = -g -std=gnu++23
+  INCLUDES = -I/home/lennart/cpp_projects/game_engine/src/Game_Common -isystem /home/lennart/cpp_projects/game_engine/GameNetworkingSockets/include
+  OBJECT_DIR = src/Game_Common/CMakeFiles/game_common_lib.dir
+  OBJECT_FILE_DIR = src/Game_Common/CMakeFiles/game_common_lib.dir/Layers
+
 build src/Game_Common/CMakeFiles/game_common_lib.dir/Layers/LayerStack.cpp.o: CXX_COMPILER__game_common_lib_Debug /home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/LayerStack.cpp || cmake_object_order_depends_target_game_common_lib
   DEP_FILE = src/Game_Common/CMakeFiles/game_common_lib.dir/Layers/LayerStack.cpp.o.d
   FLAGS = -g -std=gnu++23
@@ -242,6 +249,27 @@ build src/Game_Common/CMakeFiles/game_common_lib.dir/Layers/BackgroundLayer.cpp.
   INCLUDES = -I/home/lennart/cpp_projects/game_engine/src/Game_Common -isystem /home/lennart/cpp_projects/game_engine/GameNetworkingSockets/include
   OBJECT_DIR = src/Game_Common/CMakeFiles/game_common_lib.dir
   OBJECT_FILE_DIR = src/Game_Common/CMakeFiles/game_common_lib.dir/Layers
+
+build src/Game_Common/CMakeFiles/game_common_lib.dir/Layers/MainMenuLayer.cpp.o: CXX_COMPILER__game_common_lib_Debug /home/lennart/cpp_projects/game_engine/src/Game_Common/Layers/MainMenuLayer.cpp || cmake_object_order_depends_target_game_common_lib
+  DEP_FILE = src/Game_Common/CMakeFiles/game_common_lib.dir/Layers/MainMenuLayer.cpp.o.d
+  FLAGS = -g -std=gnu++23
+  INCLUDES = -I/home/lennart/cpp_projects/game_engine/src/Game_Common -isystem /home/lennart/cpp_projects/game_engine/GameNetworkingSockets/include
+  OBJECT_DIR = src/Game_Common/CMakeFiles/game_common_lib.dir
+  OBJECT_FILE_DIR = src/Game_Common/CMakeFiles/game_common_lib.dir/Layers
+
+build src/Game_Common/CMakeFiles/game_common_lib.dir/Scenes/Gomuko.cpp.o: CXX_COMPILER__game_common_lib_Debug /home/lennart/cpp_projects/game_engine/src/Game_Common/Scenes/Gomuko.cpp || cmake_object_order_depends_target_game_common_lib
+  DEP_FILE = src/Game_Common/CMakeFiles/game_common_lib.dir/Scenes/Gomuko.cpp.o.d
+  FLAGS = -g -std=gnu++23
+  INCLUDES = -I/home/lennart/cpp_projects/game_engine/src/Game_Common -isystem /home/lennart/cpp_projects/game_engine/GameNetworkingSockets/include
+  OBJECT_DIR = src/Game_Common/CMakeFiles/game_common_lib.dir
+  OBJECT_FILE_DIR = src/Game_Common/CMakeFiles/game_common_lib.dir/Scenes
+
+build src/Game_Common/CMakeFiles/game_common_lib.dir/Scenes/MainMenu.cpp.o: CXX_COMPILER__game_common_lib_Debug /home/lennart/cpp_projects/game_engine/src/Game_Common/Scenes/MainMenu.cpp || cmake_object_order_depends_target_game_common_lib
+  DEP_FILE = src/Game_Common/CMakeFiles/game_common_lib.dir/Scenes/MainMenu.cpp.o.d
+  FLAGS = -g -std=gnu++23
+  INCLUDES = -I/home/lennart/cpp_projects/game_engine/src/Game_Common -isystem /home/lennart/cpp_projects/game_engine/GameNetworkingSockets/include
+  OBJECT_DIR = src/Game_Common/CMakeFiles/game_common_lib.dir
+  OBJECT_FILE_DIR = src/Game_Common/CMakeFiles/game_common_lib.dir/Scenes
 
 build src/Game_Common/CMakeFiles/game_common_lib.dir/ECS/ECS.cpp.o: CXX_COMPILER__game_common_lib_Debug /home/lennart/cpp_projects/game_engine/src/Game_Common/ECS/ECS.cpp || cmake_object_order_depends_target_game_common_lib
   DEP_FILE = src/Game_Common/CMakeFiles/game_common_lib.dir/ECS/ECS.cpp.o.d
@@ -279,7 +307,7 @@ build src/Game_Common/CMakeFiles/game_common_lib.dir/GameState.cpp.o: CXX_COMPIL
 #############################################
 # Link the static library src/Game_Common/libgame_common_lib.a
 
-build src/Game_Common/libgame_common_lib.a: CXX_STATIC_LIBRARY_LINKER__game_common_lib_Debug src/Game_Common/CMakeFiles/game_common_lib.dir/Layers/LayerStack.cpp.o src/Game_Common/CMakeFiles/game_common_lib.dir/Layers/PieceLayer.cpp.o src/Game_Common/CMakeFiles/game_common_lib.dir/Layers/BackgroundLayer.cpp.o src/Game_Common/CMakeFiles/game_common_lib.dir/ECS/ECS.cpp.o src/Game_Common/CMakeFiles/game_common_lib.dir/TextureManager.cpp.o src/Game_Common/CMakeFiles/game_common_lib.dir/Game.cpp.o src/Game_Common/CMakeFiles/game_common_lib.dir/GameState.cpp.o || ../GameNetworkingSockets/bin/libGameNetworkingSockets.so
+build src/Game_Common/libgame_common_lib.a: CXX_STATIC_LIBRARY_LINKER__game_common_lib_Debug src/Game_Common/CMakeFiles/game_common_lib.dir/Layers/Layer.cpp.o src/Game_Common/CMakeFiles/game_common_lib.dir/Layers/LayerStack.cpp.o src/Game_Common/CMakeFiles/game_common_lib.dir/Layers/PieceLayer.cpp.o src/Game_Common/CMakeFiles/game_common_lib.dir/Layers/BackgroundLayer.cpp.o src/Game_Common/CMakeFiles/game_common_lib.dir/Layers/MainMenuLayer.cpp.o src/Game_Common/CMakeFiles/game_common_lib.dir/Scenes/Gomuko.cpp.o src/Game_Common/CMakeFiles/game_common_lib.dir/Scenes/MainMenu.cpp.o src/Game_Common/CMakeFiles/game_common_lib.dir/ECS/ECS.cpp.o src/Game_Common/CMakeFiles/game_common_lib.dir/TextureManager.cpp.o src/Game_Common/CMakeFiles/game_common_lib.dir/Game.cpp.o src/Game_Common/CMakeFiles/game_common_lib.dir/GameState.cpp.o || ../GameNetworkingSockets/bin/libGameNetworkingSockets.so
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = src/Game_Common/CMakeFiles/game_common_lib.dir
   POST_BUILD = :

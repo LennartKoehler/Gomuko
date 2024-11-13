@@ -1,4 +1,5 @@
 # ninja log v5
+<<<<<<< HEAD
 1	110	1731074668440630332	client	ce2c7cafde5931d7
 0	1263	1731073460283706080	CMakeFiles/client.dir/src/Game_Client/main.cpp.o	1cfed4d6ada2ff8b
 0	17	1731074716410053322	build.ninja	6854932b1288510
@@ -12,3 +13,15 @@
 1	358	1731073459375332614	src/Game_Common/CMakeFiles/game_common_lib.dir/GameState.cpp.o	1f934b7c647956bb
 0	17	1731074716410053322	build.ninja	6854932b1288510
 1	109	1731074716520053297	client	e3f4d9f7d4c43715
+=======
+9	3505	1731013646102736375	src/Game_Common/CMakeFiles/game_common_lib.dir/ECS/ECS.cpp.o	4da5d3cd19bced3b
+3510	5286	1731013647796453125	src/Game_Common/CMakeFiles/game_common_lib.dir/GameState.cpp.o	55766bdf2e32905a
+12	8845	1731013651443019994	src/Game_Common/CMakeFiles/game_common_lib.dir/TextureManager.cpp.o	ebbec44b0dae72de
+20	8849	1731013651441019126	src/Game_Common/CMakeFiles/game_common_lib.dir/Game.cpp.o	11ec0cdebe9e0535
+6	8921	1731013651520053408	src/Game_Common/CMakeFiles/game_common_lib.dir/Layers/BackgroundLayer.cpp.o	f611417b1d2f80fa
+5	9105	1731013651703132821	src/Game_Common/CMakeFiles/game_common_lib.dir/Layers/PieceLayer.cpp.o	a6fb53bb5d1ce540
+9105	9823	1731013652421445220	src/Game_Common/libgame_common_lib.a	30956d559e8cdd6a
+9823	9847	1731013652445455681	src/Game_Client/libgame_client_lib.a	b6e61a074b64395e
+4	10239	1731013652837626554	CMakeFiles/client.dir/src/Game_Client/main.cpp.o	4d3c1a135e6e88f5
+10239	10617	1731013653210789526	client	546e045f637ca5eb
+>>>>>>> 36caae48460a564ac2d16d5fa922dfdc89685e92
