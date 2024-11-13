@@ -6,12 +6,22 @@
 // manages interactions between scenes
 class SceneManager{
 public:
-    SceneManager(){}
+    SceneManager(){
+        gomuko = new Gomuko(this);
+        mainMenu = new MainMenu(this);
+        activeScene = mainMenu;
+    }
     Scene* getActiveScene(){ return activeScene; }
-    void setActiveScene(Scene* activeScene) { this->activeScene = activeScene; }
+    void setActiveScene(Scene* activeScene) {
+        this->activeScene = activeScene;
+        activeScene->refresh();
+        activeScene->update();
+        activeScene->draw();
+        }
 
-    Gomuko* gomuko = new Gomuko(this);
-    MainMenu* mainMenu = new MainMenu(this);
-    Scene* activeScene = mainMenu;
+    Gomuko* gomuko;
+    MainMenu* mainMenu;
+private:
+    Scene* activeScene;
 
 };

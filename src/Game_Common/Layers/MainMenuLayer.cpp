@@ -3,11 +3,11 @@
 // make buttoncomponent, that when pressed executes the given function? -> e.g. set a value
 MainMenuLayer::MainMenuLayer(){
     Entity& backgroundImage(manager.addEntity());
-    backgroundImage.addComponent<RectComponent>(0,0,500,500);
+    backgroundImage.addComponent<RectComponent>(0,0,1000,1000);
     backgroundImage.addComponent<SpriteComponent>(textures::background);
     
     Entity& startGameButton(manager.addEntity());
-    startGameButton.addComponent<RectComponent>(50,50,200,200);
+    startGameButton.addComponent<RectComponent>(200,200,50,100);
     startGameButton.addComponent<SpriteComponent>(textures::start_game);
     startGameButton.addGroup(groupButtons);
 }

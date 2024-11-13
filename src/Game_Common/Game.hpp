@@ -11,6 +11,7 @@
 #include "Events/EventConversionFactory.hpp"
 #include "Scenes/SceneManager.hpp"
 
+
 //#include "Layers/LayerStack.hpp"
 
 
@@ -35,7 +36,7 @@ private:
     GameState* gameState;
     bool isRunning = false;
     SDL_Window* window;
-    SceneManager* sceneManager = new SceneManager();
+    SceneManager* sceneManager;
 };
 
 #endif /* Game_hpp */

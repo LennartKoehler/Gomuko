@@ -35,7 +35,8 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 
         isRunning = true;
     }
-    sceneManager->setActiveScene(sceneManager->gomuko);
+    sceneManager = new SceneManager();
+    sceneManager->setActiveScene(sceneManager->mainMenu);
 }
 
 //TODO handleEvents can be adjusted to fit the event dispatcher system
@@ -48,20 +49,20 @@ void Game::handleEvents(SDL_Event& event){
         break;
     case SDL_MOUSEBUTTONDOWN:
 
-        sceneManager->activeScene->handleEvent(*convertedEvent);
+        sceneManager->getActiveScene()->handleEvent(*convertedEvent);
     default:
         break;
     }
 }
 
 void Game::update(){
-    sceneManager->activeScene->refresh();
-    sceneManager->activeScene->update();
+    sceneManager->getActiveScene()->refresh();
+    sceneManager->getActiveScene()->update();
 }
 
 void Game::render(){
     SDL_RenderClear(renderer);
-    sceneManager->activeScene->draw();
+    sceneManager->getActiveScene()->draw();
     SDL_RenderPresent(renderer);
 
 }
