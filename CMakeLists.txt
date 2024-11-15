@@ -32,6 +32,7 @@ PKG_SEARCH_MODULE(SDL2_image REQUIRED SDL2_image>=2.0.0)
 
 # add_library(game_common_lib SHARED)
 # target_include_directories(game_common_lib PRIVATE "${PROJECT_SOURCE_DIR}")
+list( APPEND CMAKE_BUILD_RPATH "/home/lennart/cpp_projects/game_engine/GameNetworkingSockets/bin/" )
 
 add_subdirectory("GameNetworkingSockets")
 add_subdirectory("src/Game_Common")
@@ -60,6 +61,8 @@ endif()
 
 # target_link_libraries(${PROJECT_NAME} PRIVATE protobuf)
 
+
+target_link_libraries(${PROJECT_NAME} PRIVATE libprotobuf)
 
 target_link_libraries(${PROJECT_NAME} PRIVATE game_common_lib)
 

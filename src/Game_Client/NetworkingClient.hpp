@@ -181,10 +181,13 @@ private:
 
 SteamNetworkingIPAddr input_handling(int argc, const char* argv[]){
 	SteamNetworkingIPAddr addrServer; addrServer.Clear();
-        if ( !addrServer.ParseString( argv[1] ) )
-            FatalError( "Invalid server address '%s'", argv[1] );
-        if ( addrServer.m_port == 0 )
-            addrServer.m_port = DEFAULT_SERVER_PORT;
+	if (argc == 1){
+		FatalError( "Please specify server address: ./client server_address");
+	}
+	if ( !addrServer.ParseString( argv[1] ) )
+		FatalError( "Invalid server address '%s'", argv[1] );
+	if ( addrServer.m_port == 0 )
+		addrServer.m_port = DEFAULT_SERVER_PORT;
 	return addrServer;
 }
 

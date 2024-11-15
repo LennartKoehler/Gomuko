@@ -381,10 +381,13 @@ private:
 };
 
 int input_handling(int argc, const char* argv[]){
-		int nPort = atoi( argv[1] );
-        if ( nPort <= 0 || nPort > 65535 )
-            FatalError( "Invalid port %d", nPort );
-        return nPort;
+	if (argc == 1){
+		FatalError( "Please specify port: ./server port_number");
+	}
+	int nPort = atoi( argv[1] );
+	if ( nPort <= 0 || nPort > 65535 )
+		FatalError( "Invalid port %d", nPort );
+	return nPort;
 }
 
 

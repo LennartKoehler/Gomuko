@@ -1,0 +1,2 @@
+/usr/bin/ar qc libgame_client_lib.a 
+/usr/bin/ranlib libgame_client_lib.a

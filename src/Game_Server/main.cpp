@@ -2,6 +2,8 @@
 #include "NetworkingServer.hpp"
 
 int main(int argc, const char* argv[]) {
+    std::cerr << argc;
+
     int nPort = input_handling(argc, argv);
     ChatServer* server = run_server(nPort);
     
