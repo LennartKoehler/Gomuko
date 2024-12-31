@@ -1,29 +1,81 @@
 import torch
 import torch.nn as nn
+import torch.nn.functional as F
 
 # Define Deep Q-Network (DQN) Model
+
+
+class Block(nn.Module):
+    def __init__(self, in_filters, out_filters, kernel_size, stride):
+        super(Block, self).__init__()
+
+        self.conv1=nn.Conv2d(in_filters, out_filters, kernel_size=kernel_size, stride=stride)    
+        
+        self.relu1 = nn.ReLU()
+        self.dropout1 = nn.Dropout(0.15) 
+        
+
+    def forward(self, x):
+        x = self.conv1(x)
+        x = self.relu1(x)
+        x = self.dropout1(x)
+        
+        return x
+
 class DQN(nn.Module):
-    def __init__(self, input_dim, output_dim, device):
+    def __init__(self, input_dim, output_dim, square_size, in_chans, ch_mul, device):
+        self.input_dim = input_dim
+        self.output_dim = output_dim
+        self.square_size = square_size
         self.device = device
         super(DQN, self).__init__()
-        self.fc1 = nn.Linear(input_dim, 900)
-        self.fc2 = nn.Linear(900, 900)
-        self.fc3 = nn.Linear(900, 900)
-        self.fc4 = nn.Linear(900, 900)
-        self.fc5 = nn.Linear(900, 900)
+        
+        self.enc1=Block(in_chans, ch_mul, kernel_size=(3,9), stride=(1,3))
+        self.enc2=Block(ch_mul, 2*ch_mul, kernel_size=3, stride=1)
+        self.enc3=Block(2*ch_mul, 4*ch_mul, kernel_size=3, stride=1)
+        self.enc4=Block(4*ch_mul, 8*ch_mul, kernel_size=3, stride=1)
+        
+        self.linear=nn.Linear(8*ch_mul*7*7, 8*ch_mul*7*3)
+        self.final=nn.Linear(8*ch_mul*7*3, output_dim)
+        self.softmax = nn.Softmax()
+        
+    def forward(self, x):
+        x = self.get_one_hot(x, 3)
+        x = self.get_2d(x)
 
-        self.fc6 = nn.Linear(900, output_dim)
+        enc1=self.enc1(x)
+        enc2=self.enc2(enc1)
+        enc3=self.enc3(enc2)
+        enc4=self.enc4(enc3)
 
-    def forward(self, state):
-        x = self.get_one_hot(state, 3)
-        x = torch.relu(self.fc1(x))
-        x = torch.relu(self.fc2(x))
-        x = torch.relu(self.fc3(x))
-        x = torch.relu(self.fc4(x))
-        x = torch.relu(self.fc5(x))
 
-        x = self.fc6(x)
-        return x
+        flat_enc4=enc4.view(-1)
+        
+        linear = self.linear(flat_enc4)
+        final=self.final(linear)
+        return final
+
+
+
+
     def get_one_hot(self, targets, nb_classes):
         res = torch.eye(nb_classes, device=self.device)[targets]
         return res.flatten()
+
+    def get_2d(self, x):
+        x = torch.reshape(x, (self.square_size, self.square_size*3))[None,None,:,:]
+        return x
+    
+if __name__ == "__main__":
+    import numpy as np
+    from torchviz import make_dot
+    model = DQN(15*15*3, 15*15, 15, 1, 8, "cuda")
+    model.to("cuda")
+    model_parameters = filter(lambda p: p.requires_grad, model.parameters())
+    params = sum([np.prod(p.size()) for p in model_parameters])
+    print(params)
+    yhat = model(torch.zeros(15*15, dtype=torch.int, device="cuda"))
+    dot = make_dot(yhat, params=dict(list(model.named_parameters())))
+    dot.format = 'png'
+    dot.render('./agent_training/DQN_vis')
+

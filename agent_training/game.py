@@ -5,6 +5,7 @@ class Game:
         self.size = size
         self.state_matrix = np.zeros(size* size, dtype=int)
         self.win_condition_number = win_condition_number
+        self.game_result = {"win": False, "tie": False}
 
     def set_value(self, x, y, value):
         self.state_matrix[x + y * self.size] = value
@@ -29,10 +30,11 @@ class Game:
         else:
             return False
         
-    def full(self):
+    def check_tie(self):
         if 0 in self.state_matrix:
             return False
         else:
+            self.game_result["tie"] = True
             return True
 
     def __str__(self):
@@ -40,6 +42,7 @@ class Game:
 
     def check_if_won(self, player_id):
         n_rows = n_cols = self.size
+        win = False
 
         # Check rows and columns
         for i in range(n_rows):
@@ -50,7 +53,7 @@ class Game:
                 if self.get_value(i, j) == player_id:
                     col_count += 1
                     if col_count == self.win_condition_number:
-                        return True
+                        win = True
                 else:
                     col_count = 0
 
@@ -58,7 +61,7 @@ class Game:
                 if self.get_value(j, i) == player_id:
                     row_count += 1
                     if row_count == self.win_condition_number:
-                        return True
+                        win = True
                 else:
                     row_count = 0
 
@@ -73,7 +76,7 @@ class Game:
                     if self.get_value(i, j) == player_id:
                         main_diagonal_count += 1
                         if main_diagonal_count == self.win_condition_number:
-                            return True
+                            win = True
                     else:
                         main_diagonal_count = 0
 
@@ -83,37 +86,34 @@ class Game:
                     if self.get_value(i, anti_j) == player_id:
                         anti_diagonal_count += 1
                         if anti_diagonal_count == self.win_condition_number:
-                            return True
+                            win = True
                     else:
                         anti_diagonal_count = 0
 
-        return False
+        self.game_result["win"] = win
+
+        return win
 
 
 
     
 class Game_training_wrapper:
-    def __init__(self, size):
-        self.game = Game(size, 3)
+    def __init__(self, size, win_con):
+        self.game = Game(size, win_con)
+
+    def get_game_result(self):
+        return self.game.game_result.copy()
 
     def step(self, action, playerID):
         unvalid_action = not self.game.place_piece_request_position(action, playerID)
-
-        if self.game.check_if_won(playerID): # 0 for not done, 1 for win, 3 for tie, 2 for lose
-            done = 1
-        # elif self.game.check_if_won(2):
-        #     done = 2
-        elif self.game.full():
-            done = 3
-            unvalid_action = False
-        else:
-            done = 0
-
         new_state = self.get_state()
-        return unvalid_action, done, new_state
+        if not unvalid_action:
+            if not self.game.check_if_won(1):
+                self.game.check_tie()
+        return unvalid_action, new_state
 
     def get_state(self):
-        return self.game.state_matrix.copy()   
+        return self.game.state_matrix.copy()
      
     def invert_state(self):
         temp = self.game.state_matrix.copy()
