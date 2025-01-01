@@ -61,9 +61,9 @@ class DQNAgent:
 
 
 
-        # turn_time = (time.time() - turn_time_start)*1000
-        # replay_time = (time.time() - replay_time_start)*1000
-        # print(f"turn time: {turn_time:.2f}ms, replay time: {replay_time:.2f}")
+        turn_time = (time.time() - turn_time_start)*1000
+        replay_time = (time.time() - replay_time_start)*1000
+        print(f"turn time: {turn_time:.2f}ms, replay time: {replay_time:.2f}")
         
         return unvalid_action_counter, done # done is when an agent says hes done (he still needs to remember the loss after the game is already finished)
 
@@ -123,12 +123,14 @@ class DQNAgent:
             return
         minibatch = random.sample(self.memory, batch_size)
         for experience in minibatch:
+
             state = experience['state']
             action = experience['action']
             state_next = experience['state_next']
             game_result = experience['game_result']
             reward = experience['reward']
 
+            #s_time = time.time()
 
             target = reward
             output = self.model(torch.tensor(state, dtype=int, device=self.device))
@@ -143,23 +145,23 @@ class DQNAgent:
             # debug_state_next = np.reshape(state_next, (3,3))
 
 
-            if game_result == "win":
-                pass
-            if game_result == "lose":
-                pass
-            if game_result == "tie_me":
-                pass
-            if game_result == "unvalid_action":
-                    pass
+            # if game_result == "win":
+            #     pass
+            # if game_result == "lose":
+            #     pass
+            # if game_result == "tie_me":
+            #     pass
+            # if game_result == "unvalid_action":
+            #         pass
 
             target_f = output.detach().clone()
             target_f[action] = target
-
             self.optimizer.zero_grad()
             loss = nn.MSELoss()(target_f, output)
             loss.backward()
             self.optimizer.step()
-
+            # backprop_time = time.time() - s_time
+            # print(f"backprop time: {backprop_time*1000:.2f}")
 
         if self.epsilon > 0.01:
             self.epsilon *= self.epsilon_decay

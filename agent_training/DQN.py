@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-
+import time
 # Define Deep Q-Network (DQN) Model
 
 
@@ -36,23 +36,29 @@ class DQN(nn.Module):
         self.enc4=Block(4*ch_mul, 8*ch_mul, kernel_size=3, stride=1)
         
         self.linear=nn.Linear(8*ch_mul*7*7, 8*ch_mul*7*3)
-        self.final=nn.Linear(8*ch_mul*7*3, output_dim)
+        self.final=nn.Linear(8*ch_mul*7*3+input_dim, output_dim)
         self.softmax = nn.Softmax()
         
     def forward(self, x):
-        x = self.get_one_hot(x, 3)
-        x = self.get_2d(x)
+        #s_time = time.time()
+        one_hot_x = self.get_one_hot(x, 3)
+        #one_hot_time = time.time() - s_time
+        x_2d = self.get_2d(one_hot_x)
+        #time_2d = time.time() - one_hot_time - s_time
 
-        enc1=self.enc1(x)
+        enc1=self.enc1(x_2d)
         enc2=self.enc2(enc1)
         enc3=self.enc3(enc2)
         enc4=self.enc4(enc3)
 
-
         flat_enc4=enc4.view(-1)
         
         linear = self.linear(flat_enc4)
-        final=self.final(linear)
+        linear_cat = torch.cat([linear, one_hot_x])
+        final=self.final(linear_cat)
+
+        # time_nn = time.time() - one_hot_time - s_time - time_2d
+        # print( one_hot_time*1000, time_2d*1000, time_nn*1000)
         return final
 
 
