@@ -41,7 +41,7 @@ class DQNAgent:
 
 
     def turn(self, env, iteration):
-        turn_time_start = time.time()
+        #turn_time_start = time.time()
         state = env.get_state()
         done = False
         unvalid_action_counter = 0
@@ -56,14 +56,14 @@ class DQNAgent:
             action = self.act(state)
             unvalid_action_counter, done = self.take_turn(env, state, iteration, action)
 
-        replay_time_start = time.time()
+        #replay_time_start = time.time()
         self.replay(self.batch_size)
 
 
 
-        turn_time = (time.time() - turn_time_start)*1000
-        replay_time = (time.time() - replay_time_start)*1000
-        print(f"turn time: {turn_time:.2f}ms, replay time: {replay_time:.2f}")
+        # turn_time = (time.time() - turn_time_start)*1000
+        # replay_time = (time.time() - replay_time_start)*1000
+        # print(f"turn time: {turn_time:.2f}ms, replay time: {replay_time:.2f}")
         
         return unvalid_action_counter, done # done is when an agent says hes done (he still needs to remember the loss after the game is already finished)
 

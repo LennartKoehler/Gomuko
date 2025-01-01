@@ -17,8 +17,8 @@ win_con = 5
 
 # Train the DQN agent with Experience Replay Buffer
 batch_size = 32
-num_episodes = 1800
-lr_decrease_rate = 800
+num_episodes = 1000
+lr_decrease_rate = 200
 
 network = DQN(state_dim, action_dim, game_size, in_chans=1, ch_mul=8, device="cuda").to("cuda")
 #network.load_state_dict(torch.load("agent_training/trained_models/long_2_3x3_1500_iterations_state_dict.pkl"))
@@ -55,7 +55,7 @@ for episode in range(num_episodes):
         iteration += 1
     print(f"Episode: {episode + 1}, Total Reward: {total_reward}, Epsilon: {agent1.epsilon:.2f}, Learning Rate: {agent1.lr:.5f}")
     rewards.append(total_reward)
-torch.save(network.state_dict(), "agent_training/trained_models/test_15x15_1500_iterations_state_dict.pkl")
+torch.save(network.state_dict(), "trained_models/test_15x15_1000_iterations_state_dict.pkl")
 
 plt.plot(agent1.losses)
 plt.show()
