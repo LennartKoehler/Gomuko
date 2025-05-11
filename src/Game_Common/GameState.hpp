@@ -20,8 +20,12 @@ struct GameState{
     //GameState(GameState& other){ std::cerr << "copying gamestate" << std::endl; }
 
     int getValue(int i, int j){ return stateMatrix.getValue(i, j); }
-    void placePieceRequest(int i, int j);
-    void placePiece(int i, int j);
+    const int getValue(int i, int j) const { return stateMatrix.getValue(i, j); }
+    const Matrix<int> getState() { return stateMatrix; }
+    void setState(Matrix<int> stateMatrix) { this->stateMatrix = stateMatrix; }
+
+    void placePieceRequest(int i, int j, int ID);
+    void placePiece(int i, int j, int ID);
     bool checkIfWon(int playerID);
     void nextPlayer();
     std::string to_string();

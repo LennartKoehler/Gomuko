@@ -16,6 +16,12 @@ if(NOT SERVER AND NOT CLIENT)
     project(single_player)
 endif()
 
+set(CMAKE_PREFIX_PATH /usr/local/lib/libtorch/share/cmake/Torch)
+find_package(Torch REQUIRED)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${TORCH_CXX_FLAGS}")
+include_directories(
+  "${TORCH_INCLUDE_DIRS}"
+)
 
 option(MYGAME_VENDORED "Use vendored libraries" OFF)
 
@@ -41,6 +47,9 @@ add_subdirectory("src/Game_Common")
 add_executable(${PROJECT_NAME})
 
 
+add_subdirectory(alpha_zero)
+target_link_libraries(${PROJECT_NAME} PRIVATE alpha_zero_lib)
+
 if(SERVER)
     add_subdirectory("src/Game_Server")
     target_sources(${PROJECT_NAME} PRIVATE "src/Game_Server/main.cpp")
@@ -57,10 +66,14 @@ if(NOT SERVER AND NOT CLIENT)
     target_sources(${PROJECT_NAME} PRIVATE "src/Game_Common/main.cpp")
 endif()
 
+# list(APPEND CMAKE_PREFIX_PATH "~/cpp_projects/game_engine/alpha_zero_build")
+# find_package(AlphaZero REQUIRED)
+# target_link_libraries(${PROJECT_NAME} PRIVATE AlphaZero)
+
 
 
 # target_link_libraries(${PROJECT_NAME} PRIVATE protobuf)
-
+target_link_libraries(${PROJECT_NAME} PUBLIC "${TORCH_LIBRARIES}")
 
 target_link_libraries(${PROJECT_NAME} PRIVATE libprotobuf)
 
@@ -75,11 +88,17 @@ target_link_libraries(${PROJECT_NAME} PRIVATE SDL2::SDL2main)
 target_link_libraries(${PROJECT_NAME} PRIVATE SDL2::SDL2)
 
 
+
+add_custom_target(copy_assets
+    COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_CURRENT_LIST_DIR}/assets ${CMAKE_CURRENT_BINARY_DIR}/assets
+)
+add_dependencies(${PROJECT_NAME} copy_assets)
+
 include(GNUInstallDirs)
 install(TARGETS ${PROJECT_NAME})
 install(FILES 
 "/home/lennart/cpp_projects/game_engine/GameNetworkingSockets/bin/libGameNetworkingSockets.so"
-"/home/lennart/cpp_projects/game_engine/GameNetworkingSockets/bin/libprotobuf.so.23.0.4" TYPE LIB)
+"/home/lennart/cpp_projects/game_engine/GameNetworkingSockets/bin/libprotobuf.so.23" TYPE LIB)
 install (TARGETS
 game_common_lib
 RUNTIME DESTINATION bin

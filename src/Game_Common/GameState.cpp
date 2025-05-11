@@ -5,18 +5,14 @@ GameState::GameState(int size_x, int size_y, int start_player, int win_condition
     : stateMatrix(Matrix<int>(size_x, size_y, 0)), player_at_turn(start_player), turn_number(0), win_condition_number(win_condition_number){
 }
 
-void GameState::placePieceRequest(int i, int j){
-    if (getValue(i, j) == 0 && !unchangable){ // check if viable move
-        placePiece(i, j);
+void GameState::placePieceRequest(int i, int j, int playerID){
+    if (getValue(i, j) == 0){ // check if viable move
+        placePiece(i, j, playerID);
     }
 }
 
-void GameState::placePiece(int i, int j){
-    stateMatrix.setValue(i, j, player_at_turn);
-    if (checkIfWon(player_at_turn)){
-        winner = player_at_turn;
-    }
-    else{ nextPlayer(); }
+void GameState::placePiece(int i, int j, int playerID){
+    stateMatrix.setValue(i, j, playerID);
     turn_number++;
 }
 

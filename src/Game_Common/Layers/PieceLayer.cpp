@@ -3,16 +3,15 @@
 
 
 
-PieceLayer::PieceLayer(GameState*& gameState, int entity_size, const char* asset_white, const char* asset_black)
-    : gameState(gameState),
-     entityMatrix(gameState->stateMatrix.get_num_rows(), gameState->stateMatrix.get_num_cols(), std::shared_ptr<Entity>()),
+PieceLayer::PieceLayer(const Matrix<int>& gameState, int entity_size, const char* asset_white, const char* asset_black)
+    : entityMatrix(gameState.get_num_rows(), gameState.get_num_cols(), std::shared_ptr<Entity>()),
      entity_size(entity_size){
     asset_map[1] = asset_white;
     asset_map[2] = asset_black;
 
 
-    for (int row = 0; row < gameState->stateMatrix.get_num_rows(); row++){
-        for (int col = 0; col < gameState->stateMatrix.get_num_cols(); col++){
+    for (int row = 0; row < gameState.get_num_rows(); row++){
+        for (int col = 0; col < gameState.get_num_cols(); col++){
             Entity& piece(manager.addEntity());
             piece.addComponent<RectComponent>(row*entity_size, col*entity_size, entity_size, entity_size);
             piece.addComponent<MatrixPositionComponent>(row, col);
@@ -36,24 +35,24 @@ bool PieceLayer::onMouseButtonPressed(MouseButtonPressedEvent& event){
     if (tile != nullptr){
 
         MatrixPositionComponent& position = tile->getComponent<MatrixPositionComponent>();
-        gameState->placePieceRequest(position.i, position.j);
+
+        if (onPieceSelected) {
+            onPieceSelected(position.i, position.j);
+        }
     }
     return true;
 }
 
-void PieceLayer::syncGameState(){
-    for (int row = 0; row < gameState->stateMatrix.get_num_rows(); row++){
-        for (int col = 0; col < gameState->stateMatrix.get_num_cols(); col++){
-            int piece_int = gameState->getValue(row,col);
+void PieceLayer::syncGameState(const Matrix<int>& gameState){
+    for (int row = 0; row < gameState.get_num_rows(); row++){
+        for (int col = 0; col < gameState.get_num_cols(); col++){
+            const int piece_int = gameState.getValue(row,col);
             std::shared_ptr<Entity> entity = entityMatrix.getValue(row, col);
     
             SpriteComponent& spritecomp = entity->getComponent<SpriteComponent>();
             
             spritecomp.setTexture(asset_map[piece_int]);
         }
-    }
-    if ( gameState->winner!= 0 ){
-        playerWon(gameState->winner);
     }
 }
 
@@ -67,4 +66,8 @@ void PieceLayer::playerWon(int playerID){
     Entity& won_tile = manager.addEntity();
     won_tile.addComponent<RectComponent>(200, 200-2*entity_size, entity_size*2, entity_size*2);
     won_tile.addComponent<SpriteComponent>(asset_map[playerID]);
+}
+
+void PieceLayer::setPieceSelectedCallback(PieceSelectedCallback cb) {
+    onPieceSelected = std::move(cb);
 }

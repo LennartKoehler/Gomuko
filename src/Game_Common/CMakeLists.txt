@@ -1,5 +1,7 @@
 add_library(
     game_common_lib
+
+
     "Events/Event.hpp" 
     "Events/MouseButtonPressedEvent.hpp"
 
@@ -9,7 +11,7 @@ add_library(
     "Textures.hpp"
     "Networking.hpp"
 
-    "Scenes/Gomuko.hpp" 
+    "Scenes/GomokuScene.hpp" 
     "Scenes/Scene.hpp" 
     "Scenes/SceneManager.hpp" 
     "Scenes/MainMenu.hpp" 
@@ -34,7 +36,7 @@ add_library(
     "Layers/BackgroundLayer.cpp" 
     "Layers/MainMenuLayer.cpp" 
 
-    "Scenes/Gomuko.cpp"
+    "Scenes/GomokuScene.cpp"
     "Scenes/MainMenu.cpp"
 
     "ECS/ECS.cpp"
@@ -47,5 +49,6 @@ add_library(
     )
 
 target_link_libraries(game_common_lib PUBLIC networking)
+target_link_libraries(game_common_lib PUBLIC alpha_zero_lib)
 
 target_include_directories(game_common_lib PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}")

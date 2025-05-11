@@ -13,7 +13,7 @@ int main(int argc, const char* argv[]) {
     ChatClient* client = run_client(addrServer);
 
     game = new Game();
-    game->init("Gomuko", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 64*10, 64*10, false);
+    game->init("Gomoku", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 64*10, 64*10, false);
     SDL_Event event;
 
     int recieved_turn_number = 0;

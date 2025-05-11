@@ -139,10 +139,10 @@ class DQNAgent:
                 output_next = self.model(torch.tensor(state_next, dtype=int, device=self.device))
                 target = reward + self.gamma * torch.max(output_next).item()
 
-            # debug_state = np.reshape(state, (3,3))
-            # debug_action = (action//3+1, action%3+1)
-            # debug_reward = reward
-            # debug_state_next = np.reshape(state_next, (3,3))
+            debug_state = np.reshape(state, (15,15))
+            debug_action = (action//15+1, action%15+1)
+            debug_reward = reward
+            debug_state_next = np.reshape(state_next, (15,15))
 
 
             # if game_result == "win":

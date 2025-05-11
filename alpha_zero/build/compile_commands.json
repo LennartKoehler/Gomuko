@@ -1,0 +1,37 @@
+[
+{
+  "directory": "/home/lennart/cpp_projects/game_engine/alpha_zero/build",
+  "command": "/usr/bin/g++ -DUSE_C10D_GLOO -DUSE_C10D_NCCL -DUSE_DISTRIBUTED -DUSE_RPC -DUSE_TENSORPIPE -isystem /usr/local/lib/libtorch_cuda/libtorch/include -isystem /usr/local/lib/libtorch_cuda/libtorch/include/torch/csrc/api/include -isystem /usr/local/cuda-12.6/include -g -D_GLIBCXX_USE_CXX11_ABI=0 -fopenmp -o CMakeFiles/alpha_zero.dir/main.cpp.o -c /home/lennart/cpp_projects/game_engine/alpha_zero/main.cpp",
+  "file": "/home/lennart/cpp_projects/game_engine/alpha_zero/main.cpp"
+},
+{
+  "directory": "/home/lennart/cpp_projects/game_engine/alpha_zero/build",
+  "command": "/usr/bin/g++ -DUSE_C10D_GLOO -DUSE_C10D_NCCL -DUSE_DISTRIBUTED -DUSE_RPC -DUSE_TENSORPIPE -isystem /usr/local/lib/libtorch_cuda/libtorch/include -isystem /usr/local/lib/libtorch_cuda/libtorch/include/torch/csrc/api/include -isystem /usr/local/cuda-12.6/include -g -D_GLIBCXX_USE_CXX11_ABI=0 -fopenmp -o CMakeFiles/alpha_zero.dir/Trainer.cpp.o -c /home/lennart/cpp_projects/game_engine/alpha_zero/Trainer.cpp",
+  "file": "/home/lennart/cpp_projects/game_engine/alpha_zero/Trainer.cpp"
+},
+{
+  "directory": "/home/lennart/cpp_projects/game_engine/alpha_zero/build",
+  "command": "/usr/bin/g++ -DUSE_C10D_GLOO -DUSE_C10D_NCCL -DUSE_DISTRIBUTED -DUSE_RPC -DUSE_TENSORPIPE -isystem /usr/local/lib/libtorch_cuda/libtorch/include -isystem /usr/local/lib/libtorch_cuda/libtorch/include/torch/csrc/api/include -isystem /usr/local/cuda-12.6/include -g -D_GLIBCXX_USE_CXX11_ABI=0 -fopenmp -o CMakeFiles/alpha_zero.dir/Gomoku.cpp.o -c /home/lennart/cpp_projects/game_engine/alpha_zero/Gomoku.cpp",
+  "file": "/home/lennart/cpp_projects/game_engine/alpha_zero/Gomoku.cpp"
+},
+{
+  "directory": "/home/lennart/cpp_projects/game_engine/alpha_zero/build",
+  "command": "/usr/bin/g++ -DUSE_C10D_GLOO -DUSE_C10D_NCCL -DUSE_DISTRIBUTED -DUSE_RPC -DUSE_TENSORPIPE -isystem /usr/local/lib/libtorch_cuda/libtorch/include -isystem /usr/local/lib/libtorch_cuda/libtorch/include/torch/csrc/api/include -isystem /usr/local/cuda-12.6/include -g -D_GLIBCXX_USE_CXX11_ABI=0 -fopenmp -o CMakeFiles/alpha_zero.dir/MCTS.cpp.o -c /home/lennart/cpp_projects/game_engine/alpha_zero/MCTS.cpp",
+  "file": "/home/lennart/cpp_projects/game_engine/alpha_zero/MCTS.cpp"
+},
+{
+  "directory": "/home/lennart/cpp_projects/game_engine/alpha_zero/build",
+  "command": "/usr/bin/g++ -I/usr/local/lib/libtorch_cuda/libtorch/include -I/usr/local/lib/libtorch_cuda/libtorch/include/torch/csrc/api/include -I/home/lennart/cpp_projects/game_engine/alpha_zero -g -o CMakeFiles/alpha_zero_lib.dir/Gomoku.cpp.o -c /home/lennart/cpp_projects/game_engine/alpha_zero/Gomoku.cpp",
+  "file": "/home/lennart/cpp_projects/game_engine/alpha_zero/Gomoku.cpp"
+},
+{
+  "directory": "/home/lennart/cpp_projects/game_engine/alpha_zero/build",
+  "command": "/usr/bin/g++ -I/usr/local/lib/libtorch_cuda/libtorch/include -I/usr/local/lib/libtorch_cuda/libtorch/include/torch/csrc/api/include -I/home/lennart/cpp_projects/game_engine/alpha_zero -g -o CMakeFiles/alpha_zero_lib.dir/MCTS.cpp.o -c /home/lennart/cpp_projects/game_engine/alpha_zero/MCTS.cpp",
+  "file": "/home/lennart/cpp_projects/game_engine/alpha_zero/MCTS.cpp"
+},
+{
+  "directory": "/home/lennart/cpp_projects/game_engine/alpha_zero/build",
+  "command": "/usr/bin/g++ -I/usr/local/lib/libtorch_cuda/libtorch/include -I/usr/local/lib/libtorch_cuda/libtorch/include/torch/csrc/api/include -I/home/lennart/cpp_projects/game_engine/alpha_zero -g -o CMakeFiles/alpha_zero_lib.dir/Trainer.cpp.o -c /home/lennart/cpp_projects/game_engine/alpha_zero/Trainer.cpp",
+  "file": "/home/lennart/cpp_projects/game_engine/alpha_zero/Trainer.cpp"
+}
+]

@@ -1,0 +1,10 @@
+/home/lennart/cpp_projects/game_engine/alpha_zero_build/./bin/alpha_zero
+/home/lennart/cpp_projects/game_engine/alpha_zero_build/./lib/cmake/AlphaZero/AlphaZeroTargets.cmake
+/home/lennart/cpp_projects/game_engine/alpha_zero_build/./lib/cmake/AlphaZero/AlphaZeroTargets-noconfig.cmake
+/home/lennart/cpp_projects/game_engine/alpha_zero_build/./include/alpha_zero/ModelParallel.h
+/home/lennart/cpp_projects/game_engine/alpha_zero_build/./include/alpha_zero/CustomDataset.h
+/home/lennart/cpp_projects/game_engine/alpha_zero_build/./include/alpha_zero/Trainer.h
+/home/lennart/cpp_projects/game_engine/alpha_zero_build/./include/alpha_zero/PlayOut.h
+/home/lennart/cpp_projects/game_engine/alpha_zero_build/./include/alpha_zero/Gomoku.h
+/home/lennart/cpp_projects/game_engine/alpha_zero_build/./include/alpha_zero/MCTS.h
+/home/lennart/cpp_projects/game_engine/alpha_zero_build/./include/alpha_zero/Model.h

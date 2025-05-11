@@ -1,13 +1,13 @@
 #pragma once
 
 #include "MainMenu.hpp"
-#include "Gomuko.hpp"
+#include "GomokuScene.hpp"
 
 // manages interactions between scenes
 class SceneManager{
 public:
     SceneManager(){
-        gomuko = new Gomuko(this);
+        gomoku = new GomokuScene(this);
         mainMenu = new MainMenu(this);
         activeScene = mainMenu;
     }
@@ -19,7 +19,7 @@ public:
         activeScene->draw();
         }
 
-    Gomuko* gomuko;
+    GomokuScene* gomoku;
     MainMenu* mainMenu;
 private:
     Scene* activeScene;

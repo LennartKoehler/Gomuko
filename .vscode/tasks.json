@@ -5,25 +5,33 @@
             "label": "C/C++: g++ build active file",
             "command": "/usr/bin/g++",
             "args": [
+                // "-std=gnu++23",
+                // "-I",
+                // "${workspaceFolder}/src/Game_Common",
+                // "/home/lennart/cpp_projects/networking/GameNetworkingSockets/include/steam/*",
+                // "/home/lennart/cpp_projects/networking/GameNetworkingSockets/test_build/bin/libGameNetworkingSockets.so",
+                // "-g",
+                // "${fileDirname}/*.cpp",
+                // "${fileDirname}/ECS/*.cpp",
+                // "${fileDirname}/Layers/*.cpp",
+                // "${fileDirname}/Scenes/*.cpp",
+
+
+
+                // "-fdiagnostics-color=always",
+                // "-o",
+                // "${fileDirname}/${fileBasenameNoExtension}",
+                // "-lSDL2",
+                // "-lSDL2main",
+                // "-lSDL2_image"
                 "-std=gnu++23",
                 "-I",
-                "${workspaceFolder}/src/Game_Common",
-                "/home/lennart/cpp_projects/networking/GameNetworkingSockets/include/steam/*",
-                "/home/lennart/cpp_projects/networking/GameNetworkingSockets/test_build/bin/libGameNetworkingSockets.so",
-                "-g",
-                "${fileDirname}/*.cpp",
-                "${fileDirname}/ECS/*.cpp",
-                "${fileDirname}/Layers/*.cpp",
-                "${fileDirname}/Scenes/*.cpp",
+                "${workspaceFolder}/alpha_zero",
 
-
-
-                "-fdiagnostics-color=always",
+                "${file}",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}",
-                "-lSDL2",
-                "-lSDL2main",
-                "-lSDL2_image"
+                "${fileDirname}/${fileBasenameNoExtension}"
+
             ],
             "options": {
                 "cwd": "${fileDirname}"

@@ -4,6 +4,7 @@
 //#include "Networking.hpp"
 
 Game* game = nullptr;
+const Uint32 AI_MOVE_EVENT = SDL_RegisterEvents(1);
 
 int main(int argc, const char* argv[]) {
 
@@ -16,7 +17,7 @@ int main(int argc, const char* argv[]) {
     // int frameTime;
 
     game = new Game();
-    game->init("Gomuko", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 64*20, 64*20, false);
+    game->init("Gomoku", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 64*20, 64*20, false);
     SDL_Event event;
     
     game->update();

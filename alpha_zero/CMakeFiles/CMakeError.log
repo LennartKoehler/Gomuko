@@ -1,0 +1,157 @@
+Compiling the CUDA compiler identification source file "CMakeCUDACompilerId.cu" failed.
+Compiler: /home/lennart/miniconda3/envs/alpha_zero_cpp/bin/nvcc 
+Build flags: 
+Id flags: --keep;--keep-dir;tmp -v
+
+The output was:
+1
+#$ _NVVM_BRANCH_=nvvm
+#$ _SPACE_= 
+#$ _CUDART_=cudart
+#$ _HERE_=/home/lennart/miniconda3/envs/alpha_zero_cpp/bin
+#$ _THERE_=/home/lennart/miniconda3/envs/alpha_zero_cpp/bin
+#$ _TARGET_SIZE_=
+#$ _TARGET_DIR_=
+#$ _TARGET_DIR_=targets/x86_64-linux
+#$ TOP=/home/lennart/miniconda3/envs/alpha_zero_cpp/bin/..
+#$ NVVMIR_LIBRARY_DIR=/home/lennart/miniconda3/envs/alpha_zero_cpp/bin/../nvvm/libdevice
+#$ LD_LIBRARY_PATH=/home/lennart/miniconda3/envs/alpha_zero_cpp/bin/../lib:
+#$ PATH=/home/lennart/miniconda3/envs/alpha_zero_cpp/bin/../nvvm/bin:/home/lennart/miniconda3/envs/alpha_zero_cpp/bin:/opt/hdfview/bin:/home/lennart/.local/share/JetBrains/Toolbox/apps/pycharm-community/bin:/home/lennart/.vscode-server/bin/17baf841131aa23349f217ca7c570c76ee87b957/bin/remote-cli:/home/lennart/miniconda3/envs/alpha_zero_cpp/bin:/home/lennart/miniconda3/condabin:/opt/hdfview/bin:/home/lennart/.local/share/JetBrains/Toolbox/apps/pycharm-community/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/koehl/introcs/java/bin:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Razer Chroma SDK/bin:/mnt/c/Program Files/Razer Chroma SDK/bin:/mnt/c/Program Files (x86)/Razer/ChromaBroadcast/bin:/mnt/c/Program Files/Razer/ChromaBroadcast/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0:/mnt/c/WINDOWS/System32/OpenSSH:/mnt/c/WINDOWS/system32/config/systemprofile/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit:/mnt/c/Program Files/CMake/bin:/mnt/c/Program Files/dotnet:/mnt/c/Users/koehl/introcs/j3d/bin:/mnt/c/Users/koehl/introcs/bin:/mnt/c/Users/koehl/introcs/java/bin:/mnt/c/Users/koehl/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/koehl/AppData/Local/Programs/MiKTeX/miktex/bin/x64:/mnt/c/Program Files/Java/jdk-19/bin:/mnt/c/Users/koehl/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/msys64/ucrt64/bin:/mnt/c/Users/koehl/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe:/snap/bin:/home/lennart/.local/share/JetBrains/Toolbox/scripts:/home/lennart/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand
+#$ INCLUDES="-I/home/lennart/miniconda3/envs/alpha_zero_cpp/bin/../targets/x86_64-linux/include"  
+#$ LIBRARIES=  "-L/home/lennart/miniconda3/envs/alpha_zero_cpp/bin/../targets/x86_64-linux/lib/stubs" "-L/home/lennart/miniconda3/envs/alpha_zero_cpp/bin/../targets/x86_64-linux/lib"
+#$ CUDAFE_FLAGS=
+#$ PTXAS_FLAGS=
+#$ rm tmp/a_dlink.reg.c
+#$ gcc -D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__  "-I/home/lennart/miniconda3/envs/alpha_zero_cpp/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=11 -D__CUDACC_VER_MINOR__=7 -D__CUDACC_VER_BUILD__=64 -D__CUDA_API_VER_MAJOR__=11 -D__CUDA_API_VER_MINOR__=7 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" -o "tmp/CMakeCUDACompilerId.cpp1.ii" 
+<command-line>: fatal error: cuda_runtime.h: No such file or directory
+compilation terminated.
+# --error 0x1 --
+
+
+Compiling the CUDA compiler identification source file "CMakeCUDACompilerId.cu" failed.
+Compiler: /home/lennart/miniconda3/envs/alpha_zero_cpp/bin/nvcc 
+Build flags: 
+Id flags:  -v
+
+The output was:
+1
+#$ _NVVM_BRANCH_=nvvm
+#$ _SPACE_= 
+#$ _CUDART_=cudart
+#$ _HERE_=/home/lennart/miniconda3/envs/alpha_zero_cpp/bin
+#$ _THERE_=/home/lennart/miniconda3/envs/alpha_zero_cpp/bin
+#$ _TARGET_SIZE_=
+#$ _TARGET_DIR_=
+#$ _TARGET_DIR_=targets/x86_64-linux
+#$ TOP=/home/lennart/miniconda3/envs/alpha_zero_cpp/bin/..
+#$ NVVMIR_LIBRARY_DIR=/home/lennart/miniconda3/envs/alpha_zero_cpp/bin/../nvvm/libdevice
+#$ LD_LIBRARY_PATH=/home/lennart/miniconda3/envs/alpha_zero_cpp/bin/../lib:
+#$ PATH=/home/lennart/miniconda3/envs/alpha_zero_cpp/bin/../nvvm/bin:/home/lennart/miniconda3/envs/alpha_zero_cpp/bin:/opt/hdfview/bin:/home/lennart/.local/share/JetBrains/Toolbox/apps/pycharm-community/bin:/home/lennart/.vscode-server/bin/17baf841131aa23349f217ca7c570c76ee87b957/bin/remote-cli:/home/lennart/miniconda3/envs/alpha_zero_cpp/bin:/home/lennart/miniconda3/condabin:/opt/hdfview/bin:/home/lennart/.local/share/JetBrains/Toolbox/apps/pycharm-community/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/koehl/introcs/java/bin:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Razer Chroma SDK/bin:/mnt/c/Program Files/Razer Chroma SDK/bin:/mnt/c/Program Files (x86)/Razer/ChromaBroadcast/bin:/mnt/c/Program Files/Razer/ChromaBroadcast/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0:/mnt/c/WINDOWS/System32/OpenSSH:/mnt/c/WINDOWS/system32/config/systemprofile/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit:/mnt/c/Program Files/CMake/bin:/mnt/c/Program Files/dotnet:/mnt/c/Users/koehl/introcs/j3d/bin:/mnt/c/Users/koehl/introcs/bin:/mnt/c/Users/koehl/introcs/java/bin:/mnt/c/Users/koehl/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/koehl/AppData/Local/Programs/MiKTeX/miktex/bin/x64:/mnt/c/Program Files/Java/jdk-19/bin:/mnt/c/Users/koehl/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/msys64/ucrt64/bin:/mnt/c/Users/koehl/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe:/snap/bin:/home/lennart/.local/share/JetBrains/Toolbox/scripts:/home/lennart/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand
+#$ INCLUDES="-I/home/lennart/miniconda3/envs/alpha_zero_cpp/bin/../targets/x86_64-linux/include"  
+#$ LIBRARIES=  "-L/home/lennart/miniconda3/envs/alpha_zero_cpp/bin/../targets/x86_64-linux/lib/stubs" "-L/home/lennart/miniconda3/envs/alpha_zero_cpp/bin/../targets/x86_64-linux/lib"
+#$ CUDAFE_FLAGS=
+#$ PTXAS_FLAGS=
+#$ gcc -D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__  "-I/home/lennart/miniconda3/envs/alpha_zero_cpp/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=11 -D__CUDACC_VER_MINOR__=7 -D__CUDACC_VER_BUILD__=64 -D__CUDA_API_VER_MAJOR__=11 -D__CUDA_API_VER_MINOR__=7 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" -o "/tmp/tmpxft_00023614_00000000-9_CMakeCUDACompilerId.cpp1.ii" 
+<command-line>: fatal error: cuda_runtime.h: No such file or directory
+compilation terminated.
+# --error 0x1 --
+
+
+Compiling the CUDA compiler identification source file "CMakeCUDACompilerId.cu" failed.
+Compiler: /home/lennart/miniconda3/envs/alpha_zero_cpp/bin/nvcc 
+Build flags: 
+Id flags: --keep;--keep-dir;tmp -v
+
+The output was:
+1
+#$ _NVVM_BRANCH_=nvvm
+#$ _SPACE_= 
+#$ _CUDART_=cudart
+#$ _HERE_=/home/lennart/miniconda3/envs/alpha_zero_cpp/bin
+#$ _THERE_=/home/lennart/miniconda3/envs/alpha_zero_cpp/bin
+#$ _TARGET_SIZE_=
+#$ _TARGET_DIR_=
+#$ _TARGET_DIR_=targets/x86_64-linux
+#$ TOP=/home/lennart/miniconda3/envs/alpha_zero_cpp/bin/..
+#$ NVVMIR_LIBRARY_DIR=/home/lennart/miniconda3/envs/alpha_zero_cpp/bin/../nvvm/libdevice
+#$ LD_LIBRARY_PATH=/home/lennart/miniconda3/envs/alpha_zero_cpp/bin/../lib:
+#$ PATH=/home/lennart/miniconda3/envs/alpha_zero_cpp/bin/../nvvm/bin:/home/lennart/miniconda3/envs/alpha_zero_cpp/bin:/opt/hdfview/bin:/home/lennart/.local/share/JetBrains/Toolbox/apps/pycharm-community/bin:/home/lennart/.vscode-server/bin/17baf841131aa23349f217ca7c570c76ee87b957/bin/remote-cli:/home/lennart/miniconda3/envs/alpha_zero_cpp/bin:/home/lennart/miniconda3/condabin:/opt/hdfview/bin:/home/lennart/.local/share/JetBrains/Toolbox/apps/pycharm-community/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/koehl/introcs/java/bin:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Razer Chroma SDK/bin:/mnt/c/Program Files/Razer Chroma SDK/bin:/mnt/c/Program Files (x86)/Razer/ChromaBroadcast/bin:/mnt/c/Program Files/Razer/ChromaBroadcast/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0:/mnt/c/WINDOWS/System32/OpenSSH:/mnt/c/WINDOWS/system32/config/systemprofile/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit:/mnt/c/Program Files/CMake/bin:/mnt/c/Program Files/dotnet:/mnt/c/Users/koehl/introcs/j3d/bin:/mnt/c/Users/koehl/introcs/bin:/mnt/c/Users/koehl/introcs/java/bin:/mnt/c/Users/koehl/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/koehl/AppData/Local/Programs/MiKTeX/miktex/bin/x64:/mnt/c/Program Files/Java/jdk-19/bin:/mnt/c/Users/koehl/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/msys64/ucrt64/bin:/mnt/c/Users/koehl/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe:/snap/bin:/home/lennart/.local/share/JetBrains/Toolbox/scripts:/home/lennart/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand
+#$ INCLUDES="-I/home/lennart/miniconda3/envs/alpha_zero_cpp/bin/../targets/x86_64-linux/include"  
+#$ LIBRARIES=  "-L/home/lennart/miniconda3/envs/alpha_zero_cpp/bin/../targets/x86_64-linux/lib/stubs" "-L/home/lennart/miniconda3/envs/alpha_zero_cpp/bin/../targets/x86_64-linux/lib"
+#$ CUDAFE_FLAGS=
+#$ PTXAS_FLAGS=
+#$ rm tmp/a_dlink.reg.c
+#$ gcc -D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__  "-I/home/lennart/miniconda3/envs/alpha_zero_cpp/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=11 -D__CUDACC_VER_MINOR__=7 -D__CUDACC_VER_BUILD__=64 -D__CUDA_API_VER_MAJOR__=11 -D__CUDA_API_VER_MINOR__=7 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" -o "tmp/CMakeCUDACompilerId.cpp1.ii" 
+<command-line>: fatal error: cuda_runtime.h: No such file or directory
+compilation terminated.
+# --error 0x1 --
+
+
+Compiling the CUDA compiler identification source file "CMakeCUDACompilerId.cu" failed.
+Compiler: /home/lennart/miniconda3/envs/alpha_zero_cpp/bin/nvcc 
+Build flags: 
+Id flags:  -v
+
+The output was:
+1
+#$ _NVVM_BRANCH_=nvvm
+#$ _SPACE_= 
+#$ _CUDART_=cudart
+#$ _HERE_=/home/lennart/miniconda3/envs/alpha_zero_cpp/bin
+#$ _THERE_=/home/lennart/miniconda3/envs/alpha_zero_cpp/bin
+#$ _TARGET_SIZE_=
+#$ _TARGET_DIR_=
+#$ _TARGET_DIR_=targets/x86_64-linux
+#$ TOP=/home/lennart/miniconda3/envs/alpha_zero_cpp/bin/..
+#$ NVVMIR_LIBRARY_DIR=/home/lennart/miniconda3/envs/alpha_zero_cpp/bin/../nvvm/libdevice
+#$ LD_LIBRARY_PATH=/home/lennart/miniconda3/envs/alpha_zero_cpp/bin/../lib:
+#$ PATH=/home/lennart/miniconda3/envs/alpha_zero_cpp/bin/../nvvm/bin:/home/lennart/miniconda3/envs/alpha_zero_cpp/bin:/opt/hdfview/bin:/home/lennart/.local/share/JetBrains/Toolbox/apps/pycharm-community/bin:/home/lennart/.vscode-server/bin/17baf841131aa23349f217ca7c570c76ee87b957/bin/remote-cli:/home/lennart/miniconda3/envs/alpha_zero_cpp/bin:/home/lennart/miniconda3/condabin:/opt/hdfview/bin:/home/lennart/.local/share/JetBrains/Toolbox/apps/pycharm-community/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/koehl/introcs/java/bin:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Razer Chroma SDK/bin:/mnt/c/Program Files/Razer Chroma SDK/bin:/mnt/c/Program Files (x86)/Razer/ChromaBroadcast/bin:/mnt/c/Program Files/Razer/ChromaBroadcast/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0:/mnt/c/WINDOWS/System32/OpenSSH:/mnt/c/WINDOWS/system32/config/systemprofile/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit:/mnt/c/Program Files/CMake/bin:/mnt/c/Program Files/dotnet:/mnt/c/Users/koehl/introcs/j3d/bin:/mnt/c/Users/koehl/introcs/bin:/mnt/c/Users/koehl/introcs/java/bin:/mnt/c/Users/koehl/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/koehl/AppData/Local/Programs/MiKTeX/miktex/bin/x64:/mnt/c/Program Files/Java/jdk-19/bin:/mnt/c/Users/koehl/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/msys64/ucrt64/bin:/mnt/c/Users/koehl/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe:/snap/bin:/home/lennart/.local/share/JetBrains/Toolbox/scripts:/home/lennart/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand
+#$ INCLUDES="-I/home/lennart/miniconda3/envs/alpha_zero_cpp/bin/../targets/x86_64-linux/include"  
+#$ LIBRARIES=  "-L/home/lennart/miniconda3/envs/alpha_zero_cpp/bin/../targets/x86_64-linux/lib/stubs" "-L/home/lennart/miniconda3/envs/alpha_zero_cpp/bin/../targets/x86_64-linux/lib"
+#$ CUDAFE_FLAGS=
+#$ PTXAS_FLAGS=
+#$ gcc -D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__  "-I/home/lennart/miniconda3/envs/alpha_zero_cpp/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=11 -D__CUDACC_VER_MINOR__=7 -D__CUDACC_VER_BUILD__=64 -D__CUDA_API_VER_MAJOR__=11 -D__CUDA_API_VER_MINOR__=7 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" -o "/tmp/tmpxft_00023620_00000000-9_CMakeCUDACompilerId.cpp1.ii" 
+<command-line>: fatal error: cuda_runtime.h: No such file or directory
+compilation terminated.
+# --error 0x1 --
+
+
+Checking whether the CUDA compiler is NVIDIA using "" did not match "nvcc: NVIDIA \(R\) Cuda compiler driver":
+nvcc fatal   : No input files specified; use option --help for more information
+Checking whether the CUDA compiler is Clang using "" did not match "(clang version)":
+nvcc fatal   : No input files specified; use option --help for more information
+Checking whether the CUDA compiler is NVIDIA using "" did not match "nvcc: NVIDIA \(R\) Cuda compiler driver":
+nvcc fatal   : No input files specified; use option --help for more information
+Checking whether the CUDA compiler is Clang using "" did not match "(clang version)":
+nvcc fatal   : No input files specified; use option --help for more information
+Detecting CUDA compiler ABI info failed to compile with the following output:
+Change Dir: /home/lennart/cpp_projects/game_engine/alpha_zero/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_9f355/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_9f355.dir/build.make CMakeFiles/cmTC_9f355.dir/build
+gmake[1]: Entering directory '/home/lennart/cpp_projects/game_engine/alpha_zero/CMakeFiles/CMakeTmp'
+Building CUDA object CMakeFiles/cmTC_9f355.dir/CMakeCUDACompilerABI.cu.o
+/home/lennart/miniconda3/envs/alpha_zero_cpp/bin/nvcc      -c /usr/share/cmake-3.22/Modules/CMakeCUDACompilerABI.cu -o CMakeFiles/cmTC_9f355.dir/CMakeCUDACompilerABI.cu.o
+<command-line>: fatal error: cuda_runtime.h: No such file or directory
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_9f355.dir/build.make:78: CMakeFiles/cmTC_9f355.dir/CMakeCUDACompilerABI.cu.o] Error 1
+gmake[1]: Leaving directory '/home/lennart/cpp_projects/game_engine/alpha_zero/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_9f355/fast] Error 2
+
+
+
+
+Determining if the CUDA compiler works failed with the following output:
+Change Dir: /home/lennart/cpp_projects/game_engine/alpha_zero/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_a7ed8/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a7ed8.dir/build.make CMakeFiles/cmTC_a7ed8.dir/build
+gmake[1]: Entering directory '/home/lennart/cpp_projects/game_engine/alpha_zero/CMakeFiles/CMakeTmp'
+Building CUDA object CMakeFiles/cmTC_a7ed8.dir/main.cu.o
+/home/lennart/miniconda3/envs/alpha_zero_cpp/bin/nvcc      -c /home/lennart/cpp_projects/game_engine/alpha_zero/CMakeFiles/CMakeTmp/main.cu -o CMakeFiles/cmTC_a7ed8.dir/main.cu.o
+<command-line>: fatal error: cuda_runtime.h: No such file or directory
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_a7ed8.dir/build.make:78: CMakeFiles/cmTC_a7ed8.dir/main.cu.o] Error 1
+gmake[1]: Leaving directory '/home/lennart/cpp_projects/game_engine/alpha_zero/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_a7ed8/fast] Error 2
+
+
+

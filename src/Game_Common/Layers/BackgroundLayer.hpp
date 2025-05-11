@@ -8,7 +8,7 @@
 class BackgroundLayer : public Layer{
 public:
     BackgroundLayer();
-    BackgroundLayer(GameState*& gameState, float entity_size, const char* tile_asset);
+    BackgroundLayer(const Matrix<int>& gameState, float entity_size, const char* tile_asset);
 
 
 private:

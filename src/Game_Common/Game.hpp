@@ -27,13 +27,14 @@ public:
     void clean();
     static SDL_Renderer* renderer;
     static SDL_Event event;
-    void setGameState(GameState* gameState);
-    GameState* getGameState();
+    // void setGameState(GameState* gameState);
+    // GameState* getGameState();
     bool isHandledEvent(SDL_Event& event);
-private:
+
+    private:
     EventConversionFactory eventConversionFactory;
-    std::set<Uint32> handledEvents{SDL_QUIT, SDL_MOUSEBUTTONDOWN};
-    GameState* gameState;
+    std::set<Uint32> handledEvents{SDL_QUIT, SDL_MOUSEBUTTONDOWN, AI_MOVE_EVENT};
+    // GameState* gameState;
     bool isRunning = false;
     SDL_Window* window;
     SceneManager* sceneManager;

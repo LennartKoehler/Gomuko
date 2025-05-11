@@ -21,9 +21,9 @@ num_episodes = 1000
 lr_decrease_rate = 200
 
 network = DQN(state_dim, action_dim, game_size, in_chans=1, ch_mul=8, device="cuda").to("cuda")
-#network.load_state_dict(torch.load("agent_training/trained_models/long_2_3x3_1500_iterations_state_dict.pkl"))
+network.load_state_dict(torch.load("agent_training/trained_models/15x15_1000_iterations_state_dict.pkl"))
 
-agent1 = DQNAgent(network, 1, state_dim, action_dim, lr=0.001, gamma=0.3, epsilon=1.0, epsilon_decay=0.995, buffer_size=1000, batch_size=batch_size, agentID=1)
+agent1 = DQNAgent(network, 1, state_dim, action_dim, lr=0.00001, gamma=0.3, epsilon=0.0, epsilon_decay=0.995, buffer_size=1000, batch_size=batch_size, agentID=1)
 agent2 = DQNAgent(network, 1, state_dim, action_dim, lr=0.001, gamma=0.3, epsilon=1.0, epsilon_decay=0.995, buffer_size=1000, batch_size=batch_size, agentID=2)
 
 def replay_replacement(a):
@@ -55,7 +55,7 @@ for episode in range(num_episodes):
         iteration += 1
     print(f"Episode: {episode + 1}, Total Reward: {total_reward}, Epsilon: {agent1.epsilon:.2f}, Learning Rate: {agent1.lr:.5f}")
     rewards.append(total_reward)
-torch.save(network.state_dict(), "trained_models/test_15x15_1000_iterations_state_dict.pkl")
+#torch.save(network.state_dict(), "trained_models/test_15x15_1000_iterations_state_dict.pkl")
 
 plt.plot(agent1.losses)
 plt.show()

@@ -4,11 +4,12 @@
 MainMenu::MainMenu(SceneManager* sceneManager) : Scene(sceneManager){
     mainMenuLayer = new MainMenuLayer();
     layerStack.addLayer(mainMenuLayer);
+    mainMenuLayer->setGomokuButtonCallback([sceneManager]() {
+        sceneManager->setActiveScene(sceneManager->gomoku);
+    });
 }
 
+
 void MainMenu::update(){
-    if ( mainMenuLayer->startGomuko ){
-        sceneManager->setActiveScene(sceneManager->gomuko);
-    }
     layerStack.updateLayers();
 }

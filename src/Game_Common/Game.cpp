@@ -25,7 +25,6 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
             std::cout << "Window created" << std::endl;
         }
         
-        
 
         renderer = SDL_CreateRenderer(window, -1, 0);
         if (renderer){
@@ -37,22 +36,31 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
     }
     sceneManager = new SceneManager();
     sceneManager->setActiveScene(sceneManager->mainMenu);
+
 }
 
 //TODO handleEvents can be adjusted to fit the event dispatcher system
 void Game::handleEvents(SDL_Event& event){
     std::unique_ptr<Event> convertedEvent = eventConversionFactory.convertEvent( event );
+
+    if (event.type == AI_MOVE_EVENT) {
+        update();
+        render();
+    }
+
     switch (event.type)
     {
     case SDL_QUIT:
         isRunning = false;
         break;
-    case SDL_MOUSEBUTTONDOWN:
 
+    case SDL_MOUSEBUTTONDOWN:
         sceneManager->getActiveScene()->handleEvent(*convertedEvent);
+
     default:
         break;
     }
+
 }
 
 void Game::update(){
@@ -68,7 +76,7 @@ void Game::render(){
 }
 
 void Game::clean(){
-    delete gameState;
+    // delete gameState;
     delete sceneManager;
     SDL_DestroyWindow(window);
     SDL_DestroyRenderer(renderer);
@@ -78,11 +86,11 @@ void Game::clean(){
 
 
 
-void Game::setGameState(GameState* gameState){
-    this->gameState = gameState;
-}
+// void Game::setGameState(GameState* gameState){
+//     this->gameState = gameState;
+// }
 
-GameState* Game::getGameState() { return gameState;}
+// GameState* Game::getGameState() { return gameState;}
 
 bool Game::isHandledEvent(SDL_Event& event){
     bool found = (std::find(handledEvents.begin(), handledEvents.end(), event.type) != handledEvents.end());

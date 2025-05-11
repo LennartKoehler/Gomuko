@@ -21,7 +21,11 @@ bool MainMenuLayer::onMouseButtonPressed(MouseButtonPressedEvent& event){
 
     Entity* button = getEntityAtPosition(event.x, event.y, groupButtons);
     if (button != nullptr){
-        startGomuko=true;
+        onGomokuButton();
     }
     return true;
+}
+
+void MainMenuLayer::setGomokuButtonCallback(ButtonCallback cb){
+    onGomokuButton = std::move(cb);
 }
