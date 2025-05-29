@@ -10,7 +10,7 @@
 #include <queue>
 #include <condition_variable>
 
-AZeroPlayer::AZeroPlayer(GomokuTraining* game, std::shared_ptr<Model> model, int depth) : game(game), model(model), depth(depth){}
+AZeroPlayer::AZeroPlayer(GomokuTraining* game, std::shared_ptr<AZeroNN> model, int depth) : game(game), model(model), depth(depth){}
 
 PlayOut AZeroPlayer::play(Matrix<int>& game_state, int player_id){
     Matrix<int> canonical_board = game->get_canonical(game_state, player_id);
@@ -27,7 +27,7 @@ PlayOut AZeroPlayer::play(Matrix<int>& game_state, int player_id){
 
     action_probs = action_probs / action_probs.sum();
 
-    Action action = root->select_action(0); // TODO temperature
+    Action action = root->select_action(0.3); // TODO temperature
 
     Matrix<int> next_state = game->get_next_state(game_state, player_id, action);
 
@@ -35,7 +35,7 @@ PlayOut AZeroPlayer::play(Matrix<int>& game_state, int player_id){
 }
 
 void AZeroPlayer::loadModel(std::string model_path){
-    std::shared_ptr<Model> model_loaded = std::make_shared<Model>(15*15);
+    std::shared_ptr<AZeroNN> model_loaded = std::make_shared<AZeroNN>(15*15);
     torch::load(model_loaded, model_path);
     model_loaded->to(model->parameters().front().device()); // load to device of model used for init
     model = model_loaded;
@@ -45,8 +45,8 @@ void AZeroPlayer::loadModel(std::string model_path){
 
 
 
-Trainer::Trainer(GomokuTraining* game, std::shared_ptr<Model> model, int depth, int num_iterations, int num_episodes, int num_epochs, int batch_size, std::string checkpoint_path)
-: AZeroPlayer(game, model, depth), num_iterations(num_iterations), num_episodes(num_episodes), num_epochs(num_epochs), batch_size(batch_size), checkpoint_path(checkpoint_path){}
+Trainer::Trainer(GomokuTraining* game, std::shared_ptr<AZeroNN> model, int depth, int num_iterations, int num_episodes, int num_epochs, int batch_size, std::string checkpoint_path)
+: AZeroPlayer(game, model, depth), num_iterations(num_iterations), num_episodes(num_episodes), num_epochs(num_epochs), batch_size(batch_size), checkpoint_path(checkpoint_path), learning_rate(0.1){}
 
 
 Trainer::Trainer(const Trainer& other)
@@ -86,21 +86,18 @@ std::vector<PlayOutReward> Trainer::execute_episode(){
 
 
 
-
-
 void Trainer::learn(){
     for (int i=0; i<num_iterations; i++){
         std::vector<PlayOutReward> train_examples;
         auto start = std::chrono::high_resolution_clock::now();
 
         for (int e=0; e<num_episodes; e++){
-            std::cout << e << std::endl;
             std::vector<PlayOutReward> examples = execute_episode();
             train_examples.insert(train_examples.end(), examples.begin(), examples.end());
         }
 
-        shuffle(train_examples);
         train_iteration(train_examples);
+
         save_checkpoint("state_dict.pt");
 
         auto end = std::chrono::high_resolution_clock::now();
@@ -109,18 +106,37 @@ void Trainer::learn(){
     }
 }
 
+
+
 void Trainer::train_iteration(std::vector<PlayOutReward>& train_examples){
-    torch::optim::SGD optimizer(model->parameters(), /*lr=*/0.01); //TODO reduce lr over time
+    torch::optim::SGD optimizer(model->parameters(), learning_rate); //TODO reduce lr over time
     std::vector<float> pi_losses;
     std::vector<float> v_losses;
 
-    auto data = CustomDataset(train_examples).map(Stack());
+    train_examples = DataAugmentation::augmentData(train_examples);
 
+    shuffle(train_examples);
+
+    auto data = CustomDataset(train_examples).map(Stack());
     auto data_loader = torch::data::make_data_loader<torch::data::samplers::SequentialSampler>(
         std::move(data), 
         batch_size);
 
     for (int epoch=0; epoch<num_epochs; epoch++){
+
+        // adjust learning_rate
+        if ((epoch+1) % 100 == 0){
+            learning_rate /= 10;
+            for (auto &group : optimizer.param_groups())
+            {
+                if(group.has_options())
+                {
+                    auto &options = static_cast<torch::optim::AdamOptions&>(group.options());
+                    options.set_lr(learning_rate);
+                }
+            }
+        }
+
         model->train();
         
         CustomExample last_batch; // Variable to store the last batch
@@ -128,6 +144,7 @@ void Trainer::train_iteration(std::vector<PlayOutReward>& train_examples){
 
         for (auto& batch : *data_loader){
             Prediction<torch::Tensor, torch::Tensor> prediction = model->forward(batch.data.unsqueeze(1));
+
             torch::Tensor l_pi = get_loss_pi(batch.action_probs.flatten(1,2), prediction.action_probs);
             torch::Tensor l_v = get_loss_v(batch.value, prediction.value);
 
@@ -135,13 +152,11 @@ void Trainer::train_iteration(std::vector<PlayOutReward>& train_examples){
 
             optimizer.zero_grad();
             total_loss.backward();
+            torch::nn::utils::clip_grad_norm_(model->parameters(), 1.0);
             optimizer.step();
 
             pi_losses.push_back(*l_pi.data_ptr<float>());
             v_losses.push_back(*l_v.data_ptr<float>());
-
-            last_batch = batch;
-            last_prediction = prediction;
 
         }
         // std::cout << "Action Probs Prediction: " << last_prediction.action_probs.index({0}) << std::endl;
@@ -166,9 +181,9 @@ void Trainer::save_checkpoint(const std::string& filename) {
     namespace fs = std::filesystem;
 
     // Create the folder if it doesn't exist
-    if (!fs::exists(checkpoint_path)) {
-        fs::create_directory(checkpoint_path);
-    }
+    // if (!fs::exists(checkpoint_path)) {
+    //     fs::create_directory(checkpoint_path);
+    // }
 
     std::string filepath = checkpoint_path + filename;    
 
@@ -181,7 +196,7 @@ void Trainer::save_checkpoint(const std::string& filename) {
 TrainerParallel::TrainerParallel(
      int num_threads,
      GomokuTraining* game,
-     std::shared_ptr<ModelParallel> model,
+     std::shared_ptr<AZeroNNParallel> model,
      int depth,
      int num_iterations,
      int num_episodes,
@@ -209,7 +224,7 @@ void TrainerParallel::learn() {
     for (int e = 0; e < num_episodes; e++) {
         work_queue.push(e);
     }
-    std::shared_ptr<ModelParallel> model;
+    std::shared_ptr<AZeroNNParallel> model;
     for (int i = 0; i < num_iterations; i++) {
         std::vector<PlayOutReward> train_examples; // Shared vector for all examples
         auto start = std::chrono::high_resolution_clock::now();
@@ -218,7 +233,7 @@ void TrainerParallel::learn() {
         for (int t = 0; t < num_threads; t++) {
             threads.emplace_back([&, t]() {
                 TrainerParallel thread_trainer(*this); // Thread-local copy of Trainer
-                model = std::dynamic_pointer_cast<ModelParallel>(thread_trainer.model);
+                model = std::dynamic_pointer_cast<AZeroNNParallel>(thread_trainer.model);
 
                 while (true) {
                     int episode_index;
@@ -240,7 +255,7 @@ void TrainerParallel::learn() {
 
                     // Process the episode
                     std::vector<PlayOutReward> examples = thread_trainer.execute_episode();
-
+                    std::cerr << "Episode: " << episode_index << std::endl;
                     // Store the results
                     {
                         std::lock_guard<std::mutex> lock(results_mutex);

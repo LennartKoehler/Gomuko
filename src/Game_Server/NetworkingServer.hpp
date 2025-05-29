@@ -1,5 +1,8 @@
 #pragma once
-#include "../Game_Common/Networking.hpp"
+#include "../Networking/Package.h"
+#include "../Networking/Serializer.h"
+#include "../Networking/Networking.h"
+#include "../Networking/MessageTypes.h"
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -10,9 +13,6 @@
 class ChatServer
 {
 public:
-	GameState currentGameState = GameState(20, 20, 1, 5);
-
-
 	void init( uint16 nPort )
 	{
 		// Select instance to use.  For now we'll always use the default.
@@ -71,16 +71,18 @@ public:
 		std::this_thread::sleep_for( std::chrono::milliseconds( 10 ) );
 	}
 
-
-	void sendGameStateToClient(HSteamNetConnection conn, GameState* gamestate){ // IMPORTANT
-		std::cerr << "sending gamestate" << std::endl;
-		m_pInterface->SendMessageToConnection( conn, gamestate, (uint32)sizeof(GameState), k_nSteamNetworkingSend_Reliable, nullptr );
+	void sendToClient(HSteamNetConnection conn, std::vector<uint8_t> buffer){
+		m_pInterface->SendMessageToConnection(conn, buffer.data(), buffer.size(), k_nSteamNetworkingSend_Reliable, nullptr);
 	}
 
-	void sendGameStateToAllClients(GameState* gamestate, int player_at_last_turn, HSteamNetConnection except = k_HSteamNetConnection_Invalid ){
-		sendGameStateToClient(getConnectionByID(player_at_last_turn), gamestate); //just send back to same client
-		gamestate->unchangable = false;
-		sendGameStateToClient(getConnectionByID((player_at_last_turn % 2) + 1), gamestate); // send it to the other client
+	void sendPackageToAllClients(Package package, HSteamNetConnection except = k_HSteamNetConnection_Invalid ){
+		std::vector<uint8_t> buffer = package.serialize();
+		sendToClient(getConnectionByID(1), buffer); 
+		sendToClient(getConnectionByID(2), buffer);
+	}
+	void sendBufferToAllClients(std::vector<uint8_t> buffer, HSteamNetConnection except = k_HSteamNetConnection_Invalid ){
+		sendToClient(getConnectionByID(1), buffer); 
+		sendToClient(getConnectionByID(2), buffer);
 	}
 
 	HSteamNetConnection getConnectionByID(int playerID){
@@ -123,9 +125,9 @@ private:
 		// }
 	}
 
-	void beginGame(){
-		sendGameStateToAllClients(&currentGameState, 1);
-	}
+	// void beginGame(){
+	// 	sendToAllClients(&currentGameState, 1);
+	// }
 
 
 
@@ -143,12 +145,15 @@ private:
 			assert( numMsgs == 1 && pIncomingMsg );
 			auto itClient = m_mapClients.find( pIncomingMsg->m_conn );
 			assert( itClient != m_mapClients.end() );
+			
+			for (int i = 0; i < 8 && i < pIncomingMsg->m_cbSize; ++i)
+				std::cerr << *((int*)pIncomingMsg->m_pData) << " ";
 
-			GameState gamestate = *(GameState*)pIncomingMsg->m_pData; // decode gamestate
-			int playerID = m_mapClients[pIncomingMsg->m_conn].playerID; // add the owner id according to the connection (NO CHEATING!) //TODO this doesnt work
-
-			sendGameStateToAllClients(&gamestate, playerID);
-
+			// std::cerr << *((int*)pIncomingMsg->m_pData) << std::endl;
+			Package package = steamMessageToPackage(pIncomingMsg);
+			
+			sendPackageToAllClients(package); // just forward the message
+			std::cerr << "message recieved and sent" << std::endl;
 			pIncomingMsg->Release();
 
 
@@ -350,9 +355,9 @@ private:
 				m_mapClients[ pInfo->m_hConn ];
 				SetClientNick( pInfo->m_hConn, nick );
 				SetClientPlayerID( pInfo->m_hConn);
-				if (m_mapClients.size() >= 2){
-					beginGame();
-				}
+				// if (m_mapClients.size() >= 2){
+				// 	beginGame();
+				// }
 				break;
 			}
 

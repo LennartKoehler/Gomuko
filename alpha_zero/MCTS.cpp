@@ -95,7 +95,6 @@ ChildSelection Node::select_child() {
     if (best_child == nullptr) {
         throw std::runtime_error("No children found in select_child");
     }
-
     return ChildSelection(best_action, best_child);
 }
 
@@ -114,7 +113,7 @@ void Node::expand(const Matrix<int> state, int to_play, const Matrix<float>& act
 
 
 
-MCTS::MCTS(GomokuTraining* game, std::shared_ptr<Model> model, int depth) : game(game), model(model), depth(depth){}
+MCTS::MCTS(GomokuTraining* game, std::shared_ptr<AZeroNN> model, int depth) : game(game), model(model), depth(depth){}
 
 std::shared_ptr<Node> MCTS::run(Matrix<int>& game_state, int player_id){
     std::shared_ptr<Node> root = std::make_shared<Node>(Node(0, player_id));
@@ -122,6 +121,7 @@ std::shared_ptr<Node> MCTS::run(Matrix<int>& game_state, int player_id){
     prediction.action_probs = prediction.action_probs * game->get_valid_moves(game_state);
     prediction.action_probs = prediction.action_probs / prediction.action_probs.sum();
     root->expand(game_state, player_id, prediction.action_probs);
+    root->visit_count++;
 
     for (int i=0; i<depth; i++){
         std::shared_ptr<Node> node = root;

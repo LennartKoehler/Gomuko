@@ -52,7 +52,7 @@ set_property(TARGET alpha_zero PROPERTY CXX_STANDARD 17)
 #use as library
 add_library(
     alpha_zero_lib
-    Model.h
+    AZeroNN.h
     Gomoku.cpp
     Gomoku.h
     MCTS.cpp

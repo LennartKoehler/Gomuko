@@ -1,0 +1,2 @@
+/usr/bin/ar qc libalpha_zero_lib.a CMakeFiles/alpha_zero_lib.dir/Gomoku.cpp.o CMakeFiles/alpha_zero_lib.dir/MCTS.cpp.o CMakeFiles/alpha_zero_lib.dir/Trainer.cpp.o
+/usr/bin/ranlib libalpha_zero_lib.a

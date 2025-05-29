@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../src/Game_Common/VectorMatrix.hpp"
+#include "../src/Game_Client/VectorMatrix.hpp"
 
 class Action;
 

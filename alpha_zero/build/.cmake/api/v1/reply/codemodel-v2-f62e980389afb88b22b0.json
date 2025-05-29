@@ -1,0 +1,70 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-f66e41e52ca92d1362c1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "AgentTraining",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "alpha_zero::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-alpha_zero-Debug-b773e6ef83d0df5acfc7.json",
+					"name" : "alpha_zero",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "alpha_zero_lib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-alpha_zero_lib-Debug-9917cee0955173e66377.json",
+					"name" : "alpha_zero_lib",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/lennart/cpp_projects/game_engine/alpha_zero/build",
+		"source" : "/home/lennart/cpp_projects/game_engine/alpha_zero"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

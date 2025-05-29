@@ -7,31 +7,33 @@
 
 #include "MCTS.h"
 #include "CustomDataset.h"
+#include "DataAugmentation.h"
 
 class AZeroPlayer{
 public:
-    AZeroPlayer(GomokuTraining* game, std::shared_ptr<Model> model, int depth);
+    AZeroPlayer(GomokuTraining* game, std::shared_ptr<AZeroNN> model, int depth);
     PlayOut play(Matrix<int>& state_matrix, int current_player);
     void loadModel(std::string model_path);
     
 protected:
-    std::shared_ptr<Model> model;
+    std::shared_ptr<AZeroNN> model;
     GomokuTraining* game;
     int depth;
 };
 
 class Trainer : public AZeroPlayer{
 public:
-    Trainer(GomokuTraining* game, std::shared_ptr<Model> model, int depth, int num_iterations, int num_episodes, int num_epochs, int batch_size, std::string checkpoint_path);
+    Trainer(GomokuTraining* game, std::shared_ptr<AZeroNN> model, int depth, int num_iterations, int num_episodes, int num_epochs, int batch_size, std::string checkpoint_path);
     Trainer(const Trainer& other);
     std::vector<PlayOutReward> execute_episode();
-    std::shared_ptr<Model> getModel() { return model; }
+    std::shared_ptr<AZeroNN> getModel() { return model; }
     virtual void learn();
     void train_iteration(std::vector<PlayOutReward>& train_examples);
 
 
 protected:
 
+    float learning_rate;
     int num_iterations;
     int num_episodes;
     int num_epochs;
@@ -61,13 +63,13 @@ protected:
 
 class TrainerParallel : public Trainer{
 public:
-    TrainerParallel(int num_threads, GomokuTraining* game, std::shared_ptr<ModelParallel> model, int depth, int num_iterations, int num_episodes, int num_epochs, int batch_size, std::string checkpoint_path);
+    TrainerParallel(int num_threads, GomokuTraining* game, std::shared_ptr<AZeroNNParallel> model, int depth, int num_iterations, int num_episodes, int num_epochs, int batch_size, std::string checkpoint_path);
     TrainerParallel(const TrainerParallel& other);
 
     void learn() override;
 
 private:
     int num_threads;
-    std::shared_ptr<ModelParallel> model;
+    std::shared_ptr<AZeroNNParallel> model;
 
 };

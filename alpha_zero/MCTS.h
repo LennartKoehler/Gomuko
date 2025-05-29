@@ -2,7 +2,7 @@
 #include <map>
 #include <tuple>
 #include "Gomoku.h"
-#include "ModelParallel.h"
+#include "AZeroNNParallel.h"
 
 
 class Node;
@@ -53,13 +53,13 @@ public:
 
 class MCTS{
 public:
-    MCTS(GomokuTraining* game, std::shared_ptr<Model> model, int depth);
+    MCTS(GomokuTraining* game, std::shared_ptr<AZeroNN> model, int depth);
     std::shared_ptr<Node> run(Matrix<int>& game_state, int player_id);
 
 private:
     void backpropagate(std::vector<std::shared_ptr<Node>>& search_path, float value, int player_id);
     GomokuTraining* game;
-    std::shared_ptr<Model> model;
+    std::shared_ptr<AZeroNN> model;
     int depth;
 
 };

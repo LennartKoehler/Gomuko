@@ -1,5 +1,5 @@
 #pragma once
-#include "../src/Game_Common/VectorMatrix.hpp"
+#include "../src/Game_Client/VectorMatrix.hpp"
 
 
 struct PlayOutCommon{
@@ -33,4 +33,8 @@ struct PlayOutReward : public PlayOutCommon {
     PlayOutReward(const PlayOut& play_out, float reward)
         : PlayOutCommon(play_out.old_state, play_out.action_probs, play_out.new_state),
           reward(reward) {}
+          
+    PlayOutReward(const PlayOutReward& other)
+        : PlayOutCommon(other.old_state, other.action_probs, other.new_state),
+          reward(other.reward) {}
 };

@@ -29,7 +29,7 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "enter program name, for example ${workspaceFolder}/a.out",
-            "args": [],
+            "args": ["5555"],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "environment": [],

@@ -4,8 +4,11 @@ set_target_properties( networking PROPERTIES IMPORTED_LOCATION "${CMAKE_SOURCE_D
 target_include_directories(networking INTERFACE "include")
 
 
-add_library( libprotobuf SHARED IMPORTED GLOBAL)
-set_target_properties( libprotobuf PROPERTIES IMPORTED_LOCATION "${CMAKE_SOURCE_DIR}/GameNetworkingSockets/bin/libprotobuf.so.23" )
+# add_library( libprotobuf SHARED IMPORTED GLOBAL)
+# set_target_properties( libprotobuf PROPERTIES IMPORTED_LOCATION "${CMAKE_SOURCE_DIR}/GameNetworkingSockets/bin/libprotobuf.so.23" )
+# set_target_properties(libprotobuf PROPERTIES
+#     IMPORTED_SONAME "libprotobuf.so.23"
+# )
 # target_include_directories(networking INTERFACE "include_protobuf")
 
 

@@ -12,10 +12,10 @@ std::string getTimeStamp(){
 int main(){
 
 
-    int size = 15;
-    int win_con = 5;
+    int size = 7;
+    int win_con = 4;
     GomokuTraining* gomoku = new GomokuTraining(size, win_con, 1, 0, -1, 2);
-    std::shared_ptr<ModelParallel> model_parallel = std::make_shared<ModelParallel>(4, size * size);
+    std::shared_ptr<AZeroNNParallel> model_parallel = std::make_shared<AZeroNNParallel>(4, size * size);
     // Model* model = new Model(size*size);
 
     bool use_cuda = true;
@@ -25,22 +25,21 @@ int main(){
     }
 
 
-    int depth = 1000;
+    int depth = 200;
     int num_iterations = 100;
     int num_episodes = 10;
     int num_epochs = 5;
-    int batch_size = 64;
+    int batch_size = 8;
     int threads = 4; // at many threads it seems to block
 
 
 
-    std::string checkpoint_path = "../models/gomoku/" + getTimeStamp();
+    std::string checkpoint_path = "../models/gomoku/" + std::string("size_") + std::to_string(size) + "_" + getTimeStamp();
 
 
     TrainerParallel trainer = {threads, gomoku, model_parallel, depth, num_iterations, num_episodes, num_epochs, batch_size, checkpoint_path};
-    // trainer.loadModel("/home/lennart/cpp_projects/game_engine/alpha_zero/models/gomoku/2025-05-09_18-48-39state_dict.pt");
+    // trainer.loadModel("/home/lennart/cpp_projects/game_engine/alpha_zero/models/gomoku/2025_05_16_15_00_27_state_dict.pt");
     trainer.learn();
-    // trainer.learn();
 
     return 0;
 }

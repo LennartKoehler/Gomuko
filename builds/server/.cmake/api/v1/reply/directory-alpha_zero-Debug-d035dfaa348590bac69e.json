@@ -1,0 +1,88 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"alpha_zero/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 69,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 74,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 79,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"alpha_zero/alpha_zero"
+			],
+			"targetId" : "alpha_zero::@da1408ffbf81b6b70823",
+			"targetIndex" : 0,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/AlphaZero",
+			"exportName" : "AlphaZeroTargets",
+			"exportTargets" : 
+			[
+				{
+					"id" : "alpha_zero::@da1408ffbf81b6b70823",
+					"index" : 0
+				}
+			],
+			"paths" : 
+			[
+				"alpha_zero/CMakeFiles/Export/lib/cmake/AlphaZero/AlphaZeroTargets.cmake"
+			],
+			"type" : "export"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "include/alpha_zero",
+			"paths" : 
+			[
+				{
+					"from" : "alpha_zero",
+					"to" : "."
+				}
+			],
+			"type" : "directory"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "alpha_zero",
+		"source" : "alpha_zero"
+	}
+}
