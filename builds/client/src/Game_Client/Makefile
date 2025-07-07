@@ -199,6 +199,30 @@ ECS/ECS.cpp.s:
 	cd /home/lennart/cpp_projects/game_engine/builds/client && $(MAKE) $(MAKESILENT) -f src/Game_Client/CMakeFiles/game_client_lib.dir/build.make src/Game_Client/CMakeFiles/game_client_lib.dir/ECS/ECS.cpp.s
 .PHONY : ECS/ECS.cpp.s
 
+ECS/TextFieldComponent.o: ECS/TextFieldComponent.cpp.o
+.PHONY : ECS/TextFieldComponent.o
+
+# target to build an object file
+ECS/TextFieldComponent.cpp.o:
+	cd /home/lennart/cpp_projects/game_engine/builds/client && $(MAKE) $(MAKESILENT) -f src/Game_Client/CMakeFiles/game_client_lib.dir/build.make src/Game_Client/CMakeFiles/game_client_lib.dir/ECS/TextFieldComponent.cpp.o
+.PHONY : ECS/TextFieldComponent.cpp.o
+
+ECS/TextFieldComponent.i: ECS/TextFieldComponent.cpp.i
+.PHONY : ECS/TextFieldComponent.i
+
+# target to preprocess a source file
+ECS/TextFieldComponent.cpp.i:
+	cd /home/lennart/cpp_projects/game_engine/builds/client && $(MAKE) $(MAKESILENT) -f src/Game_Client/CMakeFiles/game_client_lib.dir/build.make src/Game_Client/CMakeFiles/game_client_lib.dir/ECS/TextFieldComponent.cpp.i
+.PHONY : ECS/TextFieldComponent.cpp.i
+
+ECS/TextFieldComponent.s: ECS/TextFieldComponent.cpp.s
+.PHONY : ECS/TextFieldComponent.s
+
+# target to generate assembly for a file
+ECS/TextFieldComponent.cpp.s:
+	cd /home/lennart/cpp_projects/game_engine/builds/client && $(MAKE) $(MAKESILENT) -f src/Game_Client/CMakeFiles/game_client_lib.dir/build.make src/Game_Client/CMakeFiles/game_client_lib.dir/ECS/TextFieldComponent.cpp.s
+.PHONY : ECS/TextFieldComponent.cpp.s
+
 Game.o: Game.cpp.o
 .PHONY : Game.o
 
@@ -270,6 +294,30 @@ Layers/BackgroundLayer.s: Layers/BackgroundLayer.cpp.s
 Layers/BackgroundLayer.cpp.s:
 	cd /home/lennart/cpp_projects/game_engine/builds/client && $(MAKE) $(MAKESILENT) -f src/Game_Client/CMakeFiles/game_client_lib.dir/build.make src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/BackgroundLayer.cpp.s
 .PHONY : Layers/BackgroundLayer.cpp.s
+
+Layers/ChatLayer.o: Layers/ChatLayer.cpp.o
+.PHONY : Layers/ChatLayer.o
+
+# target to build an object file
+Layers/ChatLayer.cpp.o:
+	cd /home/lennart/cpp_projects/game_engine/builds/client && $(MAKE) $(MAKESILENT) -f src/Game_Client/CMakeFiles/game_client_lib.dir/build.make src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/ChatLayer.cpp.o
+.PHONY : Layers/ChatLayer.cpp.o
+
+Layers/ChatLayer.i: Layers/ChatLayer.cpp.i
+.PHONY : Layers/ChatLayer.i
+
+# target to preprocess a source file
+Layers/ChatLayer.cpp.i:
+	cd /home/lennart/cpp_projects/game_engine/builds/client && $(MAKE) $(MAKESILENT) -f src/Game_Client/CMakeFiles/game_client_lib.dir/build.make src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/ChatLayer.cpp.i
+.PHONY : Layers/ChatLayer.cpp.i
+
+Layers/ChatLayer.s: Layers/ChatLayer.cpp.s
+.PHONY : Layers/ChatLayer.s
+
+# target to generate assembly for a file
+Layers/ChatLayer.cpp.s:
+	cd /home/lennart/cpp_projects/game_engine/builds/client && $(MAKE) $(MAKESILENT) -f src/Game_Client/CMakeFiles/game_client_lib.dir/build.make src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/ChatLayer.cpp.s
+.PHONY : Layers/ChatLayer.cpp.s
 
 Layers/Layer.o: Layers/Layer.cpp.o
 .PHONY : Layers/Layer.o
@@ -455,6 +503,9 @@ help:
 	@echo "... ECS/ECS.o"
 	@echo "... ECS/ECS.i"
 	@echo "... ECS/ECS.s"
+	@echo "... ECS/TextFieldComponent.o"
+	@echo "... ECS/TextFieldComponent.i"
+	@echo "... ECS/TextFieldComponent.s"
 	@echo "... Game.o"
 	@echo "... Game.i"
 	@echo "... Game.s"
@@ -464,6 +515,9 @@ help:
 	@echo "... Layers/BackgroundLayer.o"
 	@echo "... Layers/BackgroundLayer.i"
 	@echo "... Layers/BackgroundLayer.s"
+	@echo "... Layers/ChatLayer.o"
+	@echo "... Layers/ChatLayer.i"
+	@echo "... Layers/ChatLayer.s"
 	@echo "... Layers/Layer.o"
 	@echo "... Layers/Layer.i"
 	@echo "... Layers/Layer.s"

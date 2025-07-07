@@ -18,6 +18,7 @@ extern const Uint32 GAMESTATE_RECIEVED_EVENT;
 extern const Uint32 TEXT_RECIEVED_EVENT;
 extern const Uint32 NETWORK_CONNECTION_EVENT;
 extern const Uint32 SEND_GAMESTATE_EVENT;
+extern const Uint32 SEND_TEXT_EVENT;
 
 class ChatClient;
 class Package;
@@ -35,6 +36,7 @@ public:
     void handleNetwork();
     void sendPackageToServer(Package package);
     void sendGameStateToServer(GameStatePlayerEvent& event);
+    void sendTextToServer(TextEvent& event);
     void setClient(const char* address);
     static SDL_Renderer* renderer;
     static SDL_Event event;
@@ -51,7 +53,8 @@ public:
          GAMESTATE_RECIEVED_EVENT,
          TEXT_RECIEVED_EVENT,
          NETWORK_CONNECTION_EVENT,
-         SEND_GAMESTATE_EVENT};
+         SEND_GAMESTATE_EVENT,
+         SEND_TEXT_EVENT};
     // GameState* gameState;
     bool isRunning = false;
     SDL_Window* window;

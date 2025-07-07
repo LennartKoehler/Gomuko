@@ -12,4 +12,6 @@ public:
 
 private:
     MainMenuLayer* mainMenuLayer;
+    ChatLayer* chatLayer;
+
 };

@@ -187,7 +187,7 @@ CMakeFiles/server.dir/src/Game_Server/main.cpp.o: \
  /usr/include/c++/11/bits/parse_numbers.h \
  /home/lennart/cpp_projects/game_engine/src/Game_Server/../Networking/MessageTypes.h \
  /home/lennart/cpp_projects/game_engine/src/Game_Server/../Networking/Serializer.h \
- /home/lennart/cpp_projects/game_engine/src/Game_Server/../Networking/../Game_Common/VectorMatrix.hpp \
+ /home/lennart/cpp_projects/game_engine/src/Game_Server/../Networking/../Game_Client/VectorMatrix.hpp \
  /usr/include/c++/11/array /usr/include/c++/11/tuple \
  /usr/include/c++/11/bits/uses_allocator.h /usr/include/c++/11/memory \
  /usr/include/c++/11/bits/stl_raw_storage_iter.h \

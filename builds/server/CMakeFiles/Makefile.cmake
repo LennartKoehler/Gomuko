@@ -14,7 +14,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.22.1/CMakeCUDACompiler.cmake"
   "CMakeFiles/3.22.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeSystem.cmake"
-  "../../src/Game_Common/CMakeLists.txt"
+  "../../src/Game_Client/CMakeLists.txt"
   "../../src/Game_Server/CMakeLists.txt"
   "../../src/Networking/CMakeLists.txt"
   "/usr/lib/x86_64-linux-gnu/cmake/SDL2/sdl2-config-version.cmake"
@@ -69,7 +69,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "GameNetworkingSockets/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "src/Game_Common/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/Game_Client/CMakeFiles/CMakeDirectoryInformation.cmake"
   "alpha_zero/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/Networking/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/Game_Server/CMakeFiles/CMakeDirectoryInformation.cmake"
@@ -79,7 +79,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/server.dir/DependInfo.cmake"
   "CMakeFiles/copy_assets.dir/DependInfo.cmake"
-  "src/Game_Common/CMakeFiles/game_common_lib.dir/DependInfo.cmake"
+  "src/Game_Client/CMakeFiles/game_client_lib.dir/DependInfo.cmake"
   "alpha_zero/CMakeFiles/alpha_zero.dir/DependInfo.cmake"
   "alpha_zero/CMakeFiles/alpha_zero_lib.dir/DependInfo.cmake"
   "src/Networking/CMakeFiles/networking_lib.dir/DependInfo.cmake"

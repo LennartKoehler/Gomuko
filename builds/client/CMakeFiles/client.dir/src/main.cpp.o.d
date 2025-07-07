@@ -358,6 +358,7 @@ CMakeFiles/client.dir/src/main.cpp.o: \
  /home/lennart/cpp_projects/game_engine/src/Game_Client/Events/NetworkConnectionEvent.hpp \
  /home/lennart/cpp_projects/game_engine/src/Game_Client/Events/TextInputEvent.hpp \
  /home/lennart/cpp_projects/game_engine/src/Game_Client/Events/KeyDownEvent.hpp \
+ /home/lennart/cpp_projects/game_engine/src/Game_Client/Events/TextEvent.hpp \
  /home/lennart/cpp_projects/game_engine/src/Game_Client/Scenes/SceneManager.hpp \
  /home/lennart/cpp_projects/game_engine/src/Game_Client/Scenes/MainMenu.hpp \
  /home/lennart/cpp_projects/game_engine/src/Game_Client/Scenes/Scene.hpp \
@@ -384,10 +385,13 @@ CMakeFiles/client.dir/src/main.cpp.o: \
  /home/lennart/cpp_projects/game_engine/src/Game_Client/Scenes/../Layers/../ECS/FunctionComponent.hpp \
  /home/lennart/cpp_projects/game_engine/src/Game_Client/Scenes/../Layers/../ECS/TextComponent.hpp \
  /home/lennart/cpp_projects/game_engine/src/Game_Client/Scenes/../Layers/../ECS/TextFieldComponent.hpp \
+ /home/lennart/cpp_projects/game_engine/src/Game_Client/Scenes/../Layers/../ECS/MultilineTextComponent.hpp \
  /usr/include/c++/11/map /usr/include/c++/11/bits/stl_map.h \
  /usr/include/c++/11/bits/stl_multimap.h \
  /home/lennart/cpp_projects/game_engine/src/Game_Client/Scenes/../Layers/BackgroundLayer.hpp \
  /home/lennart/cpp_projects/game_engine/src/Game_Client/Scenes/../Layers/MainMenuLayer.hpp \
+ /home/lennart/cpp_projects/game_engine/src/Game_Client/Scenes/../Layers/ChatLayer.hpp \
+ /home/lennart/cpp_projects/game_engine/src/Game_Client/Scenes/../Layers/../ChatUtils.h \
  /home/lennart/cpp_projects/game_engine/src/Game_Client/Scenes/GomokuScene.hpp \
  /home/lennart/cpp_projects/game_engine/src/Game_Client/Scenes/../Players/Player.h \
  /home/lennart/cpp_projects/game_engine/src/Game_Client/Scenes/../Players/../GameState.hpp \

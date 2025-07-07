@@ -54,7 +54,7 @@ alpha_zero/CMakeFiles/alpha_zero_lib.dir/MCTS.cpp.o: \
  /usr/include/c++/11/bits/stl_multimap.h \
  /usr/include/c++/11/bits/erase_if.h \
  /home/lennart/cpp_projects/game_engine/alpha_zero/Gomoku.h \
- /home/lennart/cpp_projects/game_engine/alpha_zero/../src/Game_Common/VectorMatrix.hpp \
+ /home/lennart/cpp_projects/game_engine/alpha_zero/../src/Game_Client/VectorMatrix.hpp \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_algo.h \
  /usr/include/c++/11/cstdlib /usr/include/stdlib.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \

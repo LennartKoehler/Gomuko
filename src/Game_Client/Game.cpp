@@ -61,6 +61,14 @@ void Game::handleEvents(SDL_Event& event){
         NetworkConnectionEvent* netEvent = dynamic_cast<NetworkConnectionEvent*>(convertedEvent.get());
         setClient(netEvent->IPAddress);
     }
+    if (event.type == TEXT_RECIEVED_EVENT) {
+        TextEvent* netEvent = dynamic_cast<TextEvent*>(convertedEvent.get());
+        sceneManager->getActiveScene()->handleEvent(*convertedEvent);
+    }
+    if (event.type == SEND_TEXT_EVENT) {
+        TextEvent* textEvent = dynamic_cast<TextEvent*>(convertedEvent.get());
+        sendTextToServer(*textEvent);
+    }
 
     switch (event.type)
     {
@@ -129,6 +137,14 @@ void Game::sendGameStateToServer(GameStatePlayerEvent& event){
     if (client != nullptr){
         std::vector<uint8_t> data = Serializer::serializeGameState(event.gameState, event.playerID);
         Package package{MessageType::GAME_STATE_UPDATE, data};
+        sendPackageToServer(package);
+    }
+}
+
+void Game::sendTextToServer(TextEvent& event){
+    if (client != nullptr){
+        std::vector<uint8_t> data = Serializer::serializeText(std::string(event.text));
+        Package package{MessageType::TEXT_MESSAGE, data};
         sendPackageToServer(package);
     }
 }

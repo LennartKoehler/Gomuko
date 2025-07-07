@@ -2,7 +2,7 @@ alpha_zero/CMakeFiles/alpha_zero_lib.dir/Gomoku.cpp.o: \
  /home/lennart/cpp_projects/game_engine/alpha_zero/Gomoku.cpp \
  /usr/include/stdc-predef.h \
  /home/lennart/cpp_projects/game_engine/alpha_zero/Gomoku.h \
- /home/lennart/cpp_projects/game_engine/alpha_zero/../src/Game_Common/VectorMatrix.hpp \
+ /home/lennart/cpp_projects/game_engine/alpha_zero/../src/Game_Client/VectorMatrix.hpp \
  /usr/include/c++/11/array /usr/include/c++/11/utility \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

@@ -1,0 +1,210 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-a5adbe00594fb0769bc5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.17"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						2,
+						6
+					]
+				},
+				{
+					"build" : "GameNetworkingSockets",
+					"jsonFile" : "directory-GameNetworkingSockets-Debug-9ce65cd2435b52df1f3e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.17"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "GameNetworkingSockets"
+				},
+				{
+					"build" : "src/Game_Client",
+					"jsonFile" : "directory-src.Game_Client-Debug-6347f962588188aa8b4d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.17"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/Game_Client",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "alpha_zero",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-alpha_zero-Debug-d035dfaa348590bac69e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "alpha_zero",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				},
+				{
+					"build" : "src/Networking",
+					"jsonFile" : "directory-src.Networking-Debug-3fde9057b88d2a81c8e2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.17"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/Networking",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "src/Game_Server",
+					"jsonFile" : "directory-src.Game_Server-Debug-bfc498610e04b05616f9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.17"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/Game_Server",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						4,
+						5
+					],
+					"name" : "server",
+					"targetIndexes" : 
+					[
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "AgentTraining",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 3,
+					"id" : "alpha_zero::@da1408ffbf81b6b70823",
+					"jsonFile" : "target-alpha_zero-Debug-d20097145530d3b41782.json",
+					"name" : "alpha_zero",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "alpha_zero_lib::@da1408ffbf81b6b70823",
+					"jsonFile" : "target-alpha_zero_lib-Debug-85adcc871e09555ff92e.json",
+					"name" : "alpha_zero_lib",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "copy_assets::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-copy_assets-Debug-6cbba66de406f213d9a5.json",
+					"name" : "copy_assets",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "game_client_lib::@d6b8c8c9b7ac47786c69",
+					"jsonFile" : "target-game_client_lib-Debug-b364563e9b7e6390891a.json",
+					"name" : "game_client_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "game_server_lib::@e27b8995792d606872b7",
+					"jsonFile" : "target-game_server_lib-Debug-6b3c4198ca2c4910756c.json",
+					"name" : "game_server_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "networking_lib::@62760af6ac6654c8c93f",
+					"jsonFile" : "target-networking_lib-Debug-8cefbd87797efe1bd2b5.json",
+					"name" : "networking_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "server::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-server-Debug-0732409d947db3b1a2c5.json",
+					"name" : "server",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/lennart/cpp_projects/game_engine/builds/server",
+		"source" : "/home/lennart/cpp_projects/game_engine"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

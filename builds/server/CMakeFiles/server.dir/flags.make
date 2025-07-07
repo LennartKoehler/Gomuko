@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/g++
 CXX_DEFINES = -DUSE_C10D_GLOO -DUSE_DISTRIBUTED -DUSE_RPC -DUSE_TENSORPIPE
 
-CXX_INCLUDES = -I/home/lennart/cpp_projects/game_engine/alpha_zero -I/home/lennart/cpp_projects/game_engine/src/Game_Server -I/home/lennart/cpp_projects/game_engine/src/Networking -I/home/lennart/cpp_projects/game_engine/src/Game_Common -isystem /usr/local/lib/libtorch/include -isystem /usr/local/lib/libtorch/include/torch/csrc/api/include -isystem /home/lennart/cpp_projects/game_engine/GameNetworkingSockets/include -isystem /usr/include/SDL2
+CXX_INCLUDES = -I/home/lennart/cpp_projects/game_engine/alpha_zero -I/home/lennart/cpp_projects/game_engine/src/Game_Server -I/home/lennart/cpp_projects/game_engine/src/Networking -I/home/lennart/cpp_projects/game_engine/src/Game_Client -isystem /usr/local/lib/libtorch/include -isystem /usr/local/lib/libtorch/include/torch/csrc/api/include -isystem /home/lennart/cpp_projects/game_engine/GameNetworkingSockets/include -isystem /usr/include/SDL2
 
 CXX_FLAGS = -g -std=gnu++23
 

@@ -233,7 +233,7 @@ alpha_zero/CMakeFiles/alpha_zero_lib.dir/Trainer.cpp.o: \
  /usr/include/c++/11/bits/stl_map.h \
  /usr/include/c++/11/bits/stl_multimap.h \
  /home/lennart/cpp_projects/game_engine/alpha_zero/Gomoku.h \
- /home/lennart/cpp_projects/game_engine/alpha_zero/../src/Game_Common/VectorMatrix.hpp \
+ /home/lennart/cpp_projects/game_engine/alpha_zero/../src/Game_Client/VectorMatrix.hpp \
  /usr/include/c++/11/memory \
  /usr/include/c++/11/bits/stl_raw_storage_iter.h \
  /usr/include/c++/11/bits/align.h \

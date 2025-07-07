@@ -1,21 +1,30 @@
 #pragma once
-#include "Layer.hpp"
+#include "PieceLayer.hpp"
 #include "../Events/MouseButtonPressedEvent.hpp"
-#include "../Textures.hpp"
-
-#include <functional>
+#include "../Events/TextInputEvent.hpp"
+#include "../Events/KeyDownEvent.hpp"
+#include "../Events/TextEvent.hpp"
+#include "../ChatUtils.h"
 
 using ButtonCallback = std::function<void()>;
+using ButtonCallbackString = std::function<void(std::string)>;
+
 class ChatLayer : public Layer{
 public:
-    ChatLayer(int size);
+    ChatLayer();
     void onEvent(Event& event);
     bool onMouseButtonPressed(MouseButtonPressedEvent& event);
-    void setGomokuButtonCallback(ButtonCallback cb);
+    bool onTextInput(TextInputEvent& event);
+    bool onKeyDown(KeyDownEvent& event);
+    bool onTextRecieved(TextEvent& event);
+    void setConnectServerButtonCallback(ButtonCallbackString cb);
 private:
+    void setReturn();
     enum groupLabels : std::size_t{
-        groupButtons
+        groupButtons,
+        textFields
     };
-    ButtonCallback onGomokuButton;
+    Entity* chatTextField;
+    Entity* chatHistory;
 
 };

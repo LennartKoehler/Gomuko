@@ -16,7 +16,7 @@ set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/lennart/cpp_projects/game_engine/builds/server/alpha_zero/CMakeFiles/alpha_zero_lib.dir/DependInfo.cmake"
   "/home/lennart/cpp_projects/game_engine/builds/server/src/Game_Server/CMakeFiles/game_server_lib.dir/DependInfo.cmake"
   "/home/lennart/cpp_projects/game_engine/builds/server/src/Networking/CMakeFiles/networking_lib.dir/DependInfo.cmake"
-  "/home/lennart/cpp_projects/game_engine/builds/server/src/Game_Common/CMakeFiles/game_common_lib.dir/DependInfo.cmake"
+  "/home/lennart/cpp_projects/game_engine/builds/server/src/Game_Client/CMakeFiles/game_client_lib.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

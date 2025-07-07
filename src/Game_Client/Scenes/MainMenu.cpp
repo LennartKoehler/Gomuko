@@ -5,7 +5,11 @@ extern const Uint32 NETWORK_CONNECTION_EVENT;
 
 MainMenu::MainMenu(SceneManager* sceneManager) : Scene(sceneManager){
     mainMenuLayer = new MainMenuLayer();
+    chatLayer = new ChatLayer();
+    
     layerStack.addLayer(mainMenuLayer);
+    layerStack.addLayer(chatLayer);
+
     mainMenuLayer->setGomokuButtonCallback([sceneManager, this]() {
         sceneManager->setActiveScene(sceneManager->gomoku);
     });

@@ -5,7 +5,7 @@ alpha_zero/CMakeFiles/alpha_zero.dir/Gomoku.cpp.o
  /home/lennart/cpp_projects/game_engine/alpha_zero/Gomoku.cpp
  /usr/include/stdc-predef.h
  /home/lennart/cpp_projects/game_engine/alpha_zero/Gomoku.h
- /home/lennart/cpp_projects/game_engine/src/Game_Common/VectorMatrix.hpp
+ /home/lennart/cpp_projects/game_engine/src/Game_Client/VectorMatrix.hpp
  /usr/include/c++/11/array
  /usr/include/c++/11/utility
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h
@@ -5078,7 +5078,7 @@ alpha_zero/CMakeFiles/alpha_zero.dir/MCTS.cpp.o
  /usr/include/c++/11/bits/stl_multimap.h
  /usr/include/c++/11/bits/erase_if.h
  /home/lennart/cpp_projects/game_engine/alpha_zero/Gomoku.h
- /home/lennart/cpp_projects/game_engine/src/Game_Common/VectorMatrix.hpp
+ /home/lennart/cpp_projects/game_engine/src/Game_Client/VectorMatrix.hpp
  /usr/include/c++/11/vector
  /usr/include/c++/11/bits/stl_uninitialized.h
  /usr/include/c++/11/bits/stl_vector.h
@@ -10317,7 +10317,7 @@ alpha_zero/CMakeFiles/alpha_zero.dir/Trainer.cpp.o
  /usr/include/c++/11/bits/stl_map.h
  /usr/include/c++/11/bits/stl_multimap.h
  /home/lennart/cpp_projects/game_engine/alpha_zero/Gomoku.h
- /home/lennart/cpp_projects/game_engine/src/Game_Common/VectorMatrix.hpp
+ /home/lennart/cpp_projects/game_engine/src/Game_Client/VectorMatrix.hpp
  /usr/include/c++/11/memory
  /usr/include/c++/11/bits/stl_raw_storage_iter.h
  /usr/include/c++/11/bits/align.h
@@ -15348,7 +15348,7 @@ alpha_zero/CMakeFiles/alpha_zero.dir/main.cpp.o
  /usr/include/c++/11/bits/stl_map.h
  /usr/include/c++/11/bits/stl_multimap.h
  /home/lennart/cpp_projects/game_engine/alpha_zero/Gomoku.h
- /home/lennart/cpp_projects/game_engine/src/Game_Common/VectorMatrix.hpp
+ /home/lennart/cpp_projects/game_engine/src/Game_Client/VectorMatrix.hpp
  /usr/include/c++/11/memory
  /usr/include/c++/11/bits/stl_raw_storage_iter.h
  /usr/include/c++/11/bits/align.h

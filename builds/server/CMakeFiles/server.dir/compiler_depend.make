@@ -232,7 +232,7 @@ CMakeFiles/server.dir/src/Game_Server/main.cpp.o: ../../src/Game_Server/main.cpp
   /usr/include/c++/11/bits/parse_numbers.h \
   ../../src/Networking/MessageTypes.h \
   ../../src/Networking/Serializer.h \
-  ../../src/Game_Common/VectorMatrix.hpp \
+  ../../src/Game_Client/VectorMatrix.hpp \
   /usr/include/c++/11/array \
   /usr/include/c++/11/tuple \
   /usr/include/c++/11/bits/uses_allocator.h \
@@ -1106,6 +1106,8 @@ CMakeFiles/server.dir/src/Game_Server/main.cpp.o: ../../src/Game_Server/main.cpp
 
 /usr/include/asm-generic/bitsperlong.h:
 
+../../src/Game_Client/VectorMatrix.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
 
 /usr/include/c++/11/variant:
@@ -1131,8 +1133,6 @@ CMakeFiles/server.dir/src/Game_Server/main.cpp.o: ../../src/Game_Server/main.cpp
 /usr/include/c++/11/queue:
 
 /usr/include/c++/11/bits/shared_ptr_atomic.h:
-
-../../src/Game_Common/VectorMatrix.hpp:
 
 /usr/include/c++/11/tr1/beta_function.tcc:
 

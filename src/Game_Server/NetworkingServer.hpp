@@ -75,14 +75,22 @@ public:
 		m_pInterface->SendMessageToConnection(conn, buffer.data(), buffer.size(), k_nSteamNetworkingSend_Reliable, nullptr);
 	}
 
-	void sendPackageToAllClients(Package package, HSteamNetConnection except = k_HSteamNetConnection_Invalid ){
+	void sendPackageToAllClients(Package package, HSteamNetConnection except = k_HSteamNetConnection_Invalid) {
 		std::vector<uint8_t> buffer = package.serialize();
-		sendToClient(getConnectionByID(1), buffer); 
-		sendToClient(getConnectionByID(2), buffer);
+		for (const auto& client : m_mapClients) {
+			HSteamNetConnection conn = client.first;
+			if (conn != except) {
+				sendToClient(conn, buffer);
+			}
+		}
 	}
 	void sendBufferToAllClients(std::vector<uint8_t> buffer, HSteamNetConnection except = k_HSteamNetConnection_Invalid ){
-		sendToClient(getConnectionByID(1), buffer); 
-		sendToClient(getConnectionByID(2), buffer);
+		for (const auto& client : m_mapClients) {
+			HSteamNetConnection conn = client.first;
+			if (conn != except) {
+				sendToClient(conn, buffer);
+			}
+		}
 	}
 
 	HSteamNetConnection getConnectionByID(int playerID){
@@ -150,9 +158,10 @@ private:
 				std::cerr << *((int*)pIncomingMsg->m_pData) << " ";
 
 			// std::cerr << *((int*)pIncomingMsg->m_pData) << std::endl;
-			Package package = steamMessageToPackage(pIncomingMsg);
+			Package* package = steamMessageToPackage(pIncomingMsg);
 			
-			sendPackageToAllClients(package); // just forward the message
+			
+			sendPackageToAllClients(*package); // just forward the message
 			std::cerr << "message recieved and sent" << std::endl;
 			pIncomingMsg->Release();
 
@@ -276,6 +285,7 @@ private:
 					);
 
 					m_mapClients.erase( itClient );
+					playerID_iterator -= 1;
 
 					// Send a message so everybody else knows what happened
 					SendStringToAllClients( temp );

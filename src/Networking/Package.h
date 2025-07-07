@@ -75,14 +75,13 @@ struct Package {
 
 
 // this converts the message into events
-inline Package steamMessageToPackage(SteamNetworkingMessage_t* msg) {
+inline Package* steamMessageToPackage(SteamNetworkingMessage_t* msg) {
     assert(msg && msg->m_pData && msg->m_cbSize > 0 && "Invalid SteamNetworkingMessage_t* or empty data");
 
     // Deserialize payload (m_pData -> Packet)
     const uint8_t* rawData = static_cast<const uint8_t*>(msg->m_pData);
     std::vector<uint8_t> buffer(rawData, rawData + msg->m_cbSize);
-    Package package = Package::deserialize(buffer);
-
-    return package;
+    Package* package = new Package(Package::deserialize(buffer));
+    return package; // caller must delete!
     //TODO add back releaseMessage
 }

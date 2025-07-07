@@ -9,3 +9,4 @@
 #include "FunctionComponent.hpp"
 #include "TextComponent.hpp"
 #include "TextFieldComponent.hpp"
+#include "MultilineTextComponent.hpp"

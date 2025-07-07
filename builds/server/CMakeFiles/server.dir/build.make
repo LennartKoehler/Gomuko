@@ -98,7 +98,7 @@ server: /usr/local/lib/libtorch/lib/libtorch.so
 server: /usr/local/lib/libtorch/lib/libc10.so
 server: /usr/local/lib/libtorch/lib/libkineto.a
 server: src/Networking/libnetworking_lib.a
-server: src/Game_Common/libgame_common_lib.a
+server: src/Game_Client/libgame_client_lib.a
 server: /usr/lib/x86_64-linux-gnu/libSDL2main.a
 server: /usr/lib/x86_64-linux-gnu/libSDL2.so
 server: /usr/local/lib/libtorch/lib/libc10.so

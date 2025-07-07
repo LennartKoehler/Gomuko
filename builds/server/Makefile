@@ -188,17 +188,17 @@ copy_assets/fast:
 .PHONY : copy_assets/fast
 
 #=============================================================================
-# Target rules for targets named game_common_lib
+# Target rules for targets named game_client_lib
 
 # Build rule for target.
-game_common_lib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game_common_lib
-.PHONY : game_common_lib
+game_client_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game_client_lib
+.PHONY : game_client_lib
 
 # fast build rule for target.
-game_common_lib/fast:
-	$(MAKE) $(MAKESILENT) -f src/Game_Common/CMakeFiles/game_common_lib.dir/build.make src/Game_Common/CMakeFiles/game_common_lib.dir/build
-.PHONY : game_common_lib/fast
+game_client_lib/fast:
+	$(MAKE) $(MAKESILENT) -f src/Game_Client/CMakeFiles/game_client_lib.dir/build.make src/Game_Client/CMakeFiles/game_client_lib.dir/build
+.PHONY : game_client_lib/fast
 
 #=============================================================================
 # Target rules for targets named alpha_zero
@@ -291,7 +291,7 @@ help:
 	@echo "... copy_assets"
 	@echo "... alpha_zero"
 	@echo "... alpha_zero_lib"
-	@echo "... game_common_lib"
+	@echo "... game_client_lib"
 	@echo "... game_server_lib"
 	@echo "... networking_lib"
 	@echo "... server"

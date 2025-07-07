@@ -69,10 +69,24 @@ include src/Game_Client/CMakeFiles/game_client_lib.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/Game_Client/CMakeFiles/game_client_lib.dir/flags.make
 
+src/Game_Client/CMakeFiles/game_client_lib.dir/ECS/TextFieldComponent.cpp.o: src/Game_Client/CMakeFiles/game_client_lib.dir/flags.make
+src/Game_Client/CMakeFiles/game_client_lib.dir/ECS/TextFieldComponent.cpp.o: ../../src/Game_Client/ECS/TextFieldComponent.cpp
+src/Game_Client/CMakeFiles/game_client_lib.dir/ECS/TextFieldComponent.cpp.o: src/Game_Client/CMakeFiles/game_client_lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lennart/cpp_projects/game_engine/builds/client/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/Game_Client/CMakeFiles/game_client_lib.dir/ECS/TextFieldComponent.cpp.o"
+	cd /home/lennart/cpp_projects/game_engine/builds/client/src/Game_Client && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/Game_Client/CMakeFiles/game_client_lib.dir/ECS/TextFieldComponent.cpp.o -MF CMakeFiles/game_client_lib.dir/ECS/TextFieldComponent.cpp.o.d -o CMakeFiles/game_client_lib.dir/ECS/TextFieldComponent.cpp.o -c /home/lennart/cpp_projects/game_engine/src/Game_Client/ECS/TextFieldComponent.cpp
+
+src/Game_Client/CMakeFiles/game_client_lib.dir/ECS/TextFieldComponent.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game_client_lib.dir/ECS/TextFieldComponent.cpp.i"
+	cd /home/lennart/cpp_projects/game_engine/builds/client/src/Game_Client && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lennart/cpp_projects/game_engine/src/Game_Client/ECS/TextFieldComponent.cpp > CMakeFiles/game_client_lib.dir/ECS/TextFieldComponent.cpp.i
+
+src/Game_Client/CMakeFiles/game_client_lib.dir/ECS/TextFieldComponent.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game_client_lib.dir/ECS/TextFieldComponent.cpp.s"
+	cd /home/lennart/cpp_projects/game_engine/builds/client/src/Game_Client && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lennart/cpp_projects/game_engine/src/Game_Client/ECS/TextFieldComponent.cpp -o CMakeFiles/game_client_lib.dir/ECS/TextFieldComponent.cpp.s
+
 src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/Layer.cpp.o: src/Game_Client/CMakeFiles/game_client_lib.dir/flags.make
 src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/Layer.cpp.o: ../../src/Game_Client/Layers/Layer.cpp
 src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/Layer.cpp.o: src/Game_Client/CMakeFiles/game_client_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lennart/cpp_projects/game_engine/builds/client/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/Layer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lennart/cpp_projects/game_engine/builds/client/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/Layer.cpp.o"
 	cd /home/lennart/cpp_projects/game_engine/builds/client/src/Game_Client && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/Layer.cpp.o -MF CMakeFiles/game_client_lib.dir/Layers/Layer.cpp.o.d -o CMakeFiles/game_client_lib.dir/Layers/Layer.cpp.o -c /home/lennart/cpp_projects/game_engine/src/Game_Client/Layers/Layer.cpp
 
 src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/Layer.cpp.i: cmake_force
@@ -86,7 +100,7 @@ src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/Layer.cpp.s: cmake_force
 src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/LayerStack.cpp.o: src/Game_Client/CMakeFiles/game_client_lib.dir/flags.make
 src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/LayerStack.cpp.o: ../../src/Game_Client/Layers/LayerStack.cpp
 src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/LayerStack.cpp.o: src/Game_Client/CMakeFiles/game_client_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lennart/cpp_projects/game_engine/builds/client/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/LayerStack.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lennart/cpp_projects/game_engine/builds/client/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/LayerStack.cpp.o"
 	cd /home/lennart/cpp_projects/game_engine/builds/client/src/Game_Client && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/LayerStack.cpp.o -MF CMakeFiles/game_client_lib.dir/Layers/LayerStack.cpp.o.d -o CMakeFiles/game_client_lib.dir/Layers/LayerStack.cpp.o -c /home/lennart/cpp_projects/game_engine/src/Game_Client/Layers/LayerStack.cpp
 
 src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/LayerStack.cpp.i: cmake_force
@@ -100,7 +114,7 @@ src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/LayerStack.cpp.s: cmake_fo
 src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/PieceLayer.cpp.o: src/Game_Client/CMakeFiles/game_client_lib.dir/flags.make
 src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/PieceLayer.cpp.o: ../../src/Game_Client/Layers/PieceLayer.cpp
 src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/PieceLayer.cpp.o: src/Game_Client/CMakeFiles/game_client_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lennart/cpp_projects/game_engine/builds/client/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/PieceLayer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lennart/cpp_projects/game_engine/builds/client/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/PieceLayer.cpp.o"
 	cd /home/lennart/cpp_projects/game_engine/builds/client/src/Game_Client && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/PieceLayer.cpp.o -MF CMakeFiles/game_client_lib.dir/Layers/PieceLayer.cpp.o.d -o CMakeFiles/game_client_lib.dir/Layers/PieceLayer.cpp.o -c /home/lennart/cpp_projects/game_engine/src/Game_Client/Layers/PieceLayer.cpp
 
 src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/PieceLayer.cpp.i: cmake_force
@@ -114,7 +128,7 @@ src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/PieceLayer.cpp.s: cmake_fo
 src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/BackgroundLayer.cpp.o: src/Game_Client/CMakeFiles/game_client_lib.dir/flags.make
 src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/BackgroundLayer.cpp.o: ../../src/Game_Client/Layers/BackgroundLayer.cpp
 src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/BackgroundLayer.cpp.o: src/Game_Client/CMakeFiles/game_client_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lennart/cpp_projects/game_engine/builds/client/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/BackgroundLayer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lennart/cpp_projects/game_engine/builds/client/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/BackgroundLayer.cpp.o"
 	cd /home/lennart/cpp_projects/game_engine/builds/client/src/Game_Client && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/BackgroundLayer.cpp.o -MF CMakeFiles/game_client_lib.dir/Layers/BackgroundLayer.cpp.o.d -o CMakeFiles/game_client_lib.dir/Layers/BackgroundLayer.cpp.o -c /home/lennart/cpp_projects/game_engine/src/Game_Client/Layers/BackgroundLayer.cpp
 
 src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/BackgroundLayer.cpp.i: cmake_force
@@ -128,7 +142,7 @@ src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/BackgroundLayer.cpp.s: cma
 src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/MainMenuLayer.cpp.o: src/Game_Client/CMakeFiles/game_client_lib.dir/flags.make
 src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/MainMenuLayer.cpp.o: ../../src/Game_Client/Layers/MainMenuLayer.cpp
 src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/MainMenuLayer.cpp.o: src/Game_Client/CMakeFiles/game_client_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lennart/cpp_projects/game_engine/builds/client/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/MainMenuLayer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lennart/cpp_projects/game_engine/builds/client/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/MainMenuLayer.cpp.o"
 	cd /home/lennart/cpp_projects/game_engine/builds/client/src/Game_Client && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/MainMenuLayer.cpp.o -MF CMakeFiles/game_client_lib.dir/Layers/MainMenuLayer.cpp.o.d -o CMakeFiles/game_client_lib.dir/Layers/MainMenuLayer.cpp.o -c /home/lennart/cpp_projects/game_engine/src/Game_Client/Layers/MainMenuLayer.cpp
 
 src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/MainMenuLayer.cpp.i: cmake_force
@@ -139,10 +153,24 @@ src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/MainMenuLayer.cpp.s: cmake
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game_client_lib.dir/Layers/MainMenuLayer.cpp.s"
 	cd /home/lennart/cpp_projects/game_engine/builds/client/src/Game_Client && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lennart/cpp_projects/game_engine/src/Game_Client/Layers/MainMenuLayer.cpp -o CMakeFiles/game_client_lib.dir/Layers/MainMenuLayer.cpp.s
 
+src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/ChatLayer.cpp.o: src/Game_Client/CMakeFiles/game_client_lib.dir/flags.make
+src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/ChatLayer.cpp.o: ../../src/Game_Client/Layers/ChatLayer.cpp
+src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/ChatLayer.cpp.o: src/Game_Client/CMakeFiles/game_client_lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lennart/cpp_projects/game_engine/builds/client/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/ChatLayer.cpp.o"
+	cd /home/lennart/cpp_projects/game_engine/builds/client/src/Game_Client && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/ChatLayer.cpp.o -MF CMakeFiles/game_client_lib.dir/Layers/ChatLayer.cpp.o.d -o CMakeFiles/game_client_lib.dir/Layers/ChatLayer.cpp.o -c /home/lennart/cpp_projects/game_engine/src/Game_Client/Layers/ChatLayer.cpp
+
+src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/ChatLayer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game_client_lib.dir/Layers/ChatLayer.cpp.i"
+	cd /home/lennart/cpp_projects/game_engine/builds/client/src/Game_Client && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lennart/cpp_projects/game_engine/src/Game_Client/Layers/ChatLayer.cpp > CMakeFiles/game_client_lib.dir/Layers/ChatLayer.cpp.i
+
+src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/ChatLayer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game_client_lib.dir/Layers/ChatLayer.cpp.s"
+	cd /home/lennart/cpp_projects/game_engine/builds/client/src/Game_Client && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lennart/cpp_projects/game_engine/src/Game_Client/Layers/ChatLayer.cpp -o CMakeFiles/game_client_lib.dir/Layers/ChatLayer.cpp.s
+
 src/Game_Client/CMakeFiles/game_client_lib.dir/Scenes/GomokuScene.cpp.o: src/Game_Client/CMakeFiles/game_client_lib.dir/flags.make
 src/Game_Client/CMakeFiles/game_client_lib.dir/Scenes/GomokuScene.cpp.o: ../../src/Game_Client/Scenes/GomokuScene.cpp
 src/Game_Client/CMakeFiles/game_client_lib.dir/Scenes/GomokuScene.cpp.o: src/Game_Client/CMakeFiles/game_client_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lennart/cpp_projects/game_engine/builds/client/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/Game_Client/CMakeFiles/game_client_lib.dir/Scenes/GomokuScene.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lennart/cpp_projects/game_engine/builds/client/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/Game_Client/CMakeFiles/game_client_lib.dir/Scenes/GomokuScene.cpp.o"
 	cd /home/lennart/cpp_projects/game_engine/builds/client/src/Game_Client && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/Game_Client/CMakeFiles/game_client_lib.dir/Scenes/GomokuScene.cpp.o -MF CMakeFiles/game_client_lib.dir/Scenes/GomokuScene.cpp.o.d -o CMakeFiles/game_client_lib.dir/Scenes/GomokuScene.cpp.o -c /home/lennart/cpp_projects/game_engine/src/Game_Client/Scenes/GomokuScene.cpp
 
 src/Game_Client/CMakeFiles/game_client_lib.dir/Scenes/GomokuScene.cpp.i: cmake_force
@@ -156,7 +184,7 @@ src/Game_Client/CMakeFiles/game_client_lib.dir/Scenes/GomokuScene.cpp.s: cmake_f
 src/Game_Client/CMakeFiles/game_client_lib.dir/Scenes/MainMenu.cpp.o: src/Game_Client/CMakeFiles/game_client_lib.dir/flags.make
 src/Game_Client/CMakeFiles/game_client_lib.dir/Scenes/MainMenu.cpp.o: ../../src/Game_Client/Scenes/MainMenu.cpp
 src/Game_Client/CMakeFiles/game_client_lib.dir/Scenes/MainMenu.cpp.o: src/Game_Client/CMakeFiles/game_client_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lennart/cpp_projects/game_engine/builds/client/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/Game_Client/CMakeFiles/game_client_lib.dir/Scenes/MainMenu.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lennart/cpp_projects/game_engine/builds/client/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/Game_Client/CMakeFiles/game_client_lib.dir/Scenes/MainMenu.cpp.o"
 	cd /home/lennart/cpp_projects/game_engine/builds/client/src/Game_Client && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/Game_Client/CMakeFiles/game_client_lib.dir/Scenes/MainMenu.cpp.o -MF CMakeFiles/game_client_lib.dir/Scenes/MainMenu.cpp.o.d -o CMakeFiles/game_client_lib.dir/Scenes/MainMenu.cpp.o -c /home/lennart/cpp_projects/game_engine/src/Game_Client/Scenes/MainMenu.cpp
 
 src/Game_Client/CMakeFiles/game_client_lib.dir/Scenes/MainMenu.cpp.i: cmake_force
@@ -170,7 +198,7 @@ src/Game_Client/CMakeFiles/game_client_lib.dir/Scenes/MainMenu.cpp.s: cmake_forc
 src/Game_Client/CMakeFiles/game_client_lib.dir/ECS/ECS.cpp.o: src/Game_Client/CMakeFiles/game_client_lib.dir/flags.make
 src/Game_Client/CMakeFiles/game_client_lib.dir/ECS/ECS.cpp.o: ../../src/Game_Client/ECS/ECS.cpp
 src/Game_Client/CMakeFiles/game_client_lib.dir/ECS/ECS.cpp.o: src/Game_Client/CMakeFiles/game_client_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lennart/cpp_projects/game_engine/builds/client/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/Game_Client/CMakeFiles/game_client_lib.dir/ECS/ECS.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lennart/cpp_projects/game_engine/builds/client/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/Game_Client/CMakeFiles/game_client_lib.dir/ECS/ECS.cpp.o"
 	cd /home/lennart/cpp_projects/game_engine/builds/client/src/Game_Client && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/Game_Client/CMakeFiles/game_client_lib.dir/ECS/ECS.cpp.o -MF CMakeFiles/game_client_lib.dir/ECS/ECS.cpp.o.d -o CMakeFiles/game_client_lib.dir/ECS/ECS.cpp.o -c /home/lennart/cpp_projects/game_engine/src/Game_Client/ECS/ECS.cpp
 
 src/Game_Client/CMakeFiles/game_client_lib.dir/ECS/ECS.cpp.i: cmake_force
@@ -184,7 +212,7 @@ src/Game_Client/CMakeFiles/game_client_lib.dir/ECS/ECS.cpp.s: cmake_force
 src/Game_Client/CMakeFiles/game_client_lib.dir/TextureManager.cpp.o: src/Game_Client/CMakeFiles/game_client_lib.dir/flags.make
 src/Game_Client/CMakeFiles/game_client_lib.dir/TextureManager.cpp.o: ../../src/Game_Client/TextureManager.cpp
 src/Game_Client/CMakeFiles/game_client_lib.dir/TextureManager.cpp.o: src/Game_Client/CMakeFiles/game_client_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lennart/cpp_projects/game_engine/builds/client/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/Game_Client/CMakeFiles/game_client_lib.dir/TextureManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lennart/cpp_projects/game_engine/builds/client/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/Game_Client/CMakeFiles/game_client_lib.dir/TextureManager.cpp.o"
 	cd /home/lennart/cpp_projects/game_engine/builds/client/src/Game_Client && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/Game_Client/CMakeFiles/game_client_lib.dir/TextureManager.cpp.o -MF CMakeFiles/game_client_lib.dir/TextureManager.cpp.o.d -o CMakeFiles/game_client_lib.dir/TextureManager.cpp.o -c /home/lennart/cpp_projects/game_engine/src/Game_Client/TextureManager.cpp
 
 src/Game_Client/CMakeFiles/game_client_lib.dir/TextureManager.cpp.i: cmake_force
@@ -198,7 +226,7 @@ src/Game_Client/CMakeFiles/game_client_lib.dir/TextureManager.cpp.s: cmake_force
 src/Game_Client/CMakeFiles/game_client_lib.dir/Game.cpp.o: src/Game_Client/CMakeFiles/game_client_lib.dir/flags.make
 src/Game_Client/CMakeFiles/game_client_lib.dir/Game.cpp.o: ../../src/Game_Client/Game.cpp
 src/Game_Client/CMakeFiles/game_client_lib.dir/Game.cpp.o: src/Game_Client/CMakeFiles/game_client_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lennart/cpp_projects/game_engine/builds/client/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/Game_Client/CMakeFiles/game_client_lib.dir/Game.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lennart/cpp_projects/game_engine/builds/client/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/Game_Client/CMakeFiles/game_client_lib.dir/Game.cpp.o"
 	cd /home/lennart/cpp_projects/game_engine/builds/client/src/Game_Client && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/Game_Client/CMakeFiles/game_client_lib.dir/Game.cpp.o -MF CMakeFiles/game_client_lib.dir/Game.cpp.o.d -o CMakeFiles/game_client_lib.dir/Game.cpp.o -c /home/lennart/cpp_projects/game_engine/src/Game_Client/Game.cpp
 
 src/Game_Client/CMakeFiles/game_client_lib.dir/Game.cpp.i: cmake_force
@@ -212,7 +240,7 @@ src/Game_Client/CMakeFiles/game_client_lib.dir/Game.cpp.s: cmake_force
 src/Game_Client/CMakeFiles/game_client_lib.dir/GameState.cpp.o: src/Game_Client/CMakeFiles/game_client_lib.dir/flags.make
 src/Game_Client/CMakeFiles/game_client_lib.dir/GameState.cpp.o: ../../src/Game_Client/GameState.cpp
 src/Game_Client/CMakeFiles/game_client_lib.dir/GameState.cpp.o: src/Game_Client/CMakeFiles/game_client_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lennart/cpp_projects/game_engine/builds/client/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/Game_Client/CMakeFiles/game_client_lib.dir/GameState.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lennart/cpp_projects/game_engine/builds/client/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/Game_Client/CMakeFiles/game_client_lib.dir/GameState.cpp.o"
 	cd /home/lennart/cpp_projects/game_engine/builds/client/src/Game_Client && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/Game_Client/CMakeFiles/game_client_lib.dir/GameState.cpp.o -MF CMakeFiles/game_client_lib.dir/GameState.cpp.o.d -o CMakeFiles/game_client_lib.dir/GameState.cpp.o -c /home/lennart/cpp_projects/game_engine/src/Game_Client/GameState.cpp
 
 src/Game_Client/CMakeFiles/game_client_lib.dir/GameState.cpp.i: cmake_force
@@ -225,11 +253,13 @@ src/Game_Client/CMakeFiles/game_client_lib.dir/GameState.cpp.s: cmake_force
 
 # Object files for target game_client_lib
 game_client_lib_OBJECTS = \
+"CMakeFiles/game_client_lib.dir/ECS/TextFieldComponent.cpp.o" \
 "CMakeFiles/game_client_lib.dir/Layers/Layer.cpp.o" \
 "CMakeFiles/game_client_lib.dir/Layers/LayerStack.cpp.o" \
 "CMakeFiles/game_client_lib.dir/Layers/PieceLayer.cpp.o" \
 "CMakeFiles/game_client_lib.dir/Layers/BackgroundLayer.cpp.o" \
 "CMakeFiles/game_client_lib.dir/Layers/MainMenuLayer.cpp.o" \
+"CMakeFiles/game_client_lib.dir/Layers/ChatLayer.cpp.o" \
 "CMakeFiles/game_client_lib.dir/Scenes/GomokuScene.cpp.o" \
 "CMakeFiles/game_client_lib.dir/Scenes/MainMenu.cpp.o" \
 "CMakeFiles/game_client_lib.dir/ECS/ECS.cpp.o" \
@@ -240,11 +270,13 @@ game_client_lib_OBJECTS = \
 # External object files for target game_client_lib
 game_client_lib_EXTERNAL_OBJECTS =
 
+src/Game_Client/libgame_client_lib.a: src/Game_Client/CMakeFiles/game_client_lib.dir/ECS/TextFieldComponent.cpp.o
 src/Game_Client/libgame_client_lib.a: src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/Layer.cpp.o
 src/Game_Client/libgame_client_lib.a: src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/LayerStack.cpp.o
 src/Game_Client/libgame_client_lib.a: src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/PieceLayer.cpp.o
 src/Game_Client/libgame_client_lib.a: src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/BackgroundLayer.cpp.o
 src/Game_Client/libgame_client_lib.a: src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/MainMenuLayer.cpp.o
+src/Game_Client/libgame_client_lib.a: src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/ChatLayer.cpp.o
 src/Game_Client/libgame_client_lib.a: src/Game_Client/CMakeFiles/game_client_lib.dir/Scenes/GomokuScene.cpp.o
 src/Game_Client/libgame_client_lib.a: src/Game_Client/CMakeFiles/game_client_lib.dir/Scenes/MainMenu.cpp.o
 src/Game_Client/libgame_client_lib.a: src/Game_Client/CMakeFiles/game_client_lib.dir/ECS/ECS.cpp.o
@@ -253,7 +285,7 @@ src/Game_Client/libgame_client_lib.a: src/Game_Client/CMakeFiles/game_client_lib
 src/Game_Client/libgame_client_lib.a: src/Game_Client/CMakeFiles/game_client_lib.dir/GameState.cpp.o
 src/Game_Client/libgame_client_lib.a: src/Game_Client/CMakeFiles/game_client_lib.dir/build.make
 src/Game_Client/libgame_client_lib.a: src/Game_Client/CMakeFiles/game_client_lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lennart/cpp_projects/game_engine/builds/client/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX static library libgame_client_lib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lennart/cpp_projects/game_engine/builds/client/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX static library libgame_client_lib.a"
 	cd /home/lennart/cpp_projects/game_engine/builds/client/src/Game_Client && $(CMAKE_COMMAND) -P CMakeFiles/game_client_lib.dir/cmake_clean_target.cmake
 	cd /home/lennart/cpp_projects/game_engine/builds/client/src/Game_Client && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/game_client_lib.dir/link.txt --verbose=$(VERBOSE)
 

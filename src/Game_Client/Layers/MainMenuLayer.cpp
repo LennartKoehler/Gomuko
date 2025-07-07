@@ -8,21 +8,20 @@ MainMenuLayer::MainMenuLayer(){
     
     Entity& startGameButtonEntity = manager.addEntity();
     startGameButtonEntity.addComponent<RectComponent>(200,200,50,100);
-    startGameButtonEntity.addComponent<TextComponent>("start game");
+    startGameButtonEntity.addComponent<TextComponent>("start game", 28);
     startGameButtonEntity.addGroup(groupButtons);
     startGameButton = &startGameButtonEntity;
 
     Entity& connectServerButtonEntity = manager.addEntity();
     connectServerButtonEntity.addComponent<RectComponent>(200,400,50,100);
-    connectServerButtonEntity.addComponent<TextComponent>("connect to server");
+    connectServerButtonEntity.addComponent<TextComponent>("connect to server", 28);
     connectServerButtonEntity.addGroup(groupButtons);
     connectServerButton = &connectServerButtonEntity;
 
     Entity& serverAddressTextFieldEntity = manager.addEntity(); // TODO well this is just unnecessary
     serverAddressTextFieldEntity.addComponent<RectComponent>(200,600,50,100);
-    serverAddressTextFieldEntity.addComponent<TextComponent>();
     serverAddressTextFieldEntity.addComponent<FunctionComponent>();
-    serverAddressTextFieldEntity.addComponent<TextFieldComponent>("ServerAddress");
+    serverAddressTextFieldEntity.addComponent<TextFieldComponent>("ServerAddress", textures::tile, 28);
     serverAddressTextFieldEntity.addGroup(groupButtons);
     serverAddressTextField = &serverAddressTextFieldEntity;
 
@@ -35,22 +34,31 @@ void MainMenuLayer::onEvent(Event& event){
     dispatcher.dispatch<TextInputEvent>(HZ_BIND_EVENT_FN(MainMenuLayer::onTextInput));
 }
 
-bool MainMenuLayer::onTextInput(TextInputEvent& event){
-    serverAddressTextField->getComponent<TextFieldComponent>().addLetter(event.text);
-    return true;
+
+bool MainMenuLayer::onTextInput(TextInputEvent& event){ // TODO i should make a textfield entity that takes all kinds of events, so this isnt on the layer 
+    auto& tf = serverAddressTextField->getComponent<TextFieldComponent>();
+    if (tf.isFocused()) {
+        tf.addLetter(event.text);
+        return true;
+    }
+    return false;
 }
 
 bool MainMenuLayer::onKeyDown(KeyDownEvent& event){
-    serverAddressTextField->getComponent<TextFieldComponent>().keyInput(event.key);
-    return true;
+    auto& tf = serverAddressTextField->getComponent<TextFieldComponent>();
+    if (tf.isFocused()) {
+        tf.keyInput(event.key);
+        return true;
+    }
+    return false;
 }
-
 bool MainMenuLayer::onMouseButtonPressed(MouseButtonPressedEvent& event){
     Entity* entity = getEntityAtPosition(event.x, event.y, groupButtons);
     if (entity != nullptr){
         entity->getComponent<FunctionComponent>().executeFunction();
+        return true;
     }
-    return true;
+    return false;
 }
 
 void MainMenuLayer::setGomokuButtonCallback(ButtonCallback cb){ //TODO this is the only reason i need them as member objects

@@ -4,7 +4,7 @@
 alpha_zero/CMakeFiles/alpha_zero.dir/Gomoku.cpp.o: ../../alpha_zero/Gomoku.cpp \
   /usr/include/stdc-predef.h \
   ../../alpha_zero/Gomoku.h \
-  ../../src/Game_Common/VectorMatrix.hpp \
+  ../../src/Game_Client/VectorMatrix.hpp \
   /usr/include/c++/11/array \
   /usr/include/c++/11/utility \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -5076,7 +5076,7 @@ alpha_zero/CMakeFiles/alpha_zero.dir/MCTS.cpp.o: ../../alpha_zero/MCTS.cpp \
   /usr/include/c++/11/bits/stl_multimap.h \
   /usr/include/c++/11/bits/erase_if.h \
   ../../alpha_zero/Gomoku.h \
-  ../../src/Game_Common/VectorMatrix.hpp \
+  ../../src/Game_Client/VectorMatrix.hpp \
   /usr/include/c++/11/vector \
   /usr/include/c++/11/bits/stl_uninitialized.h \
   /usr/include/c++/11/bits/stl_vector.h \
@@ -10314,7 +10314,7 @@ alpha_zero/CMakeFiles/alpha_zero.dir/Trainer.cpp.o: ../../alpha_zero/Trainer.cpp
   /usr/include/c++/11/bits/stl_map.h \
   /usr/include/c++/11/bits/stl_multimap.h \
   ../../alpha_zero/Gomoku.h \
-  ../../src/Game_Common/VectorMatrix.hpp \
+  ../../src/Game_Client/VectorMatrix.hpp \
   /usr/include/c++/11/memory \
   /usr/include/c++/11/bits/stl_raw_storage_iter.h \
   /usr/include/c++/11/bits/align.h \
@@ -15344,7 +15344,7 @@ alpha_zero/CMakeFiles/alpha_zero.dir/main.cpp.o: ../../alpha_zero/main.cpp \
   /usr/include/c++/11/bits/stl_map.h \
   /usr/include/c++/11/bits/stl_multimap.h \
   ../../alpha_zero/Gomoku.h \
-  ../../src/Game_Common/VectorMatrix.hpp \
+  ../../src/Game_Client/VectorMatrix.hpp \
   /usr/include/c++/11/memory \
   /usr/include/c++/11/bits/stl_raw_storage_iter.h \
   /usr/include/c++/11/bits/align.h \
@@ -22200,6 +22200,8 @@ alpha_zero/CMakeFiles/alpha_zero.dir/main.cpp.o: ../../alpha_zero/main.cpp \
 
 /usr/local/lib/libtorch/include/ATen/ops/tan.h:
 
+/usr/local/lib/libtorch/include/ATen/ops/take_along_dim.h:
+
 /usr/local/lib/libtorch/include/ATen/ops/t_copy.h:
 
 /usr/local/lib/libtorch/include/ATen/ops/sym_stride.h:
@@ -24048,6 +24050,8 @@ alpha_zero/CMakeFiles/alpha_zero.dir/main.cpp.o: ../../alpha_zero/main.cpp \
 
 /usr/include/c++/11/bits/functexcept.h:
 
+../../src/Game_Client/VectorMatrix.hpp:
+
 /usr/local/lib/libtorch/include/ATen/ops/special_softmax_ops.h:
 
 /usr/local/lib/libtorch/include/ATen/ops/scatter_ops.h:
@@ -24159,10 +24163,6 @@ alpha_zero/CMakeFiles/alpha_zero.dir/main.cpp.o: ../../alpha_zero/main.cpp \
 /usr/local/lib/libtorch/include/ATen/ops/pinverse_native.h:
 
 /usr/local/lib/libtorch/include/ATen/ops/reciprocal_ops.h:
-
-/usr/local/lib/libtorch/include/ATen/ops/_linalg_det_native.h:
-
-/usr/local/lib/libtorch/include/ATen/ops/ravel_ops.h:
 
 /usr/local/lib/libtorch/include/ATen/ops/reflection_pad1d_backward_ops.h:
 
@@ -25766,6 +25766,20 @@ alpha_zero/CMakeFiles/alpha_zero.dir/main.cpp.o: ../../alpha_zero/main.cpp \
 
 /usr/local/lib/libtorch/include/ATen/ops/_lazy_clone_ops.h:
 
+/usr/local/lib/libtorch/include/ATen/ops/relu.h:
+
+/usr/include/x86_64-linux-gnu/bits/timesize.h:
+
+/usr/local/lib/libtorch/include/ATen/ops/_foreach_div.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h:
+
+/usr/local/lib/libtorch/include/torch/csrc/api/include/torch/nn/functional/upsampling.h:
+
+/usr/local/lib/libtorch/include/ATen/ops/_fft_c2c_native.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h:
+
 /usr/local/lib/libtorch/include/ATen/ops/as_strided_copy_native.h:
 
 /usr/include/c++/11/bits/stl_relops.h:
@@ -25785,20 +25799,6 @@ alpha_zero/CMakeFiles/alpha_zero.dir/main.cpp.o: ../../alpha_zero/main.cpp \
 /usr/include/c++/11/bits/unique_ptr.h:
 
 /usr/local/lib/libtorch/include/ATen/ops/atleast_1d.h:
-
-/usr/local/lib/libtorch/include/ATen/ops/relu.h:
-
-/usr/include/x86_64-linux-gnu/bits/timesize.h:
-
-/usr/local/lib/libtorch/include/ATen/ops/_foreach_div.h:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h:
-
-/usr/local/lib/libtorch/include/torch/csrc/api/include/torch/nn/functional/upsampling.h:
-
-/usr/local/lib/libtorch/include/ATen/ops/_fft_c2c_native.h:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h:
 
 /usr/local/lib/libtorch/include/ATen/ops/max_pool2d_with_indices_native.h:
 
@@ -25885,12 +25885,6 @@ alpha_zero/CMakeFiles/alpha_zero.dir/main.cpp.o: ../../alpha_zero/main.cpp \
 /usr/local/lib/libtorch/include/torch/csrc/api/include/torch/nn/functional/conv.h:
 
 /usr/local/lib/libtorch/include/ATen/ops/argmax_ops.h:
-
-/usr/local/lib/libtorch/include/ATen/ops/take_along_dim.h:
-
-../../src/Game_Common/VectorMatrix.hpp:
-
-/usr/local/lib/libtorch/include/ATen/ops/_backward_ops.h:
 
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
@@ -26212,6 +26206,20 @@ alpha_zero/CMakeFiles/alpha_zero.dir/main.cpp.o: ../../alpha_zero/main.cpp \
 
 /usr/local/lib/libtorch/include/ATen/ops/conv_depthwise3d_ops.h:
 
+/usr/local/lib/libtorch/include/ATen/ops/_linalg_det_native.h:
+
+/usr/local/lib/libtorch/include/ATen/ops/ravel_ops.h:
+
+/usr/local/lib/libtorch/include/ATen/ops/sin_meta.h:
+
+/usr/local/lib/libtorch/include/ATen/ops/group_norm_ops.h:
+
+/usr/local/lib/libtorch/include/ATen/ops/fbgemm_linear_quantize_weight_native.h:
+
+/usr/local/lib/libtorch/include/ATen/ops/data_ops.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
+
 /usr/include/c++/11/bits/allocated_ptr.h:
 
 /usr/local/lib/libtorch/include/ATen/ops/empty_strided_ops.h:
@@ -26405,16 +26413,6 @@ alpha_zero/CMakeFiles/alpha_zero.dir/main.cpp.o: ../../alpha_zero/main.cpp \
 /usr/local/lib/libtorch/include/ATen/ops/_convert_indices_from_csr_to_coo_ops.h:
 
 /usr/local/lib/libtorch/include/ATen/ops/_test_autograd_multiple_dispatch.h:
-
-/usr/local/lib/libtorch/include/ATen/ops/sin_meta.h:
-
-/usr/local/lib/libtorch/include/ATen/ops/group_norm_ops.h:
-
-/usr/local/lib/libtorch/include/ATen/ops/fbgemm_linear_quantize_weight_native.h:
-
-/usr/local/lib/libtorch/include/ATen/ops/data_ops.h:
-
-/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
 
 /usr/local/lib/libtorch/include/ATen/ops/replication_pad3d_meta.h:
 
@@ -27087,6 +27085,8 @@ alpha_zero/CMakeFiles/alpha_zero.dir/main.cpp.o: ../../alpha_zero/main.cpp \
 /usr/local/lib/libtorch/include/ATen/core/custom_class.h:
 
 /usr/local/lib/libtorch/include/ATen/ops/cumprod_backward_ops.h:
+
+/usr/local/lib/libtorch/include/ATen/ops/_backward_ops.h:
 
 /usr/local/lib/libtorch/include/ATen/ops/native_layer_norm_backward.h:
 

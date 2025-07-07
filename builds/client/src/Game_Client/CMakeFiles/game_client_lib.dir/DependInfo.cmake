@@ -9,9 +9,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/lennart/cpp_projects/game_engine/src/Game_Client/ECS/ECS.cpp" "src/Game_Client/CMakeFiles/game_client_lib.dir/ECS/ECS.cpp.o" "gcc" "src/Game_Client/CMakeFiles/game_client_lib.dir/ECS/ECS.cpp.o.d"
+  "/home/lennart/cpp_projects/game_engine/src/Game_Client/ECS/TextFieldComponent.cpp" "src/Game_Client/CMakeFiles/game_client_lib.dir/ECS/TextFieldComponent.cpp.o" "gcc" "src/Game_Client/CMakeFiles/game_client_lib.dir/ECS/TextFieldComponent.cpp.o.d"
   "/home/lennart/cpp_projects/game_engine/src/Game_Client/Game.cpp" "src/Game_Client/CMakeFiles/game_client_lib.dir/Game.cpp.o" "gcc" "src/Game_Client/CMakeFiles/game_client_lib.dir/Game.cpp.o.d"
   "/home/lennart/cpp_projects/game_engine/src/Game_Client/GameState.cpp" "src/Game_Client/CMakeFiles/game_client_lib.dir/GameState.cpp.o" "gcc" "src/Game_Client/CMakeFiles/game_client_lib.dir/GameState.cpp.o.d"
   "/home/lennart/cpp_projects/game_engine/src/Game_Client/Layers/BackgroundLayer.cpp" "src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/BackgroundLayer.cpp.o" "gcc" "src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/BackgroundLayer.cpp.o.d"
+  "/home/lennart/cpp_projects/game_engine/src/Game_Client/Layers/ChatLayer.cpp" "src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/ChatLayer.cpp.o" "gcc" "src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/ChatLayer.cpp.o.d"
   "/home/lennart/cpp_projects/game_engine/src/Game_Client/Layers/Layer.cpp" "src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/Layer.cpp.o" "gcc" "src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/Layer.cpp.o.d"
   "/home/lennart/cpp_projects/game_engine/src/Game_Client/Layers/LayerStack.cpp" "src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/LayerStack.cpp.o" "gcc" "src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/LayerStack.cpp.o.d"
   "/home/lennart/cpp_projects/game_engine/src/Game_Client/Layers/MainMenuLayer.cpp" "src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/MainMenuLayer.cpp.o" "gcc" "src/Game_Client/CMakeFiles/game_client_lib.dir/Layers/MainMenuLayer.cpp.o.d"

@@ -33,7 +33,6 @@ public:
 		PollIncomingMessages();
 		PollConnectionStateChanges();
 		PollLocalUserInput();
-		std::this_thread::sleep_for( std::chrono::milliseconds( 10 ) );
 	}
 
 	void sendToServer(Package& package){
@@ -68,7 +67,7 @@ private:
 				FatalError( "Error checking for messages" );
 
 
-			Package package = steamMessageToPackage(pIncomingMsg); // IMPORTANT this is the interface
+			Package* package = steamMessageToPackage(pIncomingMsg); // IMPORTANT this is the interface
 			packageToSDLEvent(package);
 			std::cerr << "recieved new package" << std::endl;
 			pIncomingMsg->Release();

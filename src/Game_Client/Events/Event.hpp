@@ -12,7 +12,7 @@ enum class EventType
     AppTick, AppUpdate, AppRender,
     KeyDown, KeyReleased, KeyTyped,
     MouseButtonPressed, MouseButtonReleased, MouseMoved, MouseScrolled,
-    TextInput, GameState, GameStatePlayer, TextRecieved, NetworkConnection
+    TextInput, GameState, GameStatePlayer, Text, NetworkConnection
 };
 
 

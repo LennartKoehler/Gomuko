@@ -49,7 +49,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/lennart/cpp_projects/game_engine/builds/server/src/Game_Common/cmake_install.cmake")
+  include("/home/lennart/cpp_projects/game_engine/builds/server/src/Game_Client/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
@@ -95,7 +95,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/lennart/cpp_projects/game_engine/builds/server/src/Game_Common/libgame_common_lib.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/lennart/cpp_projects/game_engine/builds/server/src/Game_Client/libgame_client_lib.a")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

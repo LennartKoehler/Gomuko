@@ -233,7 +233,7 @@ CMakeFiles/server.dir/src/Game_Server/main.cpp.o
  /usr/include/c++/11/bits/parse_numbers.h
  /home/lennart/cpp_projects/game_engine/src/Networking/MessageTypes.h
  /home/lennart/cpp_projects/game_engine/src/Networking/Serializer.h
- /home/lennart/cpp_projects/game_engine/src/Game_Common/VectorMatrix.hpp
+ /home/lennart/cpp_projects/game_engine/src/Game_Client/VectorMatrix.hpp
  /usr/include/c++/11/array
  /usr/include/c++/11/tuple
  /usr/include/c++/11/bits/uses_allocator.h

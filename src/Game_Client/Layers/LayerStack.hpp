@@ -3,6 +3,7 @@
 #include "PieceLayer.hpp"
 #include "BackgroundLayer.hpp"
 #include "MainMenuLayer.hpp"
+#include "ChatLayer.hpp"
 
 
 class LayerStack{

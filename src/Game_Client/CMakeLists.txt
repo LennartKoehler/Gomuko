@@ -21,6 +21,7 @@ add_library(
     "Layers/PieceLayer.hpp" 
     "Layers/BackgroundLayer.hpp" 
     "Layers/MainMenuLayer.hpp" 
+    "Layers/ChatLayer.hpp" 
 
 
     "ECS/Components.hpp" 
@@ -28,12 +29,14 @@ add_library(
     "ECS/MatrixPositionComponent.hpp" 
     "ECS/RectComponent.hpp" 
     "ECS/SpriteComponent.hpp" 
+    "ECS/TextFieldComponent.cpp"
 
     "Layers/Layer.cpp" 
     "Layers/LayerStack.cpp" 
     "Layers/PieceLayer.cpp" 
     "Layers/BackgroundLayer.cpp" 
     "Layers/MainMenuLayer.cpp" 
+    "Layers/ChatLayer.cpp" 
 
     "Scenes/GomokuScene.cpp"
     "Scenes/MainMenu.cpp"

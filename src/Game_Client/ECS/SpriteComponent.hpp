@@ -3,7 +3,7 @@
 #include "Components.hpp"
 
 class SpriteComponent : public Component{
-private:
+protected:
     RectComponent* rect;
     SDL_Texture* texture;
     SDL_Rect srcRect, destRect;
